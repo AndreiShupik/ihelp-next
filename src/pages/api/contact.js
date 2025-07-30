@@ -14,14 +14,14 @@ export default async function handler(req, res) {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "lovengiro@gmail.com", // replace with real email
-      pass: "qbbqdcjiybluvqze", // app-specific password
+      user: process.env.EMAIL_USER, // replace with real email
+      pass: process.env.EMAIL_PASS, // app-specific password
     },
   });
 
   const mailOptions = {
     from: '"iHELP Website" <lovengiro@gmail.com>',
-    to: "a09724846@gmail.com",
+    to: process.env.EMAIL_RECEIVER,
     subject: `Новий контакт: ${type || "форма зворотнього зв'язку"}`,
     text: `Ім'я: ${name}\nТип форми: ${type || "(не вказано)"}\nПовідомлення: ${
       message || "(немає)"
