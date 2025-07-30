@@ -8,6 +8,12 @@ const { i18n } = require("./next-i18next.config");
 
 // next.config.js
 module.exports = {
-  reactStrictMode: true,
+  reactStrictMode: false,
   i18n,
 };
+
+// module.exports = {
+//   images: {
+//     domains: ['your-supabase-bucket-url.supabase.co', 'another-domain.com'],
+//   },
+// };

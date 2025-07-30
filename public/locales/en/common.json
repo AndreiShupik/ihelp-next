@@ -28,5 +28,10 @@
       "title": "Home | iHELP",
       "description": "Welcome to iHELP. Discover our projects and ways to get involved."
     }
+  },
+  "page404": {
+    "title": "404 - Page not found",
+    "description": "Unfortunately, the page you are looking for does not exist.",
+    "button": "Back to home"
   }
 }

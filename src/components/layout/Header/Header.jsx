@@ -52,7 +52,7 @@ function Header() {
       <div className={styles.headerContainer}>
         <div className={styles.logoContainer}>
           <a href="/">
-            <Image src={logoImg} alt="ihelp logo" />
+            <Image src={logoImg} alt="ihelp logo" priority />
           </a>
         </div>
 
