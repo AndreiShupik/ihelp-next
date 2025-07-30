@@ -1,0 +1,167 @@
+.photo-of-changes {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  // width: calc(min(76rem, 94%));
+  width: calc(min(73rem, 94%));
+  margin: 0 20px;
+  // min-height: 100vh;
+  column-gap: 3rem;
+  padding-block: min(20vh, 3rem);
+}
+
+.photo-of-changes .text-block {
+  padding: 0;
+  width: 100%;
+}
+
+.photo-of-changes .text-block h3 {
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+}
+
+.photo-of-changes .text-block hr {
+  display: block;
+  background: #58b764;
+  height: 0.25rem;
+  width: 6.25rem;
+  border: none;
+  margin: 0.5rem 0 1.2rem 0;
+}
+
+.photo-of-changes div p {
+  // color: #676767;
+  // width: 85%;
+  width: 100%;
+  // font-size: 1rem;
+  // line-height: 20px;
+  margin-bottom: 15px;
+  // font-style: italic;
+}
+
+.swiper {
+  width: 100%;
+  // padding-top: 3.125rem;
+  // overflow: visible;
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+  background: #fff;
+}
+
+.swiper-pagination {
+  bottom: 0.3rem !important;
+}
+
+.swiper-slide {
+  width: auto;
+  flex-shrink: 0;
+  height: 28.125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center; // or test 'stretch'
+}
+
+.swiper-slide p {
+  color: #dadada;
+  // font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  padding: 0 1.563rem;
+  line-height: 1.3rem;
+  font-size: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.swiper-slide div {
+  display: none;
+  opacity: 0;
+  padding-bottom: 0.625rem;
+}
+
+.swiper-slide-active div {
+  display: block;
+  opacity: 1;
+}
+
+.swiper-slide--one {
+  background:
+    linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url("/assets/images/change-1.jpg") no-repeat 50% 50% / cover;
+}
+
+.swiper-slide--two {
+  background:
+    linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url("/assets/images/change-2.jpg") no-repeat 50% 50% / cover;
+}
+
+.swiper-slide--three {
+  background:
+    linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url("/assets/images/change-3.jpg") no-repeat 50% 50% / cover;
+}
+
+.swiper-slide--four {
+  background:
+    linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url("/assets/images/change-4.jpg") no-repeat 50% 50% / cover;
+}
+
+.swiper-slide--five {
+  background:
+    linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url("/assets/images/change-5.png") no-repeat 50% 50% / cover;
+}
+
+.swiper-slide--six {
+  background:
+    linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url("/assets/images/change-6.jpg") no-repeat 50% 50% / cover;
+}
+
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+  background-image: none;
+}
+
+@media (min-width: 640px) {
+  .photo-of-changes div p {
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 768px) {
+  .photo-of-changes .text-block h3 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .photo-of-changes .text-block p {
+    // font-size: 1.3rem;
+    // line-height: 28px;
+  }
+
+  .photo-of-changes .text-block hr {
+    margin: 1.125rem 0 1.875rem 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .photo-of-changes {
+    margin: 0 auto;
+  }
+  .photo-of-changes .text-block h3 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+
+  .photo-of-changes .text-block p {
+    // font-size: 1.375rem;
+    // line-height: 1.5rem;
+  }
+}

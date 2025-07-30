@@ -1,0 +1,43 @@
+.ctaBtn {
+  width: fit-content;
+
+  a {
+    position: relative;
+    border-radius: 5px;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 20px;
+    transition: 0.3s;
+
+    &:hover {
+      background: #aacfaa;
+    }
+  }
+
+  .primary {
+    background: #fffbce;
+    color: #143518;
+    z-index: 3;
+  }
+
+  .secondary {
+    background: linear-gradient(315deg, #fffbce, #aacfaa);
+    color: #143518;
+  }
+}
+
+@media (max-width: 1200px) {
+  .ctaBtn .primary {
+    font-size: 16px;
+    padding: 7px 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .ctaBtn .primary {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+}

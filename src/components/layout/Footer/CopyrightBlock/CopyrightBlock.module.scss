@@ -1,0 +1,14 @@
+@use "../../../../styles/base/typography";
+
+.copyright {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #aacfaa; // Adjust color as per design
+
+  .icon {
+    margin-right: 8px;
+    font-size: typography.$font-size-base;
+    color: inherit;
+  }
+}

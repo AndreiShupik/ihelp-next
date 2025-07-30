@@ -1,0 +1,808 @@
+.socialTaxiWrapper {
+  position: relative;
+  min-height: var(--vh);
+  overflow: hidden;
+
+  // .parallaxBg {
+  //   // position: fixed;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: var(--vh);
+  //   max-height: 1000px;
+  //   z-index: -1;
+  //   background-image: url("/assets/images/social-taxi-main.jpg");
+  //   background-size: cover;
+  //   /* background-position: 100% 70%; */
+  //   background-repeat: no-repeat;
+  //   // max-width: 1000px;
+  //   max-width: 1155px;
+  //   margin: 0 auto;
+  //   // left: 20%;
+  //   left: 15.5%;
+  // }
+
+  .parallaxBg {
+    // position: fixed;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--vh);
+    max-height: 1000px;
+    z-index: -1;
+    background-image: url("/assets/images/social-taxi-main.jpg");
+    background-size: cover;
+    /* background-position: 100% 70%; */
+    background-repeat: no-repeat;
+    // max-width: 1000px;
+    max-width: 1155px;
+    margin: 0 auto;
+    // left: 20%;
+    // left: 15.5%;
+  }
+
+  // .socialTaxiContainer {
+  //   text-align: center;
+  //   width: 100%;
+  //   height: var(--vh);
+  //   max-height: 1000px;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center; // Optional, center content
+  //   padding-top: 573px; // Adjust if needed
+  //   position: relative;
+  //   z-index: 1;
+
+  //   .title {
+  //     width: 100%;
+  //     // max-width: 1200px;
+  //     max-width: 1198px;
+  //     padding: 0 20px;
+  //     text-align: start;
+  //     margin: 0 auto;
+  //     display: flex;
+  //     flex-direction: column;
+  //     align-items: flex-end;
+
+  //     h1,
+  //     h2 {
+  //       -webkit-text-fill-color: #143518;
+  //       background: rgb(214 220 236);
+  //       width: fit-content;
+  //       padding: 3px 10px;
+  //       text-align: end;
+  //     }
+
+  //     h1 {
+  //       font-weight: 700;
+  //       margin-bottom: 0;
+  //       max-width: 1000px;
+  //       line-height: 2rem;
+  //       padding-bottom: 0.7rem;
+  //     }
+
+  //     h2 {
+  //       max-width: 998px;
+  //       line-height: 1.8rem;
+  //     }
+  //   }
+  // }
+
+  .socialTaxiContainer {
+    text-align: center;
+    width: 100%;
+    height: var(--vh);
+    max-height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; // Optional, center content
+    position: absolute;
+    top: 285px;
+    left: 0;
+    z-index: 1;
+
+    .title {
+      width: 100%;
+      // max-width: 1200px;
+      max-width: 1198px;
+      padding: 0 20px;
+      text-align: start;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      h1,
+      h2 {
+        -webkit-text-fill-color: #143518;
+        background: rgb(214 220 236);
+        width: fit-content;
+        padding: 3px 10px;
+        text-align: end;
+      }
+
+      h1 {
+        font-weight: 700;
+        margin-bottom: 0;
+        max-width: 1000px;
+        line-height: 2rem;
+        padding-bottom: 0.7rem;
+      }
+
+      h2 {
+        max-width: 998px;
+        line-height: 1.8rem;
+      }
+    }
+  }
+
+  .backgroundWrapper {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 50px 0;
+
+    .ctaParagraph {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 20px;
+    }
+  }
+
+  .blankContent {
+    width: 100%;
+    padding: 50px 0;
+    background: #ffffff;
+    .blankContainer {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+
+      h2,
+      h3 {
+        margin: 0 0 1rem 0;
+      }
+
+      p:nth-child(3) {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  .second {
+    position: relative; // required for absolute positioning inside
+    padding-top: 0;
+    overflow: hidden; // optional, prevents overflow from ::before
+    background: #fff;
+    padding: 0 20px;
+    top: 0;
+
+    .imgWrapper {
+      position: relative;
+      width: 100%; // ✅ Make it responsive
+      max-width: 1155px; // ✅ Limit maximum width
+      // max-width: 1200px; // ✅ Limit maximum width
+      // height: 100%;
+      // min-height: 100vh;
+      height: var(--vh);
+      margin: 0 auto;
+      overflow: hidden;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url("/assets/images/social-taxi-work.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        z-index: -1;
+        background-position: 80% center;
+        // transform: translate(-478px);
+        // transform: translate(-40px);
+      }
+
+      .parallaxFallback {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url("/assets/images/social-taxi-work.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        // background-attachment: fixed;
+        z-index: -1;
+        background-position: 80% center;
+      }
+
+      //       .parallaxBg {
+      //   position: fixed;
+      //   // position: absolute;
+      //   top: 0;
+      //   left: 0;
+      //   width: 100%;
+      //   height: var(--vh);
+      //   z-index: -1;
+      //   background-image: url("/assets/images/social-taxi-main.jpg");
+      //   background-size: cover;
+      //   /* background-position: 100% 70%; */
+      //   background-repeat: no-repeat;
+      //   // max-width: 1000px;
+      //   max-width: 1155px;
+      //   margin: 0 auto;
+      //   // left: 20%;
+      //   left: 15.5%;
+      // }
+
+      .secondContainer {
+        flex-direction: row;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        max-height: 1000px;
+
+        .shapes {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 1;
+          pointer-events: none;
+
+          .circle {
+            position: absolute;
+            top: 0px;
+            left: 68%;
+            width: 350px;
+            height: 350px;
+            background: rgb(214 220 236);
+            border-radius: 50%;
+          }
+
+          .triangle {
+            position: absolute;
+            top: 300px;
+            left: 35%;
+            width: 0;
+            height: 0;
+            border-left: 120px solid transparent;
+            border-right: 120px solid transparent;
+            border-bottom: 200px solid rgba(193, 239, 233, 0.9);
+            transform: rotate(15deg);
+          }
+
+          .square {
+            position: absolute;
+            top: 510px;
+            right: 50%;
+            width: 350px;
+            /* left: -11px; */
+            height: 200px;
+            background: rgba(255, 251, 206, 0.9);
+            transform: rotate(230deg);
+          }
+        }
+
+        /* HowItWorks.module.scss */
+        .howItWorksSection {
+          position: relative;
+          padding: 1rem 1rem 1rem 0;
+          overflow: hidden;
+          max-width: 555px;
+          height: 100vh;
+          max-height: 1000px;
+          width: 46vw;
+          background: #fff;
+          display: flex;
+          align-items: center;
+
+          h2 {
+            margin-bottom: 1.2rem;
+          }
+        }
+
+        .contentWrapper {
+          max-width: 600px;
+          margin: 0 auto;
+          position: relative;
+          z-index: 2;
+
+          p {
+            text-align: start;
+          }
+        }
+
+        .heading {
+          text-align: start;
+        }
+
+        .block {
+          margin-bottom: 2rem;
+          position: relative;
+          z-index: 2;
+          text-align: start;
+
+          h3 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+          }
+
+          p {
+            margin-bottom: 1rem;
+          }
+
+          .heading {
+            margin-bottom: 0.5rem;
+          }
+
+          ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+
+            li {
+              list-style-type: none;
+              position: relative;
+              padding-left: 1.2rem;
+              margin-bottom: 0.5rem;
+
+              // &::before {
+              //   content: "";
+              //   background-image: url("/assets/icons/check-mark.svg");
+              //   background-repeat: no-repeat;
+              //   background-size: contain;
+              //   display: block;
+              //   height: 20px;
+              //   left: -5px;
+              //   position: absolute;
+              //   top: 0;
+              //   width: 20px;
+              // }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // .projectResults {
+  //   background: #fff;
+  //   width: 100%;
+
+  //   .wrapper {
+  //     display: flex;
+  //     flex-wrap: wrap; // Optional, for responsiveness
+  //     max-width: 1200px;
+  //     margin: 0 auto;
+  //     padding: 20px;
+
+  //     .taxiImagesBlock,
+  //     .container {
+  //       flex: 1 1 50%;
+  //       max-width: 50%;
+  //     }
+
+  //     .taxiImagesBlock {
+  //       display: flex;
+  //       flex-direction: column;
+  //       gap: 1rem;
+  //     }
+
+  //     .peopleTaxiBlock {
+  //       display: flex;
+  //       gap: 1rem;
+  //       align-items: stretch;
+
+  //       .imageWrapper {
+  //         flex: 1 1 0;
+  //         display: flex;
+  //         align-items: center;
+  //         justify-content: center;
+  //         overflow: hidden;
+
+  //         img {
+  //           width: 100%;
+  //           height: 100%;
+  //           object-fit: cover;
+  //         }
+  //       }
+  //     }
+
+  //     .taxiImagesBlock > .imageWrapper {
+  //       width: 100%;
+  //       overflow: hidden;
+
+  //       img {
+  //         width: 100%;
+  //         height: auto;
+  //         object-fit: cover;
+  //       }
+  //     }
+
+  //     .container {
+  //       padding: 20px;
+  //       z-index: 1;
+
+  //       .heading {
+  //         font-weight: 800;
+  //         margin-bottom: 2rem;
+  //       }
+
+  //       .resultsList {
+  //         list-style: decimal;
+  //         padding-left: 1.5rem;
+  //         display: grid;
+  //         gap: 1rem;
+
+  //         li {
+  //           padding-bottom: 0.5rem;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+
+  .projectResults {
+    background: #fff;
+    width: 100%;
+
+    .wrapper {
+      display: flex;
+      max-width: 1200px;
+      gap: 2rem;
+      margin: 0 auto;
+      padding: 0 20px;
+
+      .imageWrapper {
+        flex: 1 1 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .container {
+        flex: 1 1 50%;
+        display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+
+        .heading {
+          font-weight: 800;
+          margin-bottom: 2rem;
+        }
+
+        .resultsList {
+          list-style: decimal;
+          padding-left: 1.5rem;
+          display: grid;
+          gap: 1rem;
+
+          // li {
+          //   padding-bottom: 0.5rem;
+          // }
+        }
+      }
+    }
+  }
+
+  .howToHelp {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    margin: 0 auto 50px;
+    max-width: 1200px;
+    position: relative;
+    padding: 0 22px;
+    align-items: stretch;
+
+    .taxiImagesBlock {
+      flex: 1 1 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .peopleTaxiBlock {
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+
+        .imageWrapper {
+          flex: 1 1 50%;
+
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+
+    .textContent {
+      // padding-top: 50px;
+      padding-top: 20px;
+      flex: 1 1 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      .heading {
+        font-weight: 800;
+        margin-bottom: 1rem;
+        position: relative;
+        z-index: 3;
+        display: inline-block;
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .imageWrapper {
+      order: 1;
+      flex: 1;
+      min-width: 280px;
+      position: relative;
+      z-index: 1;
+      max-width: 647px;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        display: block;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1700px) {
+  .socialTaxiWrapper {
+    .second {
+      .imgWrapper {
+        &::before {
+          content: "";
+          background-position: 70%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 2100px) {
+  .socialTaxiWrapper {
+    .second {
+      .imgWrapper {
+        &::before {
+          content: "";
+          background-position: 60%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 2500px) {
+  .socialTaxiWrapper {
+    .second {
+      .imgWrapper {
+        &::before {
+          content: "";
+          background-position: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .socialTaxiWrapper {
+    .parallaxBg {
+      background-size: cover;
+      left: 0;
+      background-position: 50% 0;
+    }
+
+    .socialTaxiContainer {
+      .title {
+        h1,
+        h2 {
+          padding: 0 0 0.5rem 0;
+          text-align: start;
+        }
+      }
+    }
+
+    .projectResults {
+      .wrapper {
+        .container {
+          padding-top: 0;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .socialTaxiWrapper {
+    .socialTaxiContainer {
+      top: 140px;
+      // .title {
+      //   position: absolute;
+      //   bottom: 30px;
+      // }
+    }
+
+    .second {
+      top: 0;
+    }
+
+    .howToHelp {
+      gap: 0;
+      margin-bottom: 30px;
+
+      .textContent {
+        .heading {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .backgroundWrapper {
+      padding: 30px 0;
+    }
+
+    .projectResults {
+      .wrapper {
+        flex-direction: column;
+        gap: 1rem;
+
+        .container {
+          .heading {
+            margin-bottom: 1rem;
+          }
+        }
+
+        .imageWrapper {
+          max-width: 500px;
+          min-width: 280px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .socialTaxiWrapper {
+    .backgroundWrapper {
+      padding: 30px 0;
+    }
+
+    .blankContent {
+      padding: 30px 0;
+    }
+
+    .second {
+      // min-height: 720px;
+      .imgWrapper {
+        overflow: hidden;
+        max-height: 720px;
+
+        &::before {
+          content: "";
+          background-size: cover;
+          right: 0;
+        }
+
+        .parallaxFallback {
+          left: 0;
+          width: 100%;
+          background-size: cover;
+        }
+
+        .secondContainer {
+          padding: 0;
+          .howItWorksSection {
+            position: relative;
+            padding: 1rem;
+            background-color: rgba(249, 249, 249, 0.6705882353);
+            overflow: hidden;
+            max-width: none;
+            height: 100vh;
+            width: 100%;
+            padding-top: 21vw;
+
+            align-items: flex-start;
+
+            h2 {
+              background-image: none;
+            }
+
+            .shapes {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    .projectResults {
+      .wrapper {
+        .shapes {
+          .circle {
+            width: 37.88vw;
+            height: 37.88vw;
+          }
+
+          .triangle {
+            border-left: 18.18vw solid transparent;
+            border-right: 18.18vw solid transparent;
+            border-bottom: 30.3vw solid rgba(214, 220, 236, 0.9);
+          }
+
+          .square {
+            width: 90.91vw;
+            height: 26.52vw;
+          }
+        }
+      }
+    }
+    // .imageWrapper {
+    //   img {
+    //     max-width: 400px;
+    //   }
+    // }
+
+    .ctaBlock {
+      max-width: 1200px;
+      padding: 0 20px;
+      margin: 30px auto;
+    }
+  }
+}
+
+@media (max-width: 569px) {
+  .socialTaxiWrapper {
+    .title {
+      h1 {
+        max-width: 415px;
+      }
+    }
+
+    .projectResults {
+      .wrapper {
+        .shapes {
+          .circle {
+            top: 430px;
+            left: 46%;
+          }
+
+          .triangle {
+            top: 740px;
+            left: 55%;
+          }
+
+          .square {
+            top: 500px;
+            left: 0%;
+          }
+        }
+      }
+    }
+  }
+}

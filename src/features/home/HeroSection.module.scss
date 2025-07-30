@@ -1,0 +1,174 @@
+.heroWrapper {
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+  height: var(--vh);
+  min-height: 750px;
+  max-height: 1000px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+
+  &.backgroundLoaded {
+    opacity: 1;
+  }
+
+  /* Hero Content Animation */
+  .heroContent {
+    width: 42rem;
+
+    text-align: start;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition:
+      transform 1s ease-out,
+      opacity 1s ease-out,
+      margin-top 0.7s ease-in-out;
+    // color: #143518;
+
+    h1 {
+      width: 30rem;
+      font-weight: 700;
+    }
+
+    p {
+      font-weight: 400;
+      text-transform: uppercase;
+      margin: 20px 0 0;
+    }
+
+    a {
+      text-decoration: underline;
+      margin: 25px 0 0;
+      display: block;
+    }
+  }
+
+  .bgImage {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 70%;
+    height: var(--vh);
+    max-height: 1000px;
+    background:
+      linear-gradient(to right, #fff, rgba(151, 92, 191, 0)),
+      url("/assets/images/hero-bg.jpg") center / cover no-repeat;
+    z-index: -1;
+  }
+}
+
+@media (max-width: 1200px) {
+  .heroWrapper {
+    .heroContent {
+      margin-top: 400px;
+
+      h1 {
+        width: 25rem;
+      }
+      p {
+        width: 30rem;
+        margin: 15px 0 0;
+      }
+      a {
+        width: 14rem;
+        margin: 20px 0 0;
+      }
+    }
+
+    .bgImage {
+      width: 85%;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .heroWrapper {
+    .heroContent {
+      h1 {
+        width: 25rem;
+      }
+
+      p {
+        width: 30rem;
+        margin: 15px 0 0;
+      }
+      a {
+        width: 13rem;
+        margin: 20px 0 0;
+      }
+    }
+
+    &.bgImage {
+      width: 85%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .heroWrapper {
+    .heroContent {
+      h1 {
+        background: #aacfaa;
+        -webkit-text-fill-color: #143518;
+        width: 292px;
+        margin: 0;
+        padding: 0 3px 0.5rem;
+      }
+
+      p {
+        max-width: 317px;
+        background: #aacfaa;
+        margin: 0;
+        padding: 0 3px;
+      }
+
+      a {
+        background: #aacfaa;
+        width: 179px;
+        margin: 0;
+        padding: 0px 3px 0;
+      }
+    }
+    .bgImage {
+      width: 100%;
+      background:
+        linear-gradient(60deg, #fff 0%, rgba(151, 92, 191, 0) 0%),
+        url("/assets/images/hero-bg-mobile.jpg") center / cover no-repeat;
+
+      background-position: 28%;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .heroWrapper {
+    .heroContent {
+      margin-top: 450px;
+    }
+  }
+}
+
+.fadeInLeft {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition:
+    transform 1s ease-out,
+    opacity 1s ease-out;
+
+  /* Visible class added by JS */
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.textDelay {
+  transition-delay: 0.3s;
+}
+
+.linkDelay {
+  transition-delay: 0.6s;
+}

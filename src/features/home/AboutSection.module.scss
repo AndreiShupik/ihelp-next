@@ -1,0 +1,427 @@
+.about {
+  position: relative;
+  padding: 80px 50px;
+  text-align: center;
+  overflow: hidden;
+
+  .aboutWrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .description {
+      max-width: 1148px;
+      margin-bottom: 4.5rem;
+    }
+
+    h2 {
+      position: relative;
+      margin-bottom: 3.5rem;
+    }
+  }
+
+  .aboutContainer {
+    margin: 0 auto;
+    max-width: 1199px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vw;
+
+    .aboutBlock {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      gap: 1.35rem;
+
+      .contentBlock {
+        position: relative;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.7vw;
+        // background: #fff;
+        // box-shadow: -5px 5px 8px 2px rgba(34, 60, 80, 0.2);
+
+        h3 {
+          font-size: 25px;
+
+          background-color: #22aeff;
+          background-image: none;
+        }
+
+        p {
+          font-size: 20px;
+          color: #000;
+          padding: 8.6px 8.6px 8.6px 0;
+          text-align: start;
+        }
+
+        a {
+          font-size: 17px;
+          color: #878787;
+          text-decoration: underline;
+        }
+      }
+
+      .imgBlock {
+        width: 50%;
+        img {
+          border-radius: 15px 100px;
+          width: 100%;
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 450px;
+        height: 450px;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+      }
+    }
+
+    .firstBlock {
+      .imgBlock {
+        float: right;
+
+        img {
+          border-radius: 0 15px 100px 15px;
+        }
+      }
+
+      .contentBlock {
+        top: 90px;
+        left: 40px;
+      }
+
+      p {
+        top: 15%;
+        right: 42%;
+      }
+
+      &::before {
+        top: 30.6%;
+        left: 50%;
+        background: rgb(193 239 233 / 90%);
+      }
+    }
+
+    .secondBlock {
+      .imgBlock {
+        margin-top: -350px;
+
+        img {
+          border-radius: 100px 15px 0 15px;
+        }
+      }
+
+      .contentBlock {
+        top: 0;
+        right: 13px;
+        // box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+      }
+
+      &::before {
+        top: 41.5%;
+        left: 49%;
+        background: rgb(214 220 236 / 90%);
+      }
+    }
+
+    .thirdBlock {
+      .imgBlock {
+        margin-top: -175px;
+      }
+
+      .contentBlock {
+        top: 90px;
+        left: 27px;
+      }
+
+      &::before {
+        left: 50%;
+        top: 33.5%;
+        background: rgb(255 251 206 / 90%);
+      }
+    }
+  }
+}
+
+@media (max-width: 1312px) {
+  .about {
+    .aboutWrapper {
+      .aboutContainer {
+        .aboutBlock {
+          h3 {
+            font-size: 1.9vw;
+          }
+
+          p {
+            font-size: 1.525vw;
+            padding: 0.7vw 0.7vw 0.7vw 0;
+          }
+          a {
+            font-size: 1.3vw;
+          }
+          &::before {
+            width: 34.1vw;
+            height: 34.1vw;
+          }
+        }
+        .firstBlock {
+          .contentBlock {
+            top: 6.85vw;
+            left: 3.05vw;
+          }
+
+          &::before {
+            top: 17vw;
+            left: 45.59vw;
+          }
+        }
+
+        .secondBlock {
+          .imgBlock {
+            margin-top: -26.7vw;
+          }
+          .contentBlock {
+            top: 0vw;
+            right: 1vw;
+          }
+
+          &::before {
+            top: 12.15vw;
+            left: 44.7vw;
+          }
+        }
+
+        .thirdBlock {
+          .imgBlock {
+            margin-top: -13.3vw;
+          }
+          .contentBlock {
+            top: 6.85vw;
+            left: 2.05vw;
+          }
+
+          &::before {
+            top: 14.3vw;
+            left: 45.65vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .about {
+    .aboutWrapper {
+      .aboutContainer {
+        .aboutBlock {
+          .contentBlock {
+            position: absolute;
+            padding: 1.1vw;
+            z-index: 1;
+
+            h3 {
+              text-align: start;
+              font-size: 3vw;
+              line-height: 3.5vw;
+            }
+
+            p {
+              font-size: 2.5vw;
+              line-height: 3.3vw;
+              padding: 1.75vw 1.75vw 1.75vw 0;
+            }
+            a {
+              font-size: 2.2vw;
+            }
+          }
+          .imgBlock {
+            width: 75%;
+          }
+
+          &::before {
+            width: 45vw;
+            height: 45vw;
+            z-index: 1;
+            background: #fff;
+          }
+        }
+        .firstBlock {
+          .contentBlock {
+            left: 2vw;
+            top: 6vw;
+
+            p {
+              margin-right: 6px;
+            }
+          }
+
+          &::before {
+            top: 21.9vw;
+            left: 17.59vw;
+          }
+        }
+
+        .firstBlock.aboutBlock,
+        .thirdBlock.aboutBlock {
+          justify-content: flex-end;
+        }
+
+        .secondBlock {
+          .imgBlock {
+            margin-top: -10.45vw;
+          }
+          .contentBlock {
+            top: 21vw;
+            right: -11vw;
+
+            p {
+              margin-right: 2.6vw;
+            }
+          }
+
+          &::before {
+            top: 36.15vw;
+            left: 68.7vw;
+          }
+        }
+
+        .thirdBlock {
+          .imgBlock {
+            margin-top: -10.45vw;
+          }
+          .contentBlock {
+            top: 16vw;
+            left: 0vw;
+
+            h3 {
+              margin-right: 3vw;
+            }
+
+            p {
+              margin-right: 3vw;
+            }
+          }
+
+          &::before {
+            top: 33vw;
+            left: 17vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .about {
+    .aboutWrapper {
+      .description {
+        margin-bottom: 3rem;
+      }
+      h2 {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .about {
+    padding: 50px 15px;
+
+    .aboutWrapper {
+      .aboutContainer {
+        gap: 1.35rem;
+        .aboutBlock {
+          flex-direction: column;
+          gap: 0;
+          box-shadow: -5px 5px 8px 2px rgba(34, 60, 80, 0.2);
+          .contentBlock {
+            order: 1;
+            position: relative;
+            width: 100%;
+            border-radius: 0;
+            padding: 0.5rem 0.5rem 0.5rem 1rem;
+            box-shadow: none;
+
+            h3 {
+              // font-size: 1.5rem;
+              // line-height: 1.6rem;
+              margin-top: 0.5rem;
+
+              font-size: 1.25rem; /* 20px */
+              line-height: 1.75rem;
+            }
+
+            p {
+              // font-size: 1.2rem;
+              // line-height: 1.4rem;
+              padding: 1rem 0 0.5rem;
+
+              font-size: 1rem; /* Same as body text */
+              line-height: 1.5rem;
+            }
+            a {
+              // font-size: 1rem;
+              margin-bottom: 0.5rem;
+
+              font-size: 0.875rem; /* 14px, slightly smaller than paragraph */
+              line-height: 1.4rem;
+            }
+          }
+          .imgBlock {
+            order: 0;
+            width: 100%;
+            img {
+              border-radius: 0;
+            }
+          }
+        }
+
+        .firstBlock.aboutBlock,
+        .secondBlock.aboutBlock,
+        .thirdBlock.aboutBlock {
+          .imgBlock {
+            margin-top: 0;
+          }
+          .contentBlock {
+            top: 0;
+            left: 0;
+          }
+        }
+
+        .firstBlock {
+          &::before {
+            top: 119.9vw;
+            left: 22.59vw;
+            background: rgb(193 239 233 / 90%);
+          }
+        }
+
+        .secondBlock {
+          &::before {
+            top: 119.15vw;
+            left: 63.7vw;
+            background: rgb(214 220 236 / 90%);
+          }
+        }
+
+        .thirdBlock {
+          &::before {
+            top: 119vw;
+            left: 45vw;
+            background: rgb(255 251 206 / 90%);
+          }
+        }
+      }
+    }
+  }
+}

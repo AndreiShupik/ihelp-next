@@ -1,0 +1,26 @@
+@use "../../../../../scss/abstracts/variables";
+@use "../../../../../scss/base/typography";
+
+.mainNavigation {
+  flex: 31% 0;
+
+  .mainNavigation__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+
+    .mainNavigation__item {
+      .mainNavigation__link {
+        font-size: typography.$font-size-base;
+        &:hover {
+          color: variables.$color-buttons; /* Color on hover */
+        }
+
+        &.active {
+          pointer-events: none;
+          border-bottom: 1px solid variables.$color-text-primary;
+        }
+      }
+    }
+  }
+}

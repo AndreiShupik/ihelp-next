@@ -1,0 +1,244 @@
+.headerWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background: #143518;
+  background: #58b764;
+}
+
+.navBlock ul a {
+  display: block;
+  color: #fff;
+
+  &:hover {
+    color: #aacfaa;
+  }
+}
+
+.headerContainer {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  margin: 0 auto;
+  padding: 10px 20px;
+
+  .logoContainer {
+    z-index: 3;
+
+    a {
+      display: inline-block;
+      width: 100px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .userBlock {
+    display: flex;
+    gap: 1rem;
+
+    @media (max-width: 575px) {
+      gap: 0.3rem;
+    }
+  }
+}
+
+/* Mobile (Hamburger Menu) */
+.materialMenuWrapper {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 95.8vh;
+  width: 40vw;
+  min-width: 320px;
+  overflow: hidden;
+  // ❌ Remove pointer events to avoid unwanted closing
+  pointer-events: none;
+
+  .materialMenu {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+
+    .materialBtn {
+      will-change: transform;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: absolute;
+      z-index: 2;
+      bottom: 20px;
+      right: 5px;
+      width: 75px;
+      height: 75px;
+      background: transparent;
+      cursor: pointer;
+      pointer-events: auto; // ✅ Allow clicks inside the menu
+      // background: #143518;
+
+      &.opened {
+        &:before {
+          // background: #143518;
+          transform: scale(23);
+
+          @media (min-height: 768px) {
+            transform: scale(28);
+          }
+        }
+      }
+
+      &:opened {
+        &:before {
+          opacity: 0.75;
+        }
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 75px;
+        height: 75px;
+        background: #58b764;
+        border-radius: 50%;
+        box-shadow: 0 5px 10px rgba(black, 0.5);
+        cursor: pointer;
+        transform-origin: center 70%;
+        transform: scale(1);
+        transition: all 0.35s ease-out;
+        // ❌ Remove pointer events to avoid unwanted closing
+        pointer-events: none;
+      }
+    }
+
+    .materialContent {
+      padding: 50px 20px 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      &.opened {
+        z-index: 2;
+      }
+
+      .navBlock {
+        transition: none;
+        ul {
+          text-align: right;
+        }
+
+        a {
+          opacity: 0;
+          font-size: 5vw;
+          font-weight: 300;
+          // margin: 2.5vw 0;
+          margin: 5vw 0;
+          will-change: transform, opacity;
+          transform: translateY(100px);
+          // 🛑 When menu is closed, hide `a` instantly
+          transition: none;
+
+          &.opened {
+            pointer-events: auto; // ✅ Allow clicks inside the menu
+            transition: all 0.4s ease-out;
+            transform: translateY(0);
+            opacity: 1;
+          }
+
+          &.active {
+            pointer-events: none;
+            color: #aacfaa;
+          }
+
+          @media (max-width: 575px) {
+            font-size: 28.7px;
+          }
+        }
+
+        @for $i from 1 through 4 {
+          li:nth-child(#{$i}) {
+            transition-delay: $i * 0.1s;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 993px) {
+    display: none;
+  }
+}
+
+.materialHamburger {
+  transition: all 0.3s ease-out;
+
+  &:hover .materialPatty {
+    background: #aacfaa;
+  }
+
+  .materialPatty {
+    will-change: transform, opacity;
+    width: 32px;
+    height: 3px;
+    margin: 0 0 6px 0;
+    background: #fff;
+    opacity: 1;
+    transform: translate(0) rotate(0deg);
+    transition: all 0.2s ease-out;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &.materialClose {
+    transform: rotate(-180deg);
+
+    .materialPatty:nth-child(1) {
+      transform: translate(-10px, 4px) rotate(-45deg) scale(0.5, 1);
+    }
+
+    .materialPatty:nth-child(3) {
+      transform: translate(-10px, -4px) rotate(45deg) scale(0.5, 1);
+    }
+  }
+}
+
+/* Desktop Menu (Hidden on Mobile) */
+.desktopMenu {
+  ul {
+    display: flex;
+
+    a {
+      // font-size: 20px;
+      font-weight: bold;
+      margin: 0 15px;
+      transition: all 0.3s ease-out;
+
+      &.active {
+        pointer-events: none;
+        color: #aacfaa;
+      }
+
+      @media (max-width: 1200px) {
+        // font-size: 16px;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    display: none;
+  }
+}

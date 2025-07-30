@@ -1,0 +1,111 @@
+.aboutHero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: url("/assets/images/about-overcome.jpg");
+  /* Make it cover the screen or a desired area */
+  //   min-height: 100vh;
+  height: 800px;
+
+  /* Background image settings */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .content {
+    position: relative;
+    z-index: 1;
+
+    /* Left-aligned text area */
+    width: 1200px;
+    padding: 20px;
+    margin: 100px auto 0;
+    transition: margin-top 0.7s ease-in-out;
+
+    .container {
+      max-width: 600px;
+      h2 {
+        background-image: none;
+        -webkit-text-fill-color: #fff;
+        background-color: #fff;
+        margin-bottom: 0.3rem;
+        text-shadow:
+          #000 0px 0px 5px,
+          #aacfaa 0px 0px 10px,
+          #000 0px 0px 20px,
+          #000 0px 0px 40px,
+          #000000 0px 0px 80px;
+      }
+
+      // .short {
+      //   color: #fff;
+      //   font-size: 0.9em;
+      //   max-width: 425px;
+      //   text-shadow:
+      //     #000 0px 0px 5px,
+      //     #aacfaa 0px 0px 10px,
+      //     #000 0px 0px 20px,
+      //     #000 0px 0px 40px,
+      //     #000000 0px 0px 80px;
+      // }
+
+      .short {
+        color: #fff;
+        font-style: italic;
+        font-size: 0.9em;
+        max-width: 425px;
+        text-shadow:
+          #000 0px 0px 5px,
+          #aacfaa 0px 0px 10px,
+          #000 0px 0px 20px,
+          #000 0px 0px 40px,
+          #000000 0px 0px 80px;
+      }
+
+      p {
+        color: #fff;
+        text-shadow:
+          #000 0px 0px 5px,
+          #aacfaa 0px 0px 10px,
+          #000 0px 0px 20px,
+          #000 0px 0px 40px,
+          #000000 0px 0px 80px;
+      }
+
+      p:first-of-type {
+        margin: 1.5rem 0 1rem;
+      }
+    }
+  }
+
+  /* Optional overlay for better text contrast */
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutHero {
+    .content {
+      // margin-top: 165px;
+      margin-top: 235px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .aboutHero {
+    background-position: 54% center;
+    .content {
+      .container {
+        h2 {
+          width: 275px;
+        }
+      }
+    }
+  }
+}

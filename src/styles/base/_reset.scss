@@ -1,0 +1,95 @@
+/* 1. Remove default margin and padding for all elements */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Include border and padding in element's width/height */
+}
+
+/* 2. Set a consistent line-height and font-inheritance */
+html {
+  line-height: 1.5rem;
+  font-family: sans-serif; /* Set a base font family */
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling in Safari */
+}
+
+/* 3. Remove list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 4. Remove default link styles */
+a {
+  text-decoration: none;
+  color: inherit; /* Inherit text color */
+}
+
+/* 5. Set image styles */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* 6. Reset table styles */
+table {
+  border-collapse: collapse; /* Prevent double borders */
+  border-spacing: 0;
+  width: 100%;
+}
+
+/* 7. Reset button and input styles */
+button,
+input,
+textarea,
+select {
+  font: inherit; /* Inherit font from parent */
+  border: none; /* Remove default borders */
+  background: none; /* Remove default background */
+  color: inherit; /* Inherit text color */
+  padding: 0; /* Remove default padding */
+}
+
+/* 8. Set box-sizing for input elements */
+textarea {
+  resize: none; /* Disable resizing */
+}
+
+/* 9. Remove default quote styles */
+blockquote,
+q {
+  quotes: none; /* Remove quotation marks */
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+}
+
+/* 10. Set consistent border styles */
+fieldset {
+  border: none;
+}
+
+/* 11. Ensure consistent height for iframes */
+iframe {
+  border: none;
+}
+
+/* 12. Reset vertical alignment */
+img,
+svg,
+button,
+input {
+  vertical-align: middle;
+}
+
+/* 13. Add focus outline for accessibility */
+:focus {
+  outline: none;
+}

@@ -1,0 +1,104 @@
+@use "../../../styles/abstracts/variables";
+
+@use "../../../styles/base/base";
+@use "../../../styles/base/typography";
+
+.footerBlock {
+  background-color: #143518;
+  width: 100%;
+
+  .container {
+    max-width: 1200px;
+    color: variables.$color-text-secondary;
+    margin: 0 auto;
+    padding: 80px 10px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+
+    .mainBlock {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+
+      h4 {
+        font-size: typography.$font-size-lg;
+        margin-bottom: 15px;
+        background-image: none;
+        color: #64d172;
+      }
+
+      .supportBlock,
+      .accountBlock,
+      .quickLinksBlock {
+        flex: 1 1 calc(20% - 20px);
+        min-width: 200px;
+        margin-bottom: 20px;
+        color: #fff;
+
+        p {
+          font-size: 1.25rem;
+          line-height: 1.7rem;
+          color: #fff;
+          margin: 15px 0;
+
+          a {
+            font-size: 1.25rem;
+            line-height: 1.7rem;
+          }
+        }
+
+        .menu {
+          margin-top: -5px;
+          li {
+            margin: 15px 0;
+            line-height: 30px;
+
+            a {
+              font-size: 1.25rem;
+              line-height: 1.7rem;
+              &:hover {
+                color: #aacfaa;
+              }
+
+              &.active {
+                pointer-events: none;
+                color: #aacfaa;
+              }
+            }
+          }
+        }
+      }
+
+      // .accountBlock,
+      // .quickLinksBlock {
+      //   margin-left: 50px;
+      // }
+    }
+  }
+}
+
+// @media (max-width: 1200px) {
+//   .footerBlock {
+//     .container {
+//       .mainBlock {
+//         .accountBlock,
+//         .quickLinksBlock {
+//           margin-left: 0;
+//         }
+//       }
+//     }
+//   }
+// }
+
+@media (max-width: 464px) {
+  .footerBlock {
+    .container {
+      .mainBlock {
+        margin: -10px 0 50px;
+      }
+    }
+  }
+}

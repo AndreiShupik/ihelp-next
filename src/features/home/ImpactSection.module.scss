@@ -1,0 +1,159 @@
+.impact {
+  padding: 50px 0 25px;
+  // width: 100vw;
+  background: rgba(193, 239, 233, 0.9);
+  .impactContainer {
+    max-width: 1205px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    .impactTextContainer {
+      h3 {
+        width: 25rem;
+        font-size: 4rem;
+        line-height: 4rem;
+      }
+
+      hr {
+        display: block;
+        background: #58b764;
+        height: 0.25rem;
+        width: 6.25rem;
+        border: none;
+        margin: 1.125rem 0 1.875rem 0;
+      }
+
+      p {
+        width: 35rem;
+        // font-size: 1.375rem;
+        // line-height: 1.5rem;
+        // font-style: italic;
+      }
+
+      .btnContainer {
+        margin-top: 2.5rem;
+        width: 100%;
+      }
+    }
+
+    .impactStatistic {
+      dt {
+        color: #22aeff;
+        font-size: 5.625rem;
+        line-height: 90px;
+        font-weight: 700;
+      }
+
+      dd {
+        color: #878787;
+        font-size: 1.125rem;
+        line-height: 30px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .impact {
+    .impactContainer {
+      max-width: 730px;
+      gap: 3rem;
+      padding: 0;
+      .impactTextContainer {
+        h3 {
+          width: 15rem;
+          font-size: 2.25rem;
+          line-height: 2.5rem;
+        }
+
+        p {
+          width: 22rem;
+          // font-size: 1.2rem;
+          // line-height: 1.4rem;
+        }
+
+        .btnContainer {
+          width: 22.7rem;
+        }
+      }
+
+      .impactStatistic {
+        dt {
+          font-size: 4.375rem;
+          line-height: 70px;
+        }
+
+        dd {
+          font-size: 0.925rem;
+          line-height: 30px;
+          margin-bottom: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .impact {
+    width: auto;
+    padding: 30px 0 15px;
+    .impactContainer {
+      width: 85%;
+      flex-direction: column;
+      margin: 0 20px;
+      .impactTextContainer {
+        h3 {
+          width: 100%;
+          // font-size: 1.5rem;
+          line-height: 1.7rem;
+          margin: 10px 0;
+        }
+
+        hr {
+          margin: 0.5rem 0 1.2rem 0;
+        }
+
+        p {
+          width: 100%;
+          // font-size: 1rem;
+          // line-height: 20px;
+        }
+
+        .btnContainer {
+          width: auto;
+          margin-top: 1.5rem;
+        }
+      }
+
+      .impactStatistic {
+        width: 100%;
+
+        dt {
+          color: #22aeff;
+          font-size: 2.5rem;
+          line-height: 2.7rem;
+          font-weight: 700;
+        }
+
+        dd {
+          color: #676767;
+          font-size: 0.8rem;
+          line-height: 15px;
+          margin-bottom: 15px;
+        }
+      }
+
+      .btnContainer {
+        width: 100%;
+        margin-top: 35px;
+
+        a {
+          font-size: 14px;
+          padding: 10px 15px;
+        }
+      }
+    }
+  }
+}

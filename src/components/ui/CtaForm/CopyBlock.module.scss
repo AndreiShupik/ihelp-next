@@ -1,0 +1,38 @@
+.copyBlock {
+  display: flex;
+
+  span {
+    padding-top: 2px;
+  }
+
+  .copyIcon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .copyBlock {
+    span {
+      padding-top: 5px;
+    }
+    .copyIcon {
+      width: 25px;
+      height: 25px;
+      margin-top: 5px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .copyBlock {
+    span {
+      padding-top: 10px;
+    }
+    .copyIcon {
+      width: 25px;
+      height: 25px;
+      margin-top: 7px;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About Us",
+    "projects": "Our Projects",
+    "contact": "Contact"
+  },
+  "footer": {
+    "contactInfo": "Contact Information",
+    "phone": "Phone:",
+    "address": "Address: Kyiv, Ukraine",
+    "quickLinks": "Quick Links",
+    "home": "Home",
+    "about": "About Us",
+    "projects": "Our Projects",
+    "contact": "Contact",
+    "legal": "Legal Information",
+    "privacyPolicy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "followUs": "Follow us on social media"
+  },
+  "meta": {
+    "about": {
+      "title": "About Us | iHELP",
+      "description": "We support Ukraine during tough times. Learn about our mission and how you can help."
+    },
+    "home": {
+      "title": "Home | iHELP",
+      "description": "Welcome to iHELP. Discover our projects and ways to get involved."
+    }
+  }
+}

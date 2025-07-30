@@ -1,0 +1,182 @@
+/*---------------------*/
+/*---------------------*/
+/*---------------------*/
+
+.parallaxBlock {
+  position: relative;
+  // height: 100vh;
+  height: var(--vh);
+  max-height: 1000px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  z-index: 1;
+}
+
+/* Parallax layers */
+.parallaxOuter {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.parallaxInner {
+  position: absolute;
+  // inset: -55% 0; // extra height prevents visual gaps during scroll
+  // inset: -60% 0; // extra height prevents visual gaps during scroll
+  inset: -63% 0; // extra height prevents visual gaps during scroll
+  will-change: transform;
+  background-color: #141414;
+}
+
+.backgroundImage {
+  position: absolute;
+  margin-top: 490px;
+  inset: 0;
+
+  background: url("/assets/images/aid-for-ukraine.jpg") center / cover no-repeat;
+  opacity: 0.7;
+  // background-color: #141414;
+}
+
+.parallaxInner,
+.textContainer {
+  will-change: transform;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+/* Text */
+.textContainer {
+  // padding: -100px 0 0 15px;
+  padding-left: 20px;
+  position: relative;
+  z-index: 2;
+  width: 1200px;
+  margin: 150px auto 0;
+  text-align: start;
+  text-shadow:
+    #000 0px 0px 5px,
+    #aacfaa 0px 0px 10px,
+    #000 0px 0px 20px,
+    #000 0px 0px 40px,
+    #000000 0px 0px 80px;
+
+  h2 {
+    // font-size: 2.5rem;
+    // margin-bottom: 1rem;
+    -webkit-text-fill-color: #fff;
+  }
+
+  p {
+    // font-size: 1.2rem;
+    // margin-bottom: 2rem;
+    background-color: none;
+    background-image: none;
+    -webkit-text-fill-color: #fff;
+  }
+
+  .btnsBlock {
+    margin-top: 1rem;
+    width: 460px;
+    display: flex;
+    flex-wrap: wrap;
+    text-shadow: none;
+  }
+
+  .buttons {
+    margin: 0 10px 10px 0;
+
+    button {
+      padding: 0.8rem 1.5rem;
+      margin: 0.5rem 0.5rem 0.5rem 0;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      background: #fffbce;
+      font-weight: bold;
+
+      // &:hover {
+      //   background: #aacfaa;
+      // }
+    }
+
+    .mainBtn {
+      // background-color: #007bff;
+      color: #143518;
+    }
+
+    .secondaryBtn {
+      // background-color: #28a745;
+      color: #143518;
+    }
+
+    .partnerBtn {
+      // background-color: #6c757d;
+      color: #143518;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .textContainer {
+    // padding: -100px 0 0 15px;
+    padding-left: 0;
+    margin-left: -15px;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .parallaxBlock {
+    padding: 1rem;
+  }
+  .backgroundImage {
+    position: absolute;
+    margin-top: 300px;
+  }
+
+  .textContainer {
+    margin-left: 0;
+    h2 {
+      font-size: 2rem;
+      width: 285px;
+    }
+
+    p {
+      font-size: 16px;
+      width: 300px;
+    }
+
+    .buttons {
+      button {
+        // padding: 0.6rem 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .textContainer {
+    h2 {
+      font-size: 1.8rem;
+    }
+    .btnsBlock {
+      // width: 385px;
+    }
+  }
+
+  .buttons {
+    .secondaryBtn,
+    .partnerBtn {
+      // width: 186px;
+    }
+  }
+}
+
+/*---------------------*/
+/*---------------------*/
+/*---------------------*/

@@ -1,0 +1,191 @@
+.accordion {
+  --circle-x: 1.8rem;
+  --circle-y: 0;
+  --circle-r: 200%;
+  background-color: var(--circle-bg);
+  margin-bottom: 1rem;
+  border-radius: min(8px, 0.5rem);
+  display: grid;
+  grid-template-rows: 0fr 0fr;
+  transition-timing-function: var(--slide-ease);
+  transition-duration: 200ms, 200ms, var(--slide-duration);
+  transition-property: opacity, box-shadow, grid-template-rows;
+  transition-delay: 0ms, 0ms, var(--slide-delay);
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+  opacity: 0.9;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 90%;
+    right: -1.5rem;
+    width: 11rem;
+    height: 11rem;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+    transition:
+      transform 0.6s ease,
+      opacity 0.6s ease;
+    z-index: -1;
+  }
+
+  &.open::before {
+    transform: translateY(-150%);
+    opacity: 0;
+  }
+
+  // Color variants using nth-of-type
+  &:nth-of-type(1)::before {
+    background-color: rgba(193, 239, 233, 0.9);
+  }
+
+  &:nth-of-type(2)::before {
+    background-color: rgba(214, 220, 236, 0.9);
+  }
+
+  &:nth-of-type(3)::before {
+    background-color: rgba(255, 251, 206, 0.9);
+  }
+
+  h3 {
+    background-image: none;
+  }
+}
+
+.accordion:active {
+  opacity: 1;
+  box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.3);
+}
+
+.accordion.open {
+  --d: 90deg;
+  grid-template-rows: 0fr 1fr;
+  transition: grid-template-rows var(--slide-ease) var(--slide-duration) var(--slide-delay);
+}
+
+.title {
+  margin: 0;
+}
+
+.toggleBtn {
+  text-align: start;
+  padding: 1rem 1.25rem;
+  font-weight: 800;
+  color: currentColor;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.toggleBtn::before {
+  --chevron-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath fill='white' d='M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z'/%3E%3C/svg%3E");
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  aspect-ratio: 320 / 512;
+  display: inline-block;
+  margin-right: 0.75rem;
+  transform: rotate(var(--d, 0deg));
+  transition: transform var(--slide-ease) var(--slide-duration) var(--slide-delay);
+  mask-image: var(--chevron-icon);
+  mask-size: 100% 100%;
+  -webkit-mask-image: var(--chevron-icon);
+  -webkit-mask-size: 100% 100%;
+  background-color: currentColor;
+}
+
+.accordion.open .toggleBtn::before {
+  transform: rotate(90deg);
+}
+
+.content {
+  line-height: 140%;
+  overflow: hidden;
+}
+
+.content p {
+  margin-bottom: 1rem;
+}
+
+.content a {
+  color: currentColor;
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+.content :last-child {
+  margin-bottom: 0;
+}
+
+.wrapper {
+  padding-block: 0 1.05rem;
+  padding-inline: 1.25rem;
+}
+
+@media (max-width: 599px) {
+  .accordion {
+    &::before {
+      top: 25%;
+    }
+  }
+}
+// .accordion::before,
+// .accordion::after {
+//   content: "";
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   // background-color: var(--circle-bg);
+//   // mix-blend-mode: difference;
+//   transform-style: preserve-3d;
+//   transition-timing-function: ease;
+//   transition-property: opacity, clip-path, visibility;
+//   pointer-events: none;
+//   clip-path: circle(var(--r) at var(--circle-x) var(--circle-y));
+//   border-radius: inherit;
+//   z-index: 4;
+// }
+
+// .accordion::before {
+//   --r: 0%;
+//   transition-delay: var(--circle-duration), var(--circle-duration), 0ms;
+//   transition-duration: 0ms, var(--circle-duration), 0ms;
+//   opacity: 0;
+// }
+
+// .accordion.open::before {
+//   --r: var(--circle-r);
+//   transition-delay: 0ms, 0ms, 0ms;
+//   transition-duration: 0ms, var(--circle-duration), 0ms;
+//   opacity: 1;
+// }
+
+// .accordion::after {
+//   --r: var(--circle-r);
+//   transition-delay: 0ms, 0ms, var(--circle-duration);
+//   transition-duration: 0ms, var(--circle-duration), 0ms;
+//   visibility: hidden;
+//   opacity: 1;
+// }
+
+// .accordion.open::after {
+//   --r: 0%;
+//   transition-delay: 0ms, 0ms, 0ms;
+//   transition-duration: 0ms, 0ms, 0ms;
+//   visibility: visible;
+//   opacity: 0;
+// }
+
+// .toggleBtn:focus-visible {
+//   background-color: hsl(0, 100%, 90%);
+//   outline: none;
+// }
+
+// .accordion.open .toggleBtn:focus-visible {
+//   background-color: hsl(183, 100%, 93%);
+// }

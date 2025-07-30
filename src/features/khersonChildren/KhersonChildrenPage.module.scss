@@ -1,0 +1,589 @@
+// @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap");
+
+// :root {
+//   --color: #333;
+// }
+
+.khersonChildrenWrapper {
+  position: relative;
+  min-height: var(--vh);
+  overflow: hidden;
+
+  .fixBgWrapper {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 2000px; // or whatever constraint you want
+    height: var(--vh);
+    max-height: 1000px;
+    z-index: -1;
+    overflow: hidden;
+
+    .parallaxBg {
+      width: 100%;
+      height: 100%;
+      // z-index: -1;
+
+      background-image: url("/assets/images/kherson-children-main.jpg");
+      background-size: cover;
+      background-position: 46% 0;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .khersonChildrenContainer {
+    text-align: center;
+    width: 100%;
+    height: var(--vh);
+    max-height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; // Optional, center content
+    padding-top: 650px; // Adjust if needed
+    position: relative;
+    z-index: 1;
+
+    .title {
+      width: 100%;
+      max-width: 1200px;
+      padding: 0 20px;
+      text-align: start;
+      margin: 0 auto;
+
+      h1 {
+        font-weight: 700;
+        width: 400px;
+        margin-bottom: 0;
+      }
+
+      h2 {
+        width: 350px;
+      }
+
+      h1,
+      h2 {
+        -webkit-text-fill-color: #143518;
+        background: #fffbce;
+        width: fit-content;
+        padding: 3px 10px;
+      }
+    }
+  }
+
+  .backgroundWrapper {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 50px 0;
+  }
+
+  .blankContent {
+    width: 100%;
+    padding: 50px 0;
+    background: #ffffff;
+    .blankContainer {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+
+      h3 {
+        margin: 0 0 1rem 0;
+      }
+
+      p:nth-child(3) {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  .second {
+    position: relative; // required for absolute positioning inside
+    padding-top: 0;
+    overflow: hidden; // optional, prevents overflow from ::before
+    background: #fff;
+
+    .imgWrapper {
+      position: relative;
+      width: 100%; // ✅ Make it responsive
+      max-width: 1200px; // ✅ Limit maximum width
+      height: 100%;
+      margin: 0 auto;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -22%;
+        width: 120.3%;
+        height: 100%;
+        background-image: url("/assets/images/girl-gift.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        z-index: -1;
+      }
+
+      .parallaxFallback {
+        // display: none; // default hidden
+        position: absolute;
+        top: 0;
+        left: 20px;
+        width: 120%;
+        height: 100%;
+        z-index: -1;
+        background-image: url("/assets/images/girl-gift.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      // ✅ Default: fallback is hidden
+      // .parallaxFallback {
+      //   display: none;
+      // }
+
+      // body.ios-device & {
+      //   &::before {
+      //     display: none;
+      //   }
+
+      //   .parallaxFallback {
+      //     position: absolute;
+      //     top: 0;
+      //     left: 20px;
+      //     width: 120%;
+      //     height: 100%;
+      //     z-index: -1;
+      //     background-image: url("/assets/images/girl-gift.jpg");
+      //     // background-size: 100.3%;
+      //     background-repeat: no-repeat;
+      //     background-size: cover;
+      //   }
+      // }
+
+      .secondContainer {
+        flex-direction: row;
+        display: flex;
+        justify-content: flex-end;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 0 0 20px;
+
+        /* HowItWorks.module.scss */
+        .howItWorksSection {
+          position: relative;
+          padding: 4rem 2rem;
+          background-color: #f9f9f9ab;
+          overflow: hidden;
+
+          h2,
+          h3 {
+            background-image: none;
+          }
+
+          .shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            pointer-events: none;
+
+            .circle {
+              position: absolute;
+              top: 10%;
+              // right: 5%;
+              left: 5%;
+              width: 200px;
+              height: 200px;
+              background: rgb(193, 239, 233);
+              border-radius: 50%;
+            }
+
+            .triangle {
+              position: absolute;
+              bottom: 35%;
+              left: 15%;
+              width: 0;
+              height: 0;
+              border-left: 180px solid transparent;
+              border-right: 180px solid transparent;
+              border-bottom: 300px solid #fffbce;
+              transform: rotate(20deg);
+            }
+
+            .square {
+              position: absolute;
+              top: 30%;
+              right: 20%;
+              width: 150px;
+              height: 150px;
+              background: rgb(214 220 236);
+              transform: rotate(70deg);
+            }
+          }
+        }
+
+        .contentWrapper {
+          max-width: 600px;
+          margin: 0 auto;
+          position: relative;
+          z-index: 2;
+        }
+
+        .heading {
+          // font-weight: 800;
+          // margin-bottom: 2rem;
+          text-align: start;
+        }
+
+        .block {
+          margin-bottom: 2rem;
+          position: relative;
+          z-index: 2;
+          text-align: start;
+
+          h3 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+          }
+
+          p {
+            margin-bottom: 1rem;
+          }
+
+          ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+
+            li {
+              list-style-type: none;
+              position: relative;
+              padding-left: 1.2rem;
+              margin-bottom: 0.5rem;
+
+              &::before {
+                content: "";
+                background-image: url("/assets/icons/check-mark.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                display: block;
+                height: 20px;
+                left: -5px;
+                position: absolute;
+                top: 0;
+                width: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .projectResults {
+    background: linear-gradient(90deg, rgb(193, 239, 233) 20%, #ffffff 100%);
+    width: 100%;
+
+    .container {
+      max-width: 1200px;
+      padding: 20px 20px;
+      margin: 0 auto;
+
+      .heading {
+        font-weight: 800;
+        margin-bottom: 2rem;
+        // text-align: center;
+      }
+
+      .resultsList {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 1rem;
+
+        li {
+          padding-bottom: 0.5rem;
+          position: relative;
+        }
+      }
+
+      .star {
+        font-size: 1.5rem;
+        margin-right: 0.5rem;
+
+        svg {
+          margin-top: -5px;
+        }
+      }
+    }
+  }
+
+  .howToHelp {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    margin: 0 auto;
+    max-width: 1200px;
+    position: relative;
+    padding: 0 22px;
+    align-items: stretch;
+
+    .textContent {
+      margin-top: 50px;
+      flex: 1;
+      min-width: 280px;
+      position: relative;
+      z-index: 2;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -15vw;
+        width: 300px;
+        height: 241px;
+        background: url("/assets/images/soap-bubbles.png") top left / cover;
+        opacity: 0.5;
+        z-index: 1;
+      }
+
+      .heading {
+        font-weight: 800;
+        margin-bottom: 1rem;
+        position: relative;
+        z-index: 3;
+        display: inline-block;
+      }
+
+      ul {
+        li {
+          list-style-type: none;
+          position: relative;
+          padding-left: 1.2rem;
+          margin-bottom: 0.5rem;
+
+          &::before {
+            content: "";
+            background-image: url("/assets/icons/check-mark.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: block;
+            height: 20px;
+            left: -5px;
+            position: absolute;
+            top: 3px;
+            width: 20px;
+          }
+        }
+      }
+    }
+
+    .imageWrapper {
+      flex: 1;
+      min-width: 280px;
+      position: relative;
+      z-index: 1;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        display: block;
+        height: 100%;
+      }
+    }
+  }
+
+  .ctaBlock {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 50px auto;
+
+    h2 {
+      padding-bottom: 1rem;
+    }
+
+    p:first-of-type {
+      padding-bottom: 1rem;
+    }
+  }
+}
+
+@media (max-width: 1215px) {
+  .khersonChildrenWrapper {
+    .howToHelp {
+      .textContent {
+        &::before {
+          width: 24.69vw;
+          height: 19.83vw;
+        }
+      }
+    }
+
+    .second {
+      .imgWrapper {
+        &::before {
+          content: "";
+          right: 0;
+          width: 100%;
+          background-position: 21px 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .khersonChildrenWrapper {
+    .second {
+      .secondContainer {
+        .howItWorksSection {
+          .shapes {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .khersonChildrenWrapper {
+    .khersonChildrenContainer {
+      .title {
+        position: absolute;
+        bottom: 50px;
+      }
+    }
+    .howToHelp {
+      align-items: center;
+
+      .textContent {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .khersonChildrenWrapper {
+    .backgroundWrapper {
+      padding: 30px 0;
+    }
+
+    .blankContent {
+      padding: 30px 0;
+    }
+    .howToHelp {
+      align-items: flex-start;
+      flex-direction: column;
+
+      .textContent {
+        &::before {
+          // top: -22.7vw;
+          top: -19.7vw;
+          left: 40vw;
+          width: 45.45vw;
+          height: 36.52vw;
+        }
+      }
+    }
+
+    .second {
+      padding-left: 20px;
+      .imgWrapper {
+        overflow: hidden;
+
+        &::before {
+          content: "";
+          right: 0;
+          width: 100%;
+          background-position: -35px 0;
+        }
+
+        .parallaxFallback {
+          // background-position: center;
+          left: 0;
+          width: 100%;
+        }
+
+        // .parallaxFallback {
+        //   width: 100%;
+        //   left: 0;
+        //   // background-position: -210px;
+        // }
+
+        .secondContainer {
+          padding: 0;
+        }
+      }
+    }
+
+    .imageWrapper {
+      img {
+        max-width: 400px;
+      }
+    }
+
+    .ctaBlock {
+      max-width: 1200px;
+      padding: 0 20px;
+      margin: 30px auto;
+    }
+  }
+}
+
+@media (max-width: 569px) {
+  .khersonChildrenWrapper {
+    .title {
+      h1 {
+        max-width: 415px;
+      }
+    }
+  }
+}
+
+@media (max-width: 449px) {
+  .khersonChildrenWrapper {
+    .second {
+      .imgWrapper {
+        .parallaxFallback {
+          // width: 100%;
+          // background-position: -210px;
+          background-position: -120px;
+        }
+      }
+    }
+  }
+}
+
+// body.ios-device {
+//   .khersonChildrenWrapper {
+//     .second {
+//       .imgWrapper {
+//         &::before {
+//           display: none !important;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// body.ios-device {
+//   .khersonChildrenWrapper {
+//     .second {
+//       .imgWrapper {
+//         .parallaxFallback {
+//           display: block !important;
+//         }
+//       }
+//     }
+//   }
+// }

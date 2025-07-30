@@ -1,0 +1,218 @@
+.volunteerBlock {
+  .joinUs {
+    padding-left: 1.8rem;
+
+    .container {
+      max-width: 960px;
+
+      p {
+        padding-bottom: 0;
+      }
+    }
+
+    .title {
+      margin-bottom: 1.5rem;
+    }
+
+    .intro {
+      margin-bottom: 1.5rem;
+    }
+
+    .bullets {
+      margin-bottom: 1.5rem;
+
+      ul {
+        padding-left: 2.5rem;
+        list-style: disc;
+
+        li {
+          margin-bottom: 0.75rem;
+        }
+
+        strong {
+          color: #004080;
+        }
+      }
+    }
+
+    .closing {
+      margin-bottom: 1rem;
+      font-style: italic;
+      text-decoration: underline;
+    }
+
+    .contact {
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+
+      a {
+        color: #22aeff;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .note {
+      font-size: 0.9em;
+      color: gray;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.partnersBlock {
+  p {
+    padding-bottom: 0 !important;
+  }
+
+  .container {
+    max-width: 960px;
+    padding-left: 1.7rem;
+    .heading {
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+    }
+
+    .list {
+      margin-top: 1.5rem;
+      padding-left: 2.5rem;
+
+      li {
+        margin-bottom: 1rem;
+        list-style: disc;
+        line-height: 1.6;
+      }
+    }
+
+    .closing {
+      font-style: italic;
+      text-decoration: underline;
+    }
+
+    .contact {
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+
+      a {
+        color: #22aeff;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.accordionWrapper {
+  --size-header: 2.25rem;
+  --size-accordion-title: 1.25rem;
+  --size-accordion-content: 1rem;
+  --animation-speed: 100;
+  --slide-ease: cubic-bezier(0.86, 0, 0.07, 1);
+  --slide-duration: calc(400ms * 100 / var(--animation-speed));
+  --slide-delay: calc(450ms * 100 / var(--animation-speed));
+  --circle-duration: calc(900ms * 100 / var(--animation-speed));
+
+  max-width: 1195px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  p {
+    // padding-bottom: 2rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.paymentInfo {
+  padding: 1rem 1rem 1rem 1.8rem;
+  p {
+    margin: 0.5rem 0;
+  }
+
+  .accountBlock {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    margin: 1rem 0 1rem -5px;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 30px;
+    padding: 10px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+
+    &:hover,
+    &.active {
+      opacity: 0.7;
+    }
+
+    span {
+      word-break: break-all;
+    }
+  }
+
+  .bankLink {
+    margin-top: 1.5rem;
+
+    a {
+      color: #22aeff;
+      // opacity: 0.7;
+      text-decoration: underline;
+      word-break: break-all;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .crypto {
+    margin-top: 2rem;
+
+    strong {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.firstBlock .accountBlock {
+  border: 1px solid rgba(193, 239, 233, 0.9);
+  background: rgba(193, 239, 233, 0.9);
+}
+
+.secondBlock .accountBlock {
+  border: 1px solid rgba(214, 220, 236, 0.9);
+  background: rgba(214, 220, 236, 0.9);
+}
+
+.thirdBlock .accountBlock {
+  border: 1px solid rgba(255, 251, 206, 0.9);
+  background: rgba(255, 251, 206, 0.9);
+}
+
+.paymentInfo .mainColor {
+  border: 1px solid rgba(193, 239, 233, 0.9);
+  background: rgba(193, 239, 233, 0.9);
+}
+
+@media (max-width: 400px) {
+  .volunteerBlock {
+    .joinUs {
+      padding-left: 1.7rem;
+    }
+  }
+  .paymentInfo {
+    padding: 1rem 1rem 1rem 1.5rem;
+  }
+}
