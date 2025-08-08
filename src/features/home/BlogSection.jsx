@@ -1,24 +1,27 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+
+import useIsMobile from "@/utils/useIsMobile";
 import * as styles from "./BlogSection.module.scss";
 
-// ✅ Custom hook to detect mobile screen
-function useIsMobile() {
-  const [isMobile, setIsMobile] = useState(false);
+// // ✅ Custom hook to detect mobile screen
+// function useIsMobile() {
+//   const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= 767);
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+//   useEffect(() => {
+//     const handleResize = () => setIsMobile(window.innerWidth <= 767);
+//     handleResize();
+//     window.addEventListener("resize", handleResize);
+//     return () => window.removeEventListener("resize", handleResize);
+//   }, []);
 
-  return isMobile;
-}
+//   return isMobile;
+// }
 
 export default function BlogSection({ posts }) {
+  // const isMobile = useIsMobile();
   const [visibleCount, setVisibleCount] = useState(4);
-  const isMobile = useIsMobile();
+  const isMobile = useIsMobile(767);
 
   // Format posts with date formatting
   const formattedPosts = posts.map((post) => ({

@@ -1,0 +1,40 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modalOverlay.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modalContent {
+  padding: 67px 0 0;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 100%;
+  background: transparent;
+  transform: translateY(-120%);
+  transition: transform 0.35s ease-in-out;
+}
+
+.slideIn {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .modalContent {
+    padding-top: 65px;
+  }
+}

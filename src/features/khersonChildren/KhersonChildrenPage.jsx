@@ -1,5 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
+
+import { isIOS } from "@/utils/isIOS";
+import { useLockHeight } from "@/utils/useLockHeight";
 
 import * as styles from "./KhersonChildrenPage.module.scss";
 
@@ -7,28 +10,10 @@ import CtaForm from "../../components/ui/CtaForm/CtaForm";
 import howToHelpImg from "../../../public/assets/images/how-help.jpg";
 
 export default function KhersonChildrenPage() {
-  useEffect(() => {
-    function lockHeroHeight() {
-      let vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty("--vh", `${vh * 100}px`);
-    }
+  const [ios, setIos] = useState(false);
+  useLockHeight();
 
-    // ✅ Call it immediately when component mounts
-    lockHeroHeight();
-  }, []);
-
-  // useEffect(() => {
-  //   const isIOS = typeof window !== "undefined" && /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-
-  //   if (isIOS) {
-  //     document.body.classList.add("ios-device");
-  //   }
-  // }, []);
-
-  const isIOS =
-    typeof window !== "undefined" &&
-    (/iPad|iPhone|iPod/.test(navigator.userAgent) ||
-      (navigator.userAgent.includes("Macintosh") && "ontouchend" in document));
+  useEffect(() => setIos(isIOS()), []);
 
   return (
     <main>
@@ -54,7 +39,7 @@ export default function KhersonChildrenPage() {
         </div>
         <div className={`${styles.khersonChildrenContainer} ${styles.second}`}>
           <div className={styles.imgWrapper}>
-            <div className={styles.parallaxFallback} style={{ display: isIOS ? "block" : "none" }}></div>
+            <div className={styles.parallaxFallback} style={{ display: ios ? "block" : "none" }}></div>
             <div className={styles.secondContainer}>
               <section className={styles.howItWorksSection}>
                 <div className={styles.shapes}>

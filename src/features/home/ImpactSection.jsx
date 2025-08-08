@@ -2,8 +2,11 @@ import React from "react";
 import Button from "../../components//ui/Button";
 
 import * as styles from "./ImpactSection.module.scss";
+import { useModal } from "@/components/ui/ModalActions/ModalContext";
 
 function ImpactSection() {
+  const { openModal } = useModal();
+
   const impactBtnText = "Кожна пожертва змінює життя";
   const impactBtnType = "secondary";
 
@@ -20,7 +23,7 @@ function ImpactSection() {
             Херсон. Ми працюємо там, де відчайдушно потрібна підтримка, попри складні умови та ризики.
           </p>
           <div className={styles.btnContainer}>
-            <Button type={impactBtnType} text={impactBtnText} link={"/about#ihelp-form"} />
+            <Button type={impactBtnType} text={impactBtnText} onClick={() => openModal("donate")} />
           </div>
         </div>
 

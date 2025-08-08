@@ -1,12 +1,15 @@
 import React from "react";
-import Link from "next/link";
+
 import Image from "next/image";
+import { useModal } from "@/components/ui/ModalActions/ModalContext";
 
 import * as styles from "./OurVision.module.scss";
 
 import image from "../../../public/assets/images/our-vision.jpg"; // adjust path
 
 function OurVision() {
+  const { openModal } = useModal();
+
   return (
     <section className={styles.ourVision}>
       <div className={styles.imageWrapper}>
@@ -27,7 +30,9 @@ function OurVision() {
           <li>Сильну, єдину та непереможну Україну.</li>
         </ul>
         <p>
-          <Link href="/about#ihelp-form">Долучайтеся до наших проєктів! Разом ми змінюємо життя на краще.</Link>
+          <span onClick={() => openModal("ihelp")}>
+            Долучайтеся до наших проєктів! Разом ми змінюємо життя на краще.
+          </span>
         </p>
       </div>
     </section>

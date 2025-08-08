@@ -6,12 +6,14 @@ import Button from "../../components/ui/Button";
 import DownloadBlock from "../../components/layout/Footer/DownloadBlock";
 import joinUsPhoto from "../../../public/assets/images/join-us.jpg";
 
+import { useModal } from "@/components/ui/ModalActions/ModalContext";
 import * as styles from "./JoinUsSection.module.scss";
 
 function JoinUsSection() {
+  const { openModal } = useModal();
+
   const joinUsBtnText = "Стати волонтером";
   const joinUsBtnType = "secondary";
-  const joinUsBtnLink = "/about#ihelp-form:become-a-volunteer";
   return (
     <section className={styles.joinUs}>
       <div className={styles.imageWrapper}>
@@ -24,7 +26,7 @@ function JoinUsSection() {
           гарячих точках. Ми не лише задовольняємо базові потреби, а й допомагаємо повернути віру в краще майбутнє.
         </p>
         <div className={styles.btnContainer}>
-          <Button type={joinUsBtnType} text={joinUsBtnText} link={joinUsBtnLink} />
+          <Button type={joinUsBtnType} text={joinUsBtnText} onClick={() => openModal("volunteer")} />
         </div>
 
         <DownloadBlock place="page" />

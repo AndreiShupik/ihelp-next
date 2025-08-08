@@ -28,6 +28,16 @@
     font-size: 0.9em;
     color: gray;
   }
+
+  .text {
+    display: none;
+  }
+
+  @media (min-width: 993px) {
+    .desktopOnly {
+      display: inline-block;
+    }
+  }
 }
 
 .title {
@@ -397,12 +407,18 @@
 }
 
 @media (max-width: 992px) {
+  .aboutHero {
+    .mobileOnly {
+      display: block;
+    }
+  }
+
   .firstSteps {
     flex-direction: column;
     align-items: flex-start;
     // padding: 50px 4px;
     padding: 30px 0 50px;
-    gap: 1rem;
+    gap: 1.5rem;
 
     span {
       padding-top: 1rem;

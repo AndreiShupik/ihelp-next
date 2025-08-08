@@ -1,29 +1,21 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 import * as styles from "./SocialTaxiPage.module.scss";
-
 import CtaForm from "../../components/ui/CtaForm/CtaForm";
 
-import peopleTaxiImg from "../../../public/assets/images/people-taxi.jpg";
-import peopleTaxiImgSec from "../../../public/assets/images/people-taxi-1.jpg";
+import { useLockHeight } from "@/utils/useLockHeight";
+import { isIOS } from "@/utils/isIOS";
+
+// import peopleTaxiImg from "../../../public/assets/images/people-taxi.jpg";
+// import peopleTaxiImgSec from "../../../public/assets/images/people-taxi-1.jpg";
 import socialTaxiImg from "../../../public/assets/images/ihelp-social-taxi.jpg";
 
 export default function SocialTaxiPage() {
-  useEffect(() => {
-    function lockHeroHeight() {
-      let vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty("--vh", `${vh * 100}px`);
-    }
+  const [ios, setIos] = useState(false);
+  useLockHeight();
 
-    // ✅ Call it immediately when component mounts
-    lockHeroHeight();
-  }, []);
-
-  const isIOS =
-    typeof window !== "undefined" &&
-    (/iPad|iPhone|iPod/.test(navigator.userAgent) ||
-      (navigator.userAgent.includes("Macintosh") && "ontouchend" in document));
+  useEffect(() => setIos(isIOS()), []);
 
   return (
     <section className={styles.socialTaxiWrapper}>
@@ -49,7 +41,7 @@ export default function SocialTaxiPage() {
       </div>
       <div className={`${styles.socialTaxiContainer} ${styles.second}`}>
         <div className={styles.imgWrapper}>
-          <div className={styles.parallaxFallback} style={{ display: isIOS ? "block" : "none" }}></div>
+          <div className={styles.parallaxFallback} style={{ display: ios ? "block" : "none" }}></div>
           {/* <div className={styles.parallaxFallback}></div> */}
           <div className={styles.secondContainer}>
             <section className={styles.howItWorksSection}>
