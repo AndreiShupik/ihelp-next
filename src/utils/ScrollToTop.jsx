@@ -14,7 +14,7 @@
 //   return () => observer.disconnect();
 // }, []);
 
-// src/components/helpers/ScrollToTop.jsx
+// src/utils/ScrollToTop.jsx
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 

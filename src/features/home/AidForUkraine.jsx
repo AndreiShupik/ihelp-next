@@ -1,20 +1,17 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+
+import { useLockHeight } from "@/utils/useLockHeight";
 import * as styles from "./AidForUkraine.module.scss";
+
 import Button from "../../components//ui/Button";
+import { useModal } from "@/components/ui/ModalActions/ModalContext";
 
 export default function AidForUkraine() {
   const parallaxRef = useRef(null);
+  const { openModal } = useModal();
 
-  useEffect(() => {
-    function lockHeroHeight() {
-      let vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty("--vh", `${vh * 100}px`);
-    }
-
-    // ✅ Call it immediately when component mounts
-    lockHeroHeight();
-  }, []);
+  useLockHeight();
 
   const { scrollYProgress } = useScroll({
     target: parallaxRef,
@@ -40,19 +37,16 @@ export default function AidForUkraine() {
         <p>Ваша підтримка — це шанс для тисяч сімей відновити життя.</p>
         <div className={styles.btnsBlock}>
           <div className={styles.buttons}>
-            {/* <button className={styles.mainBtn}>Зробити пожертву</button> */}
-            <Button text={"Зробити пожертву"} type={"primary"} link={"/about#ihelp-form"} />
+            <Button text={"Зробити пожертву"} type={"primary"} onClick={() => openModal("donate")} />
           </div>
           <div className={styles.buttons}>
-            {/* <button className={styles.partnerBtn}>Стати партнером</button> */}
-            <Button text={"Стати партнером"} type={"primary"} link={"/about#ihelp-form:become-a-partner"} />
+            <Button text={"Стати партнером"} type={"primary"} onClick={() => openModal("partner")} />
           </div>
           <div className={styles.buttons}>
-            {/* <button className={styles.secondaryBtn}>Долучитися до волонтерської команди</button> */}
             <Button
               text={"Долучитися до волонтерської команди"}
               type={"primary"}
-              link={"/about#ihelp-form:become-a-volunteer"}
+              onClick={() => openModal("volunteer")}
             />
           </div>
         </div>

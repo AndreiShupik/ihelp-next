@@ -1,9 +1,8 @@
 import React from "react";
-import Link from "next/link";
 
 import * as styles from "./Button.module.scss";
 
-function Button({ type, text, link }) {
+function Button({ type, text, onClick }) {
   const getBtnType = (type) => {
     switch (type) {
       case "primary":
@@ -14,10 +13,8 @@ function Button({ type, text, link }) {
   };
 
   return (
-    <div className={styles.ctaBtn}>
-      <Link href={link} className={getBtnType(type)} rel="nofollow">
-        {text}
-      </Link>
+    <div className={styles.ctaBtn} onClick={onClick}>
+      <span className={getBtnType(type)}>{text}</span>
     </div>
   );
 }

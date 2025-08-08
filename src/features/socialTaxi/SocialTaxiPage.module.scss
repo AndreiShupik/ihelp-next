@@ -3,26 +3,6 @@
   min-height: var(--vh);
   overflow: hidden;
 
-  // .parallaxBg {
-  //   // position: fixed;
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   height: var(--vh);
-  //   max-height: 1000px;
-  //   z-index: -1;
-  //   background-image: url("/assets/images/social-taxi-main.jpg");
-  //   background-size: cover;
-  //   /* background-position: 100% 70%; */
-  //   background-repeat: no-repeat;
-  //   // max-width: 1000px;
-  //   max-width: 1155px;
-  //   margin: 0 auto;
-  //   // left: 20%;
-  //   left: 15.5%;
-  // }
-
   .parallaxBg {
     // position: fixed;
     position: relative;
@@ -30,17 +10,14 @@
     left: 0;
     width: 100%;
     height: var(--vh);
+    min-height: 750px;
     max-height: 1000px;
     z-index: -1;
     background-image: url("/assets/images/social-taxi-main.jpg");
     background-size: cover;
-    /* background-position: 100% 70%; */
     background-repeat: no-repeat;
-    // max-width: 1000px;
     max-width: 1155px;
     margin: 0 auto;
-    // left: 20%;
-    // left: 15.5%;
   }
 
   // .socialTaxiContainer {
@@ -294,7 +271,7 @@
           padding: 1rem 1rem 1rem 0;
           overflow: hidden;
           max-width: 555px;
-          height: 100vh;
+          height: var(--vh);
           max-height: 1000px;
           width: 46vw;
           background: #fff;
@@ -614,7 +591,8 @@
     .parallaxBg {
       background-size: cover;
       left: 0;
-      background-position: 50% 0;
+      // background-position: 60% 0;
+      background-position: 55% 0;
     }
 
     .socialTaxiContainer {
@@ -642,10 +620,6 @@
   .socialTaxiWrapper {
     .socialTaxiContainer {
       top: 140px;
-      // .title {
-      //   position: absolute;
-      //   bottom: 30px;
-      // }
     }
 
     .second {
@@ -723,7 +697,7 @@
             background-color: rgba(249, 249, 249, 0.6705882353);
             overflow: hidden;
             max-width: none;
-            height: 100vh;
+            height: var(--vh);
             width: 100%;
             padding-top: 21vw;
 
@@ -778,6 +752,9 @@
 
 @media (max-width: 569px) {
   .socialTaxiWrapper {
+    .parallaxBg {
+      min-height: 610px;
+    }
     .title {
       h1 {
         max-width: 415px;

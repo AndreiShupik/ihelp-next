@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
+import useIsMobile from "@/utils/useIsMobile";
 
+import Image from "next/image";
 import Button from "../../components//ui/Button";
+
+import { useModal } from "@/components/ui/ModalActions/ModalContext";
 
 import partner1st from "../../../public/assets/images/partners/partner-1.png";
 import partner2nd from "../../../public/assets/images/partners/partner-2.svg";
@@ -10,23 +13,23 @@ import partner3rd from "../../../public/assets/images/partners/partner-3.webp";
 import * as styles from "./OurPartners.module.scss";
 
 function OurPartners() {
-  // const [isMobile, setIsMobile] = useState(window.innerWidth <= 1200);
-  const [isMobile, setIsMobile] = useState(false);
+  const { openModal } = useModal();
+  const isMobile = useIsMobile(1200);
 
   const partnersBtnText = "Стати партнером";
   const partnersBtnType = "secondary";
-  const partnersBtnLink = "/about#ihelp-form:become-a-partner";
+  // const partnersBtnLink = "/about#ihelp-form:become-a-partner";
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1200);
-    };
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setIsMobile(window.innerWidth <= 1200);
+  //   };
 
-    handleResize(); // Set initial value on mount
+  //   handleResize(); // Set initial value on mount
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  //   window.addEventListener("resize", handleResize);
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
 
   // useEffect(() => {
   //   const handleResize = () => {
@@ -50,7 +53,7 @@ function OurPartners() {
           суспільні організації. Завдяки ним ми маємо змогу реалізовувати важливі соціальні проєкти, допомагати тим, хто
           цього найбільше потребує, та змінювати життя людей на краще.
         </p>
-        {!isMobile && <Button type={partnersBtnType} text={partnersBtnText} link={partnersBtnLink} />}
+        {!isMobile && <Button type={partnersBtnType} text={partnersBtnText} onClick={() => openModal("partner")} />}
       </div>
 
       <div className={styles.partnersGrid}>
@@ -82,7 +85,7 @@ function OurPartners() {
           <Image src={partner3rd} alt="Partner 9" />
         </div>
       </div>
-      {isMobile && <Button type={partnersBtnType} text={partnersBtnText} link={partnersBtnLink} />}
+      {isMobile && <Button type={partnersBtnType} text={partnersBtnText} onClick={() => openModal("partner")} />}
     </section>
   );
 }

@@ -1,7 +1,9 @@
 .ctaBtn {
+  display: block;
   width: fit-content;
+  cursor: pointer;
 
-  a {
+  span {
     position: relative;
     border-radius: 5px;
     display: block;

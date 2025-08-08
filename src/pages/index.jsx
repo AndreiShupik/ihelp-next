@@ -15,9 +15,6 @@ export async function getStaticProps({ locale }) {
     console.error("❌ Error fetching posts:", error.message);
   }
 
-  // ✅ Debug log
-  // console.log("✅ Fetched posts from Supabase:", posts);
-
   return {
     props: {
       ...(await serverSideTranslations(locale, ["common"])),

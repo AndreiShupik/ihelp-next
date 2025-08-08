@@ -1,0 +1,80 @@
+.accordionBase {
+  margin-bottom: 1rem;
+  border-radius: min(8px, 0.5rem);
+  display: grid;
+  grid-template-rows: 0fr 0fr;
+  transition-timing-function: var(--slide-ease);
+  transition-duration: 200ms, 200ms, var(--slide-duration);
+  transition-property: opacity, box-shadow, grid-template-rows;
+  transition-delay: 0ms, 0ms, var(--slide-delay);
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+
+  &.open::before {
+    transform: translateY(-150%);
+    opacity: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 90%;
+    right: -1.5rem;
+    width: 11rem;
+    height: 11rem;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+    transition:
+      transform 0.6s ease,
+      opacity 0.6s ease;
+  }
+
+  &:nth-of-type(1)::before {
+    background-color: rgba(193, 239, 233, 0.9);
+  }
+
+  &:nth-of-type(2)::before {
+    background-color: rgba(214, 220, 236, 0.9);
+  }
+
+  &:nth-of-type(3)::before {
+    background-color: rgba(255, 251, 206, 0.9);
+  }
+}
+
+.openBase {
+  --d: 90deg;
+  transition: grid-template-rows var(--slide-ease) var(--slide-duration) var(--slide-delay);
+
+  &::before {
+    transform: translateY(-150%);
+    opacity: 0;
+  }
+}
+
+.toggleBtnBase {
+  text-align: start;
+  padding: 1rem 1.25rem;
+  font-weight: 800;
+  color: currentColor;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+
+  &::before {
+    --chevron-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath fill='white' d='M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z'/%3E%3C/svg%3E");
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    aspect-ratio: 320 / 512;
+    margin-right: 0.75rem;
+    -webkit-mask-image: var(--chevron-icon);
+    -webkit-mask-size: 100% 100%;
+    background-color: currentColor;
+    transition: transform var(--slide-ease) var(--slide-duration) var(--slide-delay);
+  }
+}

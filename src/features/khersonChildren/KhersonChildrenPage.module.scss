@@ -28,7 +28,7 @@
 
       background-image: url("/assets/images/kherson-children-main.jpg");
       background-size: cover;
-      background-position: 46% 0;
+      background-position: 55% 0;
       background-repeat: no-repeat;
     }
   }
@@ -36,12 +36,12 @@
   .khersonChildrenContainer {
     text-align: center;
     width: 100%;
-    height: var(--vh);
+    min-height: var(--vh);
     max-height: 1000px;
     display: flex;
     flex-direction: column;
     justify-content: center; // Optional, center content
-    padding-top: 650px; // Adjust if needed
+    padding-top: 450px; // Adjust if needed
     position: relative;
     z-index: 1;
 
@@ -56,10 +56,12 @@
         font-weight: 700;
         width: 400px;
         margin-bottom: 0;
+        line-height: 2rem;
       }
 
       h2 {
         width: 350px;
+        line-height: 1.8rem;
       }
 
       h1,

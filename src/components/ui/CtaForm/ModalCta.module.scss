@@ -1,0 +1,97 @@
+.scrollable {
+  max-height: 91.5vh; /* or whatever fits your modal */
+  overflow-y: auto;
+  padding-right: 8px;
+
+  /* Add a nice scrollbar */
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+  }
+}
+
+.closeBtnTop,
+.closeBtnContent {
+  position: absolute;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background: #64d172;
+  border-radius: 50%;
+  color: #fff;
+  top: 18px;
+  right: 4px;
+}
+
+.contentInner {
+  background: #fafafa;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.title {
+  background-image: none;
+}
+
+.slideContainer {
+  display: flex;
+  width: 200%;
+  gap: 2rem;
+  transition: transform 0.4s ease-in-out;
+}
+
+.showContent {
+  transform: translateX(-51%);
+}
+
+.titlesView,
+.contentView {
+  position: relative;
+  flex: 0 0 49%;
+  box-sizing: border-box;
+  background: #f5f5f5;
+  align-self: center;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px 20px 10px;
+}
+
+.toggleBtn {
+  composes: toggleBtnBase from "./CtaAccordionShared.module.scss";
+  max-width: 530px;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+  border-radius: min(8px, 0.5rem);
+  z-index: 0;
+}
+
+.contentView {
+  .toggleBtn::before {
+    content: "";
+    transform: rotate(var(--d, 180deg));
+  }
+}
+
+.accordion {
+  composes: accordionBase from "./CtaAccordionShared.module.scss";
+}
+
+.open {
+  composes: openBase from "./CtaAccordionShared.module.scss";
+}
+
+@media (max-width: 1200px) {
+  .scrollable {
+    max-height: 93vh;
+  }
+}
+
+@media (max-width: 575px) {
+  .showContent {
+    transform: translateX(-53%);
+  }
+}

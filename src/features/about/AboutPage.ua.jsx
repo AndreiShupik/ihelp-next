@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 import Image from "next/image";
 
 import ChildrenCards from "./ChildrenCards";
@@ -29,36 +29,23 @@ import iHelpTodayPhoto from "../../../public/assets/images/ihelp-today.jpg";
 import * as styles from "./AboutPage.module.scss";
 
 function AboutPage() {
-  const [isMobile, setIsMobile] = useState(false);
-  const router = useRouter();
+  // const router = useRouter();
 
-  const SCROLL_OFFSET = 75; // height of your sticky header
+  // const SCROLL_OFFSET = 75; // height of your sticky header
 
-  useEffect(() => {
-    // Update isMobile on mount and resize
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 992);
-    };
-
-    handleResize(); // set initial value
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  useEffect(() => {
-    // Scroll to the element if there's a hash in the URL
-    if (typeof window !== "undefined") {
-      const hash = window.location.hash || (router.asPath.includes("#") ? router.asPath.split("#")[1] : null);
-      if (hash) {
-        const el = document.getElementById(hash);
-        if (el) {
-          const y = el.getBoundingClientRect().top + window.scrollY - SCROLL_OFFSET;
-          window.scrollTo({ top: y, behavior: "smooth" });
-        }
-      }
-    }
-  }, [router.asPath]);
+  // useEffect(() => {
+  //   // Scroll to the element if there's a hash in the URL
+  //   if (typeof window !== "undefined") {
+  //     const hash = window.location.hash || (router.asPath.includes("#") ? router.asPath.split("#")[1] : null);
+  //     if (hash) {
+  //       const el = document.getElementById(hash);
+  //       if (el) {
+  //         const y = el.getBoundingClientRect().top + window.scrollY - SCROLL_OFFSET;
+  //         window.scrollTo({ top: y, behavior: "smooth" });
+  //       }
+  //     }
+  //   }
+  // }, [router.asPath]);
 
   return (
     <div className={styles.aboutPage}>
@@ -81,12 +68,10 @@ function AboutPage() {
             <div className={styles.imageWrapper}>
               <Image src={firstStepsPhoto} alt="iHELP. First steps" />
             </div>
-            {isMobile && (
-              <span>
-                Станом на березень 2022 року благодійний фонд iHELP забезпечував їжею всі бомбосховища центральної гілки
-                метро Києва, допомагаючи тисячам мешканців столиці.
-              </span>
-            )}
+            <span className={`${styles.text} ${styles.mobileOnly}`}>
+              Станом на березень 2022 року благодійний фонд iHELP забезпечував їжею всі бомбосховища центральної гілки
+              метро Києва, допомагаючи тисячам мешканців столиці.
+            </span>
           </div>
           <div className={styles.contentKyiv}>
             <h3>Перші кроки: Київ та його люди</h3>
@@ -100,12 +85,10 @@ function AboutPage() {
               Києві. Наша волонтерська допомога мала одну просту, але життєво важливу мету: бути поряд із тими, хто
               цього найбільше потребував.
             </p>
-            {!isMobile && (
-              <span>
-                Станом на березень 2022 року благодійний фонд iHELP забезпечував їжею всі бомбосховища центральної гілки
-                метро Києва, допомагаючи тисячам мешканців столиці.
-              </span>
-            )}
+            <span className={`${styles.text} ${styles.desktopOnly}`}>
+              Станом на березень 2022 року благодійний фонд iHELP забезпечував їжею всі бомбосховища центральної гілки
+              метро Києва, допомагаючи тисячам мешканців столиці.
+            </span>
           </div>
         </div>
         <div className={styles.contentKyivRegion}>
@@ -300,7 +283,7 @@ function AboutPage() {
         </div>
       </section>
       <CtaAboutUs />
-      <CtaForm page={"AboutUs"} />
+      <CtaForm page={"Default"} />
     </div>
   );
 }

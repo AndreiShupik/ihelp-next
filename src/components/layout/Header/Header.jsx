@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
+import { useModal } from "@/components/ui/ModalActions/ModalContext";
+
 import Image from "next/image";
+import Link from "next/link";
 
 import { useTranslation } from "next-i18next";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
+
+import useIsMobile from "@/utils/useIsMobile";
 
 import Button from "../../ui/Button";
 import LanguageSwitcher from "../../ui/LanguageSwitcher";
@@ -12,8 +16,10 @@ import logoImg from "../../../../public/assets/images/logo.png";
 import * as styles from "./Header.module.scss";
 
 function Header() {
-  const [isMobile, setIsMobile] = useState(false);
+  // const [isMobile, setIsMobile] = useState(useIsMobile(992));
   const [menuOpen, setMenuOpen] = useState(false);
+  const { openModal } = useModal();
+  const isMobile = useIsMobile(992);
 
   const pathname = usePathname();
   const { t } = useTranslation("common");
@@ -21,18 +27,18 @@ function Header() {
   const headerBtnText = "Зробити пожертву";
   const headerBtnType = "primary";
 
-  useEffect(() => {
-    // Now window is defined, so we can safely use it here
-    function handleResize() {
-      setIsMobile(window.innerWidth <= 992);
-    }
+  // useEffect(() => {
+  //   // Now window is defined, so we can safely use it here
+  //   function handleResize() {
+  //     setIsMobile(window.innerWidth <= 992);
+  //   }
 
-    handleResize(); // Set initial value on mount
+  //   handleResize(); // Set initial value on mount
 
-    window.addEventListener("resize", handleResize);
+  //   window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
 
   const toggleMenu = (event) => {
     event.preventDefault();
@@ -51,9 +57,9 @@ function Header() {
     <header className={styles.headerWrapper}>
       <div className={styles.headerContainer}>
         <div className={styles.logoContainer}>
-          <a href="/">
+          <Link href="/">
             <Image src={logoImg} alt="ihelp logo" priority />
-          </a>
+          </Link>
         </div>
 
         {isMobile ? (
@@ -134,7 +140,7 @@ function Header() {
 
         <div className={styles.userBlock}>
           <LanguageSwitcher />
-          <Button text={headerBtnText} type={headerBtnType} link={"/about#ihelp-form"} />
+          <Button text={headerBtnText} type={headerBtnType} onClick={() => openModal("donate")} />
         </div>
       </div>
     </header>

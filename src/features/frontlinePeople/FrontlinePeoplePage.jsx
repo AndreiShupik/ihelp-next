@@ -1,31 +1,23 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
-import * as styles from "./FrontlinePeoplePage.module.scss";
+import { isIOS } from "@/utils/isIOS";
+import { useLockHeight } from "@/utils/useLockHeight";
 
+import * as styles from "./FrontlinePeoplePage.module.scss";
 import CtaForm from "../../components/ui/CtaForm/CtaForm";
 
 import howToHelpImg from "../../../public/assets/images/ihelp-team.jpg";
 import helpHospital from "../../../public/assets/images/ihelp-hospital.png";
 
 export default function FrontlinePeoplePage() {
-  useEffect(() => {
-    function lockHeroHeight() {
-      let vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty("--vh", `${vh * 100}px`);
-    }
+  const [ios, setIos] = useState(false);
+  useLockHeight();
 
-    // ✅ Call it immediately when component mounts
-    lockHeroHeight();
-  }, []);
-
-  const isIOS =
-    typeof window !== "undefined" &&
-    (/iPad|iPhone|iPod/.test(navigator.userAgent) ||
-      (navigator.userAgent.includes("Macintosh") && "ontouchend" in document));
+  useEffect(() => setIos(isIOS()), []);
 
   return (
-    <section className={styles.khersonChildrenWrapper}>
+    <section className={styles.frontlinePeopleWrapper}>
       <div className={styles.fixBgWrapper}>
         <div className={styles.parallaxBg}></div> {/* <-- fake parallax background */}
       </div>
@@ -46,16 +38,9 @@ export default function FrontlinePeoplePage() {
       </div>
       <div className={`${styles.khersonChildrenContainer} ${styles.second}`}>
         <div className={styles.imgWrapper}>
-          <div className={styles.parallaxFallback} style={{ display: isIOS ? "block" : "none" }}></div>
-          {/* <div className={styles.parallaxFallback}></div> */}
+          <div className={styles.parallaxFallback} style={{ display: ios ? "block" : "none" }}></div>
           <div className={styles.secondContainer}>
             <section className={styles.howItWorksSection}>
-              {/* <div className={styles.shapes}>
-                <span className={styles.circle}></span>
-                <span className={styles.triangle}></span>
-                <span className={styles.square}></span>
-              </div> */}
-
               <div className={styles.contentWrapper}>
                 <h2 className={styles.heading}>Як ми допомагаємо?</h2>
 
@@ -127,29 +112,12 @@ export default function FrontlinePeoplePage() {
           <div className={styles.container}>
             <h3 className={styles.heading}>Наші досягнення:</h3>
             <ul className={styles.resultsList}>
+              <li>Створено унікальну систему розподілення допомоги мешканцям Херсонської області</li>
               <li>
-                {/* <span className={styles.star}>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="#1f1f21">
-                  <path d="M12 2l2.9 6.9L22 10.3l-5 5 1.2 7L12 18l-6.2 4.3L7 15.3l-5-5 7.1-1.4z" />
-                </svg>
-              </span> */}
-                Створено унікальну систему розподілення допомоги мешканцям Херсонської області
-              </li>
-              <li>
-                {/* <span className={styles.star}>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="#1f1f21">
-                  <path d="M12 2l2.9 6.9L22 10.3l-5 5 1.2 7L12 18l-6.2 4.3L7 15.3l-5-5 7.1-1.4z" />
-                </svg>
-              </span> */}
                 Забезпечено шлях прямого надходження медикаментів та засобів першої необхідності до медичних закладів у
                 м. Херсон та цілого регіону
               </li>
               <li>
-                {/* <span className={styles.star}>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="#1f1f21">
-                  <path d="M12 2l2.9 6.9L22 10.3l-5 5 1.2 7L12 18l-6.2 4.3L7 15.3l-5-5 7.1-1.4z" />
-                </svg>
-              </span> */}
                 Регулярно здійснюємо акції для підтримки родин із дітьми від українського бізнесу та з залученням
                 донорської допомоги міжнародних партнерів Фонду
               </li>
@@ -181,16 +149,6 @@ export default function FrontlinePeoplePage() {
         <p className={styles.ctaParagraph}>
           Ставайте з нами діяти добро зараз, щоб наблизити перемогу людяності та справедливості для України!
         </p>
-        {/* <section className={styles.ctaBlock}>
-          <h2>Долучайтеся до справжньої допомоги!</h2>
-          <p>
-            Ваш внесок — це реальна підтримка дітей Херсонщини. Разом ми забезпечимо їм необхідне для життя, навчання та
-            розвитку.
-          </p>
-          <p>
-            <strong>Приєднуйтесь сьогодні — зробімо важливе разом!</strong>
-          </p>
-        </section> */}
         <CtaForm page={"FrontlinePeople"} />
       </div>
     </section>
