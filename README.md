@@ -567,8 +567,8 @@ ihelp-next
 │  │  │  │  ├─ CopyrightBlock
 │  │  │  │  │  ├─ CopyrightBlock.jsx
 │  │  │  │  │  └─ CopyrightBlock.module.scss
-│  │  │  │  ├─ DownloadBlock.jsx
-│  │  │  │  ├─ DownloadBlock.module.scss
+│  │  │  │  ├─ OurSocials.jsx
+│  │  │  │  ├─ OurSocials.module.scss
 │  │  │  │  ├─ Footer.jsx
 │  │  │  │  └─ Footer.module.scss
 │  │  │  └─ Header

@@ -40,14 +40,16 @@
         flex-direction: column;
         align-items: flex-start;
         padding: 0.7vw;
-        // background: #fff;
-        // box-shadow: -5px 5px 8px 2px rgba(34, 60, 80, 0.2);
 
         h3 {
           font-size: 25px;
 
           background-color: #22aeff;
           background-image: none;
+
+          .titleLink {
+            font-size: inherit;
+          }
         }
 
         p {
@@ -121,7 +123,6 @@
       .contentBlock {
         top: 0;
         right: 13px;
-        // box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
       }
 
       &::before {
@@ -353,24 +354,19 @@
             box-shadow: none;
 
             h3 {
-              // font-size: 1.5rem;
-              // line-height: 1.6rem;
               margin-top: 0.5rem;
 
-              font-size: 1.25rem; /* 20px */
+              font-size: 1.25rem;
               line-height: 1.75rem;
             }
 
             p {
-              // font-size: 1.2rem;
-              // line-height: 1.4rem;
               padding: 1rem 0 0.5rem;
 
-              font-size: 1rem; /* Same as body text */
+              font-size: 1rem;
               line-height: 1.5rem;
             }
             a {
-              // font-size: 1rem;
               margin-bottom: 0.5rem;
 
               font-size: 0.875rem; /* 14px, slightly smaller than paragraph */

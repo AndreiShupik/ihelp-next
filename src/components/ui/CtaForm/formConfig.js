@@ -116,7 +116,9 @@ export const FORM_CONFIG = [
             </p>
           </div>
         </section>
-        <ContactForm type="волонтерство" />
+        <div className={partnershipStyles.formWrapperOutside}>
+          <ContactForm type="волонтерство" />
+        </div>
       </div>
     ),
   },
@@ -166,7 +168,10 @@ export const FORM_CONFIG = [
             </p>
           </div>
         </div>
-        <ContactForm type="партнерство" />
+        <div className={partnershipStyles.formWrapperOutside}>
+          {" "}
+          <ContactForm type="партнерство" />
+        </div>
       </div>
     ),
   },

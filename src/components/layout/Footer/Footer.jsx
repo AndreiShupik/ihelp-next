@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslation } from "next-i18next";
 
-import DownloadBlock from "./DownloadBlock";
+import OurSocials from "./OurSocials";
 import CopyrightBlock from "./CopyrightBlock/CopyrightBlock";
 
 import * as styles from "./Footer.module.scss";
@@ -63,22 +63,23 @@ function Footer() {
             <h4>{t("footer.legal")}</h4>
             <ul className={styles.menu}>
               <li>
-                <Link href="#" className={`${isActive("/#") ? styles.active : ""}`}>
+                <Link href="/privacy" className={`${isActive("/privacy") ? styles.active : ""}`}>
                   {t("footer.privacyPolicy")}
                 </Link>
               </li>
               <li>
-                <Link href="#" className={`${isActive("/#") ? styles.active : ""}`}>
+                <Link href="/terms" className={`${isActive("/terms") ? styles.active : ""}`}>
                   {t("footer.terms")}
                 </Link>
               </li>
             </ul>
           </div>
-
-          {/* Social Media */}
-          <DownloadBlock place="footer" />
+          <div className={styles.socialBlock}>
+            <h4>{t("footer.followUs")}</h4>
+            {/* Social Media */}
+            <OurSocials place="footer" />
+          </div>
         </div>
-
         <CopyrightBlock />
       </div>
     </footer>

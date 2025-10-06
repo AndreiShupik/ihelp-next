@@ -22,7 +22,11 @@ function AboutSection() {
         <div className={styles.aboutContainer}>
           <div className={`${styles.aboutBlock} ${styles.firstBlock}`}>
             <div className={styles.contentBlock}>
-              <h3>Надання екстреної допомоги</h3>
+              <h3>
+                <Link className={styles.titleLink} href="/frontline-people">
+                  Надання екстреної допомоги
+                </Link>
+              </h3>
               <p>
                 Доставка продуктів, ліків, гігієнічних наборів та теплого одягу сім’ям, які цього найбільше потребують.
               </p>
@@ -37,14 +41,22 @@ function AboutSection() {
               <Image src={aboutSecondPhoto} alt="Image 2" />
             </div>
             <div className={styles.contentBlock}>
-              <h3>Відновлення громад та інфраструктури</h3>
+              <h3>
+                <Link className={styles.titleLink} href="/social-taxi">
+                  Відновлення громад та інфраструктури
+                </Link>
+              </h3>
               <p>Відбудова житлових будинків, шкіл та критичної інфраструктури у зруйнованих регіонах.</p>
               <Link href="/social-taxi">Дізнатися більше</Link>
             </div>
           </div>
           <div className={`${styles.aboutBlock} ${styles.thirdBlock}`}>
             <div className={styles.contentBlock}>
-              <h3>Допомога дітям та освітні ініціативи</h3>
+              <h3>
+                <Link className={styles.titleLink} href="/kherson-children">
+                  Допомога дітям та освітні ініціативи
+                </Link>
+              </h3>
               <p>
                 Емоційна та освітня підтримка дітей, які постраждали від війни, через психологічну допомогу, навчальні
                 матеріали та розвиваючі заходи.
