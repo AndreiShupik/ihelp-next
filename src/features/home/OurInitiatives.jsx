@@ -5,6 +5,7 @@ import iconFood from "../../../public/assets/icons/food.png";
 import iconMeds from "../../../public/assets/icons/meds.png";
 import iconKids from "../../../public/assets/icons/kids.png";
 import iconInfrastructure from "../../../public/assets/icons/infrastructure.png";
+import iconTaxi from "../../../public/assets/icons/taxi.png";
 
 import * as styles from "./OurInitiatives.module.scss";
 
@@ -12,7 +13,7 @@ const OurInitiatives = () => {
   return (
     <section className={styles.ourInitiatives}>
       <div className={styles.container}>
-        <h3>Разом ми можемо забезпечити:</h3>
+        <h3>Разом ми можемо забезпечити</h3>
         {/* <p className={styles.intro}>Разом ми можемо забезпечити:</p> */}
 
         <div className={styles.iconsGrid}>
@@ -39,6 +40,15 @@ const OurInitiatives = () => {
               <Image src={iconInfrastructure} alt="Інфраструктура" />
             </div>
             <p>Відновлення інфраструктури: житлові будинки, школи та лікарні</p>
+          </div>
+          <div className={`${styles.iconBox} ${styles.iconTaxi}`}>
+            <div className={styles.iconCircle}>
+              <Image src={iconTaxi} alt="Соціальне таксі" />
+            </div>
+            <p>
+              Соціальне таксі
+              <br /> для людей з обмеженними можливостями
+            </p>
           </div>
         </div>
 

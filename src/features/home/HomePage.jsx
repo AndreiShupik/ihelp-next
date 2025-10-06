@@ -5,12 +5,13 @@ import AboutSection from "./AboutSection";
 import ImpactSection from "./ImpactSection";
 import JoinUsSection from "./JoinUsSection";
 import PhotoOfChanges from "./PhotoOfChanges";
+import MediaCarousel from "./MediaCarousel";
 import OurPartners from "./OurPartners";
 import OurInitiatives from "./OurInitiatives";
 import AidForUkraine from "./AidForUkraine";
 import BlogSection from "./BlogSection";
 
-function HomePage({ posts }) {
+function HomePage({ posts, media }) {
   return (
     <main>
       <HeroSection />
@@ -18,6 +19,7 @@ function HomePage({ posts }) {
       <ImpactSection />
       <JoinUsSection />
       <PhotoOfChanges />
+      <MediaCarousel media={media} />
       <OurPartners />
       <OurInitiatives />
       <AidForUkraine />

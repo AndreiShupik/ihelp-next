@@ -121,7 +121,7 @@
 
 @media (min-width: 992px) {
   .partnersSection {
-    margin-top: 50px;
+    // margin-top: 50px;
     .partnersInfo {
       h3 {
         font-size: 4rem;
@@ -131,7 +131,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1201px) {
   .partnersSection {
     margin-top: 0;
     flex-direction: row;

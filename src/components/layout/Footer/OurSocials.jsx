@@ -8,14 +8,13 @@ import xIconBlack from "../../../../public/assets/icons/x-black.png";
 import instagramIcon from "../../../../public/assets/icons/instagram.png";
 import linkedinIcon from "../../../../public/assets/icons/linkedin.png";
 
-import * as styles from "./DownloadBlock.module.scss";
+import * as styles from "./OurSocials.module.scss";
 
-function DownloadBlock({ place = "page" }) {
+function OurSocials({ place = "page" }) {
   const { t } = useTranslation("common");
 
   return (
-    <div className={styles.downloadBlock}>
-      <h4 className={place === "footer" ? styles.footerHeading : ""}>{t("footer.followUs")}</h4>
+    <div className={styles.ourSocials}>
       <div className={styles.social}>
         <Image src={facebookIcon} alt="Facebook" />
         <Image src={place === "footer" ? xIcon : xIconBlack} alt="Twitter" />
@@ -26,4 +25,4 @@ function DownloadBlock({ place = "page" }) {
   );
 }
 
-export default DownloadBlock;
+export default OurSocials;

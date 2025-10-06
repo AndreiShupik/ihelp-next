@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Button from "../../components/ui/Button";
 
-import DownloadBlock from "../../components/layout/Footer/DownloadBlock";
+import OurSocials from "../../components/layout/Footer/OurSocials";
 import joinUsPhoto from "../../../public/assets/images/join-us.jpg";
 
 import { useModal } from "@/components/ui/ModalActions/ModalContext";
@@ -28,8 +28,10 @@ function JoinUsSection() {
         <div className={styles.btnContainer}>
           <Button type={joinUsBtnType} text={joinUsBtnText} onClick={() => openModal("volunteer")} />
         </div>
-
-        <DownloadBlock place="page" />
+        <div className={styles.socialBlock}>
+          <p>Наші соцмережі:</p>
+          <OurSocials place="page" />
+        </div>
       </div>
     </section>
   );
