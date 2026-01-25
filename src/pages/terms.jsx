@@ -1,16 +1,47 @@
 // src/pages/terms.jsx
 import React from "react";
-import TermsPage from "../features/terms/TermsPage";
+import Head from "next/head";
+import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useRouter } from "next/router";
 
-export default function terms() {
-  return <TermsPage />;
-}
+import TermsEn from "@/features/terms/TermsPage.en";
+import TermsUa from "@/features/terms/TermsPage.ua";
+
+const Terms = () => {
+  const { locale } = useRouter();
+  const { t } = useTranslation("common");
+
+  return (
+    <>
+      <Head>
+        <link rel="alternate" hrefLang="en" href="https://ihelp.org.ua/terms" />
+        <link rel="alternate" hrefLang="ua" href="https://ihelp.org.ua/ua/terms" />
+
+        <meta name="description" content={t("meta.terms.description")} />
+        <meta name="robots" content="noindex, nofollow" />
+
+        <meta property="og:title" content={t("meta.terms.title")} />
+        <meta property="og:description" content={t("meta.terms.description")} />
+        <meta property="og:url" content="https://ihelp.org.ua/terms" />
+
+        <meta name="twitter:title" content={t("meta.terms.title")} />
+        <meta name="twitter:description" content={t("meta.terms.description")} />
+
+        <title>{t("meta.terms.title")}</title>
+        <link rel="canonical" href={locale === "ua" ? "https://ihelp.org.ua/ua/terms" : "https://ihelp.org.ua/terms"} />
+      </Head>
+      {locale === "ua" ? <TermsUa /> : <TermsEn />}
+    </>
+  );
+};
 
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common"])),
+      ...(await serverSideTranslations(locale, ["common", "payment"])),
     },
   };
 }
+
+export default Terms;

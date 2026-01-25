@@ -21,7 +21,7 @@ import regionSecondPhoto from "../../../public/assets/images/ihelp-region2.jpg";
 import hotSpotPhoto1 from "../../../public/assets/images/hotspot-1.jpg";
 import hotSpotPhoto2 from "../../../public/assets/images/hotspot-2.jpg";
 import hotSpotPhoto3 from "../../../public/assets/images/hotspot-3.jpg";
-import hotSpotPhoto4 from "../../../public/assets/images/hotspot-4.jpg";
+import hotSpotPhoto4 from "../../../public/assets/images/blog-3.jpg";
 import hotSpotPhoto5 from "../../../public/assets/images/hotspot-5.jpg";
 
 import iHelpTodayPhoto from "../../../public/assets/images/ihelp-today.jpg";
@@ -66,70 +66,80 @@ function AboutPage() {
         <div>
           <h1 className={styles.title}>Charitable Foundation "IHELP"</h1>
           <span className={styles.short}>
-            <b>Допомога Україні під час війни: продукти харчування, медикаменти, гуманітарні проєкти</b>
+            <b>iHELP – Helping Ukraine During Wartime: Food. Medicine. Humanitarian Action.</b>
           </span>
           <p>
-            When the first explosion shook Kyiv, many lives were changed forever. Tetyana Dziubenko didn't hesitate...
+            When the first explosion shook Kyiv, countless lives changed in an instant. Tetiana Dziubenko didn’t
+            hesitate. Alongside her family and neighbours, she began delivering food to the nearest bomb shelters,
+            supporting those left homeless by the chaos. What started as a simple act of kindness soon grew into a
+            mission. From that spark, the iHELP Charitable Foundation - known in Ukrainian as “Я ДОПОМАГАЮ” - was born.
+            A beam of hope in the darkness of war.
           </p>
         </div>
         <div className={styles.firstSteps}>
           <div className={styles.imageDescription}>
             <div className={styles.imageWrapper}>
-              <Image src={firstStepsPhoto} alt="iHELP. First steps" />
+              <Image src={firstStepsPhoto} alt="Charitable Foundation iHELP. First steps" />
             </div>
             <span className={`${styles.text} ${styles.mobileOnly}`}>
-              Станом на березень 2022 року благодійний фонд iHELP забезпечував їжею всі бомбосховища центральної гілки
-              метро Києва, допомагаючи тисячам мешканців столиці.
+              As of March 2022, the iHELP charity foundation has created logistics and provided food to people who lost
+              their homes due to the war launched by Russia against Ukraine and were forced to live in bomb shelters.
+              The food was provided to people along the central branch of the Kyiv metro, helping thousands of residents
+              of the capital.
             </span>
           </div>
           <div className={styles.contentKyiv}>
-            <h3>Перші кроки: Київ та його люди</h3>
+            <h3>Our First Steps: Standing with Kyiv</h3>
+            <span className={styles.short}>Humanitarian Aid in Kyiv: Food, medicine, and baby supplies</span>
             <p>
-              З перших днів війни наша команда не зволікала й не відпочивала. Сирени, холод, страх — усе це залишалося
-              позаду, коли йшлося про гуманітарну допомогу тим, хто втратив усе. Ми розносили пакунки з продуктами,
-              ліками, дитячим харчуванням до сховищ у метро, шкіл, лікарень, дитячих садочків та домівок літніх людей у
-              Києві. Наша волонтерська допомога мала одну просту, але життєво важливу мету: бути поряд із тими, хто
-              цього найбільше потребував.
+              From the first days of the invasion, our team never paused. Despite sirens, cold, and fear, we brought
+              emergency aid to those who had lost everything. We delivered packages of food, medicine, and baby food to
+              subway shelters, schools, hospitals, kindergartens, and nursing homes in Kyiv. Our volunteer work had one
+              simple but vital goal: to be with those who needed it most.
             </p>
             <span className={`${styles.text} ${styles.desktopOnly}`}>
-              Станом на березень 2022 року благодійний фонд iHELP забезпечував їжею всі бомбосховища центральної гілки
-              метро Києва, допомагаючи тисячам мешканців столиці.
+              As of March 2022, the iHELP charity foundation has created logistics and provided food to people who lost
+              their homes due to the war launched by Russia against Ukraine and were forced to live in bomb shelters.
+              The food was provided to people along the central branch of the Kyiv metro, helping thousands of residents
+              of the capital.
             </span>
           </div>
         </div>
         <div className={styles.contentKyivRegion}>
-          <h2>Розширення горизонту: Від столиці до Бородянки</h2>
+          <h2>Widening Our Reach: From the Capital to Borodianka</h2>
+          <span className={styles.short}>Aid to liberated towns in Kyiv Region: food, clothing, medicine</span>
           <p>
-            Після визволення Київщини наші зусилля охопили нові території. Одними з перших ми вирушили до зруйнованої
-            Бородянки, де кожна вулиця дихала болем і втратою.
+            After the liberation of Kyiv region, our efforts expanded to new territories. We were among the first to go
+            to the destroyed Borodyanka, where every street breathed of pain and loss.
           </p>
           <div className={styles.borodyankaPhotos}>
             <div className={styles.imageWrapper}>
-              <Image src={borodyankaFirstPhoto} alt="iHELP. Borodyanka 1" />
+              <Image src={borodyankaFirstPhoto} alt="iHELP. From the Capital to Borodianka" />
             </div>
             <div className={styles.imageWrapper}>
-              <Image src={borodyankaSecondPhoto} alt="iHELP. Borodyanka 2" />
+              <Image src={borodyankaSecondPhoto} alt="iHELP were among the first to go to the destroyed Borodyanka" />
             </div>
           </div>
           <p>
-            Благодійний фонд iHELP став міцною опорою для місцевих мешканців. З допомогою священників ПЦУ ми налагодили
-            стабільну передачу гуманітарної допомоги: їжі, ковдр, ліків, одягу – всього, що могло повернути людям надію
-            на завтрашній день.
+            The iHELP charity foundation has become a strong support for local residents. With the help of the priests
+            of the OCU, we have established a stable transfer of humanitarian aid: food, blankets, medicine, clothing -
+            everything that could restore people's hope for tomorrow.
           </p>
           <div className={styles.kyivRegionPhotos}>
             <div className={styles.row}>
               <div className={styles.imageWrapper}>
-                <Image src={regionSecondPhoto} alt="iHELP. Kyiv Region 1" />
+                <Image src={regionSecondPhoto} alt="iHELP distributes humanitarian aid in Ivankiv" />
               </div>
               <div className={styles.imageWrapper}>
-                <Image src={regionFirstPhoto} alt="iHELP. Kyiv Region 2" />
+                <Image src={regionFirstPhoto} alt="iHELP delivers assistance to the elderly" />
               </div>
             </div>
             <div className={styles.commonImageDescription}>
-              <Image src={commonPhoto} alt="iHELP. Common photo" />
+              <Image src={commonPhoto} alt="iHELP. Preparation for the next humanitarian mission" />
               <span>
-                Завдяки храму Святих 40 мучеників Севастійських у Новобіличах, ми створили гуманітарний штаб, котрий
-                став осередком підтримки та віри для мешканців регіону, що суттєво постраждав від гуманітарної кризи.
+                Thanks to the Church of the Holy 40 Martyrs of Sebaste in Novobilichy, we created a humanitarian
+                headquarters, which became a center of support and faith for the residents of the region, which has been
+                significantly affected by the humanitarian crisis.
               </span>
             </div>
             <div className={styles.bgTriangleThree}></div> {/* ✅ The third triangle */}
@@ -139,17 +149,20 @@ function AboutPage() {
       <div className={styles.hotSpotsWrapper}>
         <div className={styles.hotSpots}>
           <div className={styles.contentHotSpots}>
-            <h3>На передовій: Допомога гарячим точкам</h3>
+            <h3>Frontline Action: Bringing Aid to the East</h3>
+            <span className={styles.short}>
+              Humanitarian missions to Bakhmut, Soledar, Pokrovsk, Lysychansk, and more
+            </span>
             <p>
-              Від травня 2022 року наші маршрути пролягли у найнебезпечніші гарячі точки війни, куди мало хто
-              наважувався вирушити: Бахмут, Соледар, Лисичанськ, Новолуганське, Авдіївка. Ми працювали у важких умовах
-              бойових дій, доставляючи гуманітарну допомогу: продукти, тактичне спорядження, медикаменти людям, котрі
-              виживали під постійними обстрілами та в умовах замінованих територій.
+              After the situation in the Kyiv region stabilized, we moved east with help. Since May 2022, our routes
+              have been to the most dangerous hot spots of the war, where few dared to go: Bakhmut, Soledar, Lysychansk,
+              Novoluhanske, Avdiivka. We worked in difficult combat conditions, delivering humanitarian aid: food,
+              tactical equipment, medicines to people who survived under constant shelling and in mined territories.
             </p>
             <p>
-              У Лисичанську старенькі батьки зверталися до нас із проханнями передати записки їх дітям поза Луганщиною,
-              передчуваючи неминучу ізоляцію окупації. Це нагадувало нам, що кожен ризик волонтерів iHELP – це шанс
-              врятувати чиєсь життя.
+              In Lysychansk, elderly parents asked us to deliver notes to their children outside Luhansk, anticipating
+              the inevitable isolation of the occupation. This reminded us that every risk iHELP volunteers take is a
+              chance to save someone's life.
             </p>
           </div>
           <div className={styles.picCtn}>
@@ -158,8 +171,7 @@ function AboutPage() {
                 {/* <source srcSet="/images/slide-1.webp" type="image/webp" /> */}
                 <Image
                   src={hotSpotPhoto1}
-                  // alt="ihelp volunteers.Kharkiv region"
-                  alt="Волонтери ihelp. Харківська область"
+                  alt="iHELP volunteers in Kharkiv region"
                   width={485}
                   height={600}
                   loading="lazy"
@@ -173,8 +185,7 @@ function AboutPage() {
               <picture>
                 <Image
                   src={hotSpotPhoto2}
-                  // alt="ihelp volunteers. Lysychansk"
-                  alt="Волонтери ihelp. Лисичанськ"
+                  alt="iHELP volunteers in Lysychansk"
                   width={485}
                   height={600}
                   loading="lazy"
@@ -188,8 +199,7 @@ function AboutPage() {
               <picture>
                 <Image
                   src={hotSpotPhoto3}
-                  // alt="ihelp volunteers. Avdiyivka"
-                  alt="Волонтери ihelp. Авдіївка"
+                  alt="iHELP volunteers in Avdiivka"
                   width={485}
                   height={600}
                   loading="lazy"
@@ -203,8 +213,7 @@ function AboutPage() {
               <picture>
                 <Image
                   src={hotSpotPhoto4}
-                  // alt="ihelp volunteers. Road to Bakhmut"
-                  alt="Волонтери ihelp. Дорога в Бахмут"
+                  alt="iHELP volunteers in Donetsk region"
                   width={485}
                   height={600}
                   loading="lazy"
@@ -218,8 +227,7 @@ function AboutPage() {
               <picture>
                 <Image
                   src={hotSpotPhoto5}
-                  // alt="ihelp volunteers. Bakhmut"
-                  alt="Волонтери ihelp. Бахмут>"
+                  alt="iHELP volunteers in Bakhmut"
                   width={485}
                   height={600}
                   loading="lazy"
@@ -233,22 +241,25 @@ function AboutPage() {
       </div>
       <section className={styles.aboutHero}>
         <div className={styles.contentKhersonRegion}>
-          <h2>Людські історії: Даруємо радість</h2>
+          <h2>Human Stories: Bringing Joy</h2>
+          <span className={styles.short}>
+            Children’s aid in liberated regions: gifts, emotional support, and psychological care
+          </span>
           <p>
-            Ми завжди пам’ятаємо: допомога — це не лише про хліб чи воду, це про підтримку, відчуття радості та
-            людяності. У щойно звільнених містах Півдня України, зокрема Херсонської області, ми працювали, передаючи
-            підготовлені дітьми Києва новорічні подарунки.
+            We always remember: aid is not just about bread or water, it is about support, a sense of joy and humanity.
+            In the newly liberated cities of Southern Ukraine, in particular the Kherson region, we worked, delivering
+            New Year's gifts prepared by the children of Kyiv.
           </p>
           <div className={styles.cardsAndDescription}>
             <ChildrenCards />
             <div className={styles.description}>
               <p>
-                Ми бачили, як нажахані війною малюки вперше за тривалий час посміхнулися. Один із них, Дмитрик, тримаючи
-                подарунка у руках, сказав: «Мамо, це справжнє свято!».
+                We saw the war-scarred children smile for the first time in a long time. One of them, Dmytryk, holding a
+                gift in his hands, said: «Mom, this is a real holiday!»
               </p>
               <p>
-                Такі миті не лише дарують радість малечі, але й надихають нашу команду iHELP рухатися далі, втілювати
-                нові проєкти та допомагати тим, хто пережив війну, повернути віру у краще майбутнє.
+                Such moments not only bring joy to children, but also inspire our iHELP team to move forward, implement
+                new projects, and help those who survived the war regain faith in a better future.
               </p>
             </div>
           </div>
@@ -257,20 +268,20 @@ function AboutPage() {
       <AboutOvercome />
       <section className={styles.aboutHero}>
         <div className={styles.iHelpToday}>
-          <h2>Сьогодення і майбутнє: Відновлення країни</h2>
+          <h2>Today and Tomorrow: Rebuilding Ukraine</h2>
+          <span className={styles.short}>Developing recovery projects and launching strategic partnerships</span>
           <p>
-            Сьогодні ми розширюємо партнерські зв’язки, плануємо великі проєкти з відновлення та відбудови України,
-            допомагаючи громадам повернутися до гідного життя. Наша діяльність охоплює відновлення житлових будинків,
-            шкіл та критичної інфраструктури у Херсонській, Миколаївській, Чернігівській, Сумській, Харківській,
-            Запорізькій та Одеській областях, а також у громадах сходу та півдня України, що найбільше постраждали від
-            бойових дій.
+            Today, we are expanding our partnerships, planning major projects to restore and rebuild Ukraine, helping
+            communities return to a dignified life. Our activities include the restoration of homes, schools, and
+            critical infrastructure in Kherson, Mykolaiv, Chernihiv, Sumy, Kharkiv, Zaporizhia, and Odesa regions, as
+            well as in communities in eastern and southern Ukraine that have been hardest hit by the fighting.
           </p>
           <div className={styles.imageWrapper}>
-            <Image src={iHelpTodayPhoto} alt="iHELP today" />
+            <Image src={iHelpTodayPhoto} alt="iHELP with the leadership of the Kherson region" />
           </div>
           <span>
-            Метою iHELP є не лише забезпечити базові потреби людини, але й створити живильне середовище, де кожен
-            відчуває себе частиною сильної, єдиної України, що рухається до гідного майбутнього.
+            The goal of iHELP is not only to provide for basic human needs, but also to create a nurturing environment
+            where everyone feels part of a strong, united Ukraine moving toward a dignified future.
           </span>
         </div>
       </section>

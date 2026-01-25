@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
+import { useTranslation } from "next-i18next";
 import * as styles from "./OurProjectsProjects.module.scss";
 
 // import childrenImage from "../../../public/assets/images/pr.jpg";
@@ -9,54 +10,52 @@ import * as styles from "./OurProjectsProjects.module.scss";
 
 import girlAndFlag from "../../../public/assets/images/ukrainian-girl.png";
 
-const data = [
-  {
-    title: "1. Підтримка дітей",
-    description:
-      "Благодійний фонд iHELP ставить за мету створення сприятливих умов для зростання, навчання та розвитку дітей",
-    points: [
-      "• Шкільні набори: Канцелярські товари для дітей, щоб забезпечити рівні можливості для освіти в умовах війни.",
-      "• Гігієнічні набори: Допомога у дотриманні чистоти та здорового способу життя.",
-      "• Розвиваючі ігри: Розвиток креативного мислення та комунікативних навичок.",
-    ],
-    bottomText:
-      "Ці проєкти не лише допомагають дітям, а й надають їх родинам підтримку та відчуття турботи у складні часи.",
-    // image: childrenImage,
-    bgColor: "rgb(193 239 233 / 100%)",
-  },
-  {
-    title: "2. Допомога людям з інвалідністю та обмежено рухомим",
-    description:
-      "У часи війни особливо люди з інвалідністю зіштовхуються з додатковими труднощами у доступі до необхідних послуг та підтримки.",
-    points: [
-      "• Соціальне таксі та евакуація: Транспортування вразливих людей до лікарень і безпечних місць з прифронтових районів.",
-      "• Доставка ліків та продуктів: Адресна підтримка для покращення повсякденного життя.",
-    ],
-    bottomText:
-      "Ці ініціативи роблять життя людей із інвалідністю комфортнішим, безпечнішим та допомагають подолати щоденні виклики.",
-    // image: disabledImage,
-    bgColor: "rgb(214 220 236 / 100%)",
-  },
-  {
-    title: "3. Сприяння освіті",
-    description:
-      "Освіта є ключем до майбутнього, і навіть у надзвичайних умовах діти повинні мати можливість навчатися.",
-    points: [
-      "• Оснащення бомбосховищ мультимедійними системами: Проведення уроків і занять у безпечних умовах під час повітряних тривог.",
-      "• Психологічна допомога дітям: Підтримка емоційного здоров’я через роботу з кваліфікованими психологами.",
-    ],
-    bottomText:
-      "Ці ініціативи забезпечують безперервне навчання та емоційне відновлення дітей, даючи їм шанс на успішне майбутнє.",
-    // image: educationImage,
-    bgColor: "rgb(255 251 206 / 100%)",
-  },
-];
-
 function OurProjectsProjects() {
+  const { t } = useTranslation("projects");
+
+  const data = [
+    {
+      title: t("ourProjects.1stProject.title"),
+      description: t("ourProjects.1stProject.description"),
+      points: [
+        t("ourProjects.1stProject.point1"),
+        t("ourProjects.1stProject.point2"),
+        t("ourProjects.1stProject.point3"),
+      ],
+      bottomText: t("ourProjects.1stProject.subtitle"),
+      // image: childrenImage,
+      bgColor: "rgb(193 239 233 / 100%)",
+    },
+    {
+      title: t("ourProjects.2ndProject.title"),
+      description: t("ourProjects.2ndProject.description"),
+      points: [
+        t("ourProjects.2ndProject.point1"),
+        t("ourProjects.2ndProject.point2"),
+        t("ourProjects.2ndProject.point3"),
+        t("ourProjects.2ndProject.point4"),
+      ],
+      bottomText: t("ourProjects.2ndProject.subtitle"),
+      // image: disabledImage,
+      bgColor: "rgb(214 220 236 / 100%)",
+    },
+    {
+      title: t("ourProjects.3rdProject.title"),
+      description: t("ourProjects.3rdProject.description"),
+      points: [
+        t("ourProjects.3rdProject.point1"),
+        t("ourProjects.3rdProject.point2"),
+        t("ourProjects.3rdProject.point3"),
+      ],
+      bottomText: t("ourProjects.3rdProject.subtitle"),
+      // image: educationImage,
+      bgColor: "rgb(255 251 206 / 100%)",
+    },
+  ];
   return (
     <section className={styles.initiatives}>
       <div className={styles.initiativesImageBlock}>
-        <Image src={girlAndFlag} alt="Ihelp Бус>" />
+        <Image src={girlAndFlag} alt={t("ourProjects.imageAlt")} />
       </div>
       <div className={styles.initiativesBlock}>
         {data.map((block, idx) => (
@@ -72,7 +71,7 @@ function OurProjectsProjects() {
                   <li key={i}>{item}</li>
                 ))}
               </ul>
-              <p>{block.bottomText}</p>
+              <p className={styles.impact}>{block.bottomText}</p>
             </div>
           </div>
         ))}

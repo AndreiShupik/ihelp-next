@@ -1,0 +1,24 @@
+{
+  "title": "Contact Form",
+
+  "successMessage": "Thank you! We will contact you shortly.",
+
+  "fields": {
+    "name": "Name",
+    "phone": "Phone",
+    "message": "Message",
+    "messagePlaceholder": "Your message..."
+  },
+
+  "buttons": {
+    "send": "Send",
+    "sending": "Sending..."
+  },
+
+  "errors": {
+    "nameRequired": "Name is required.",
+    "phoneRequired": "Phone number is required.",
+    "phoneInvalid": "Invalid phone number.",
+    "submitError": "Error submitting the form"
+  }
+}

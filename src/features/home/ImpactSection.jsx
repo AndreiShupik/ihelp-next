@@ -1,13 +1,15 @@
 import React from "react";
-import Button from "../../components//ui/Button";
+import { useTranslation } from "next-i18next";
 
+import Button from "../../components//ui/Button";
 import * as styles from "./ImpactSection.module.scss";
 import { useModal } from "@/components/ui/ModalActions/ModalContext";
 
 function ImpactSection() {
+  const { t } = useTranslation("home");
   const { openModal } = useModal();
 
-  const impactBtnText = "Кожна пожертва змінює життя";
+  const impactBtnText = t("impact.ctaButton");
   const impactBtnType = "secondary";
 
   return (
@@ -16,24 +18,21 @@ function ImpactSection() {
         <div className={styles.impactTextContainer}>
           {/* <span>Приєднуйся</span> */}
           {/* <h2>Наші досягнення</h2> */}
-          <h3>Наші досягнення</h3>
+          <h3>{t("impact.title")}</h3>
           <hr />
-          <p>
-            З 2022 року наші маршрути проходять через найнебезпечніші регіони, включаючи Бахмут, Соледар, Ізюм та
-            Херсон. Ми працюємо там, де відчайдушно потрібна підтримка, попри складні умови та ризики.
-          </p>
+          <p>{t("impact.description")}</p>
           <div className={styles.btnContainer}>
             <Button type={impactBtnType} text={impactBtnText} onClick={() => openModal("donate")} />
           </div>
         </div>
 
         <dl className={styles.impactStatistic}>
-          <dt>10 000+</dt>
-          <dd>сімей отримали гуманітарну допомогу</dd>
-          <dt>150</dt>
-          <dd>будинків відновлено у прифронтових районах</dd>
-          <dt>3 000</dt>
-          <dd>дітей отримали освітню та психологічну підтримку</dd>
+          <dt>57 750+</dt>
+          <dd>{t("impact.familyHelp")}</dd>
+          <dt>8</dt>
+          <dd>{t("impact.communityHelp")}</dd>
+          <dt>15 139</dt>
+          <dd>{t("impact.childrenHelp")}</dd>
         </dl>
       </div>
     </section>

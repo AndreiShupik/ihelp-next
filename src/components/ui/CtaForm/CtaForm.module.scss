@@ -14,9 +14,9 @@
 
   scroll-margin-top: 75px;
 
-  p {
-    padding-bottom: 1rem;
-  }
+  // p {
+  //   padding-bottom: 1rem;
+  // }
 }
 
 /*--- Payment info block ---*/
@@ -30,7 +30,7 @@
     position: relative;
     display: flex;
     align-items: flex-end;
-    margin: 1rem 0 1rem -5px;
+    margin: 1rem 0 2rem -5px;
     gap: 0.5rem;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -44,13 +44,37 @@
       opacity: 0.7;
     }
 
-    span {
+    section {
       word-break: break-all;
+
+      h4 {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .donateNow {
+    position: relative;
+    top: -25px;
+
+    a {
+      font-size: 20px;
+      color: #22aeff;
+      text-decoration: underline;
+    }
+  }
+
+  .paymentBlock {
+    flex-direction: column;
+    align-items: flex-start;
+
+    p {
+      margin-bottom: -5px;
     }
   }
 
   .bankLink {
-    margin-top: 1.5rem;
+    margin-bottom: 32px;
 
     a {
       color: #22aeff;
@@ -65,6 +89,10 @@
 
   .crypto {
     margin-top: 2rem;
+
+    .breakable {
+      overflow-wrap: anywhere;
+    }
 
     strong {
       display: block;

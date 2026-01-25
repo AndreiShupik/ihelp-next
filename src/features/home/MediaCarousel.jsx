@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { useTranslation } from "next-i18next";
 
 import useIsMobile from "@/utils/useIsMobile";
 import styles from "./MediaCarousel.module.scss";
@@ -22,9 +23,12 @@ import rewindForward from "../../../public/assets/icons/rewind-forward.png";
 import rewindBack from "../../../public/assets/icons/rewind-back.png";
 
 function MediaCarousel({ media }) {
+  const { t } = useTranslation("home");
   const [isRunning, setIsRunning] = useState(true);
+
   const [offset, setOffset] = useState(0);
   const requestRef = useRef(null);
+
   const previousTimeRef = useRef(null);
   const trackRef = useRef(null);
 
@@ -70,11 +74,8 @@ function MediaCarousel({ media }) {
 
   return (
     <section className={styles.mediaSection}>
-      <h3 className={styles.mediaHeader}>Про нас пишуть</h3>
-      <p>
-        Ми відкрито ділимося результатами своєї роботи, і про нас говорять у медіа. Так ми доводимо: прозорість та
-        довіра — основа нашої діяльності.
-      </p>
+      <h3 className={styles.mediaHeader}>{t("media.title")}</h3>
+      <p>{t("media.subtitle")}</p>
 
       <div
         className={styles.slider}
@@ -87,7 +88,7 @@ function MediaCarousel({ media }) {
               href={item.link || "#"}
               className={styles.slide}
               key={`${item.id}-${index}`}
-              aria-label={`${item.name} — стаття про нас`}
+              aria-label={`${item.name} - ${t("media.article")}`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -182,7 +183,7 @@ export default MediaCarousel;
 //       <h3 className={styles.mediaHeader}>Про нас пишуть</h3>
 //       <p>
 //         Ми відкрито ділимося результатами своєї роботи, і про нас говорять у медіа. Так ми доводимо: прозорість та
-//         довіра — основа нашої діяльності.
+//         довіра - основа нашої діяльності.
 //       </p>
 //       <div
 //         className={styles.slider}
@@ -195,7 +196,7 @@ export default MediaCarousel;
 //               href="#"
 //               className={styles.slide}
 //               key={`${media.id}-${index}`}
-//               aria-label={`${media.name} — стаття про нас`}
+//               aria-label={`${media.name} - стаття про нас`}
 //             >
 //               <div className={styles.logoWrapper}>
 //                 {" "}

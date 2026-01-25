@@ -1,13 +1,17 @@
 import React, { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useTranslation } from "next-i18next";
 
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useLockHeight } from "@/utils/useLockHeight";
+
 import * as styles from "./AidForUkraine.module.scss";
 
 import Button from "../../components//ui/Button";
 import { useModal } from "@/components/ui/ModalActions/ModalContext";
 
 export default function AidForUkraine() {
+  const { t } = useTranslation("home");
+
   const parallaxRef = useRef(null);
   const { openModal } = useModal();
 
@@ -33,21 +37,17 @@ export default function AidForUkraine() {
 
       {/* Foreground Content */}
       <motion.div className={styles.textContainer} style={{ y: textY }}>
-        <h2>Кожна пожертва змінює життя.</h2>
-        <p>Ваша підтримка — це шанс для тисяч сімей відновити життя.</p>
+        <h2>{t("aidForUkraine.title")}</h2>
+        <p>{t("aidForUkraine.title")}</p>
         <div className={styles.btnsBlock}>
           <div className={styles.buttons}>
-            <Button text={"Зробити пожертву"} type={"primary"} onClick={() => openModal("donate")} />
+            <Button text={t("aidForUkraine.makeDonation")} type={"primary"} onClick={() => openModal("donate")} />
           </div>
           <div className={styles.buttons}>
-            <Button text={"Стати партнером"} type={"primary"} onClick={() => openModal("partner")} />
+            <Button text={t("aidForUkraine.becomePartner")} type={"primary"} onClick={() => openModal("partner")} />
           </div>
           <div className={styles.buttons}>
-            <Button
-              text={"Долучитися до волонтерської команди"}
-              type={"primary"}
-              onClick={() => openModal("volunteer")}
-            />
+            <Button text={t("aidForUkraine.joinVolunteer")} type={"primary"} onClick={() => openModal("volunteer")} />
           </div>
         </div>
       </motion.div>

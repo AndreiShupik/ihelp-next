@@ -21,7 +21,7 @@ import regionSecondPhoto from "../../../public/assets/images/ihelp-region2.jpg";
 import hotSpotPhoto1 from "../../../public/assets/images/hotspot-1.jpg";
 import hotSpotPhoto2 from "../../../public/assets/images/hotspot-2.jpg";
 import hotSpotPhoto3 from "../../../public/assets/images/hotspot-3.jpg";
-import hotSpotPhoto4 from "../../../public/assets/images/hotspot-4.jpg";
+import hotSpotPhoto4 from "../../../public/assets/images/hotspot-6.jpg";
 import hotSpotPhoto5 from "../../../public/assets/images/hotspot-5.jpg";
 
 import iHelpTodayPhoto from "../../../public/assets/images/ihelp-today.jpg";
@@ -59,18 +59,19 @@ function AboutPage() {
             Коли перший вибух сколихнув Київ, життя багатьох змінилося назавжди. Тетяна Дзюбенко не вагалася. Разом із
             рідними та сусідами вона почала приносити їжу до найближчих укриттів, підтримуючи тих, хто залишився без
             дому. Що починалося як маленький жест людяності та гуманітарної допомоги, швидко переросло у велику справу.
-            Так народився благодійний фонд в Україні, iHELP, відомий також як «Я ДОПОМАГАЮ» — промінь надії у темряві
+            Так народився благодійний фонд в Україні, iHELP, відомий також як «Я ДОПОМАГАЮ» - промінь надії у темряві
             війни.
           </p>
         </div>
         <div className={styles.firstSteps}>
           <div className={styles.imageDescription}>
             <div className={styles.imageWrapper}>
-              <Image src={firstStepsPhoto} alt="iHELP. First steps" />
+              <Image src={firstStepsPhoto} alt="Благодійний фонд iHELP. Перші кроки" />
             </div>
             <span className={`${styles.text} ${styles.mobileOnly}`}>
-              Станом на березень 2022 року благодійний фонд iHELP забезпечував їжею всі бомбосховища центральної гілки
-              метро Києва, допомагаючи тисячам мешканців столиці.
+              Станом на березень 2022 року благодійний фонд iHELP створив логістику забезпечення та надавав їжу людям,
+              які втратили житло через війну яку розпочала росія проти України та змушені були жити в бомбосховищах. Їжа
+              надавалась людям по центральної гілці метро Києва, допомагаючи тисячам мешканців столиці.
             </span>
           </div>
           <div className={styles.contentKyiv}>
@@ -79,15 +80,16 @@ function AboutPage() {
               Гуманітарна допомога у Києві під час війни: продукти, ліки, дитяче харчування
             </span>
             <p>
-              З перших днів війни наша команда не зволікала й не відпочивала. Сирени, холод, страх — усе це залишалося
+              З перших днів війни наша команда не зволікала й не відпочивала. Сирени, холод, страх - усе це залишалося
               позаду, коли йшлося про гуманітарну допомогу тим, хто втратив усе. Ми розносили пакунки з продуктами,
               ліками, дитячим харчуванням до сховищ у метро, шкіл, лікарень, дитячих садочків та домівок літніх людей у
               Києві. Наша волонтерська допомога мала одну просту, але життєво важливу мету: бути поряд із тими, хто
               цього найбільше потребував.
             </p>
             <span className={`${styles.text} ${styles.desktopOnly}`}>
-              Станом на березень 2022 року благодійний фонд iHELP забезпечував їжею всі бомбосховища центральної гілки
-              метро Києва, допомагаючи тисячам мешканців столиці.
+              Станом на березень 2022 року благодійний фонд iHELP створив логістику забезпечення та надавав їжу людям,
+              які втратили житло через війну яку розпочала росія проти України та змушені були жити в бомбосховищах. Їжа
+              надавалась людям по центральної гілці метро Києва, допомагаючи тисячам мешканців столиці.
             </span>
           </div>
         </div>
@@ -102,10 +104,10 @@ function AboutPage() {
           </p>
           <div className={styles.borodyankaPhotos}>
             <div className={styles.imageWrapper}>
-              <Image src={borodyankaFirstPhoto} alt="iHELP. Borodyanka 1" />
+              <Image src={borodyankaFirstPhoto} alt="iHELP. Від столиці до Бородянки" />
             </div>
             <div className={styles.imageWrapper}>
-              <Image src={borodyankaSecondPhoto} alt="iHELP. Borodyanka 2" />
+              <Image src={borodyankaSecondPhoto} alt="iHELP одними з перших вирушили до зруйнованої Бородянки" />
             </div>
           </div>
           <p>
@@ -116,14 +118,14 @@ function AboutPage() {
           <div className={styles.kyivRegionPhotos}>
             <div className={styles.row}>
               <div className={styles.imageWrapper}>
-                <Image src={regionSecondPhoto} alt="iHELP. Kyiv Region 1" />
+                <Image src={regionSecondPhoto} alt="iHELP роздає гуманітарну допомогу в Іванкові" />
               </div>
               <div className={styles.imageWrapper}>
-                <Image src={regionFirstPhoto} alt="iHELP. Kyiv Region 2" />
+                <Image src={regionFirstPhoto} alt="iHELP надає допомогу людям похилого віку" />
               </div>
             </div>
             <div className={styles.commonImageDescription}>
-              <Image src={commonPhoto} alt="iHELP. Common photo" />
+              <Image src={commonPhoto} alt="iHELP. Підготовка до чергової гуманітарної місії" />
               <span>
                 Завдяки храму Святих 40 мучеників Севастійських у Новобіличах, ми створили гуманітарний штаб, котрий
                 став осередком підтримки та віри для мешканців регіону, що суттєво постраждав від гуманітарної кризи.
@@ -142,10 +144,11 @@ function AboutPage() {
               України
             </span>
             <p>
-              Від травня 2022 року наші маршрути пролягли у найнебезпечніші гарячі точки війни, куди мало хто
-              наважувався вирушити: Бахмут, Соледар, Лисичанськ, Новолуганське, Авдіївка. Ми працювали у важких умовах
-              бойових дій, доставляючи гуманітарну допомогу: продукти, тактичне спорядження, медикаменти людям, котрі
-              виживали під постійними обстрілами та в умовах замінованих територій.
+              По стабілізації ситуації в Київській області му рушили з допомогою на схід. Від травня 2022 року наші
+              маршрути пролягли у найнебезпечніші гарячі точки війни, куди мало хто наважувався вирушити: Бахмут,
+              Соледар, Лисичанськ, Новолуганське, Авдіївка. Ми працювали у важких умовах бойових дій, доставляючи
+              гуманітарну допомогу: продукти, тактичне спорядження, медикаменти людям, котрі виживали під постійними
+              обстрілами та в умовах замінованих територій.
             </p>
             <p>
               У Лисичанську старенькі батьки зверталися до нас із проханнями передати записки їх дітям поза Луганщиною,
@@ -159,8 +162,7 @@ function AboutPage() {
                 {/* <source srcSet="/images/slide-1.webp" type="image/webp" /> */}
                 <Image
                   src={hotSpotPhoto1}
-                  // alt="ihelp volunteers.Kharkiv region"
-                  alt="Волонтери ihelp. Харківська область"
+                  alt="Волонтери iHELP у Харківській області"
                   width={485}
                   height={600}
                   loading="lazy"
@@ -174,8 +176,7 @@ function AboutPage() {
               <picture>
                 <Image
                   src={hotSpotPhoto2}
-                  // alt="ihelp volunteers. Lysychansk"
-                  alt="Волонтери ihelp. Лисичанськ"
+                  alt="Волонтери iHELP у Лисичанську"
                   width={485}
                   height={600}
                   loading="lazy"
@@ -189,8 +190,7 @@ function AboutPage() {
               <picture>
                 <Image
                   src={hotSpotPhoto3}
-                  // alt="ihelp volunteers. Avdiyivka"
-                  alt="Волонтери ihelp. Авдіївка"
+                  alt="Волонтери iHELP в Авдіївці"
                   width={485}
                   height={600}
                   loading="lazy"
@@ -204,8 +204,7 @@ function AboutPage() {
               <picture>
                 <Image
                   src={hotSpotPhoto4}
-                  // alt="ihelp volunteers. Road to Bakhmut"
-                  alt="Волонтери ihelp. Дорога в Бахмут"
+                  alt="Волонтери iHELP у Донецькій області"
                   width={485}
                   height={600}
                   loading="lazy"
@@ -219,8 +218,7 @@ function AboutPage() {
               <picture>
                 <Image
                   src={hotSpotPhoto5}
-                  // alt="ihelp volunteers. Bakhmut"
-                  alt="Волонтери ihelp. Бахмут>"
+                  alt="Волонтери iHELP у Бахмуті"
                   width={485}
                   height={600}
                   loading="lazy"
@@ -240,7 +238,7 @@ function AboutPage() {
             психологічна допомога
           </span>
           <p>
-            Ми завжди пам’ятаємо: допомога — це не лише про хліб чи воду, це про підтримку, відчуття радості та
+            Ми завжди пам’ятаємо: допомога - це не лише про хліб чи воду, це про підтримку, відчуття радості та
             людяності. У щойно звільнених містах Півдня України, зокрема Херсонської області, ми працювали, передаючи
             підготовлені дітьми Києва новорічні подарунки.
           </p>
@@ -274,7 +272,7 @@ function AboutPage() {
             бойових дій.
           </p>
           <div className={styles.imageWrapper}>
-            <Image src={iHelpTodayPhoto} alt="iHELP today" />
+            <Image src={iHelpTodayPhoto} alt="iHELP із керівництвом Херсонської області." />
           </div>
           <span>
             Метою iHELP є не лише забезпечити базові потреби людини, але й створити живильне середовище, де кожен

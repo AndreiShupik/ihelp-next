@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "next-i18next";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -10,61 +11,54 @@ import aboutThirdPhoto from "../../../public/assets/images/about-3.jpg";
 import * as styles from "./AboutSection.module.scss";
 
 function AboutSection() {
+  const { t } = useTranslation("home");
+
   return (
     <section className={styles.about}>
       <div className={styles.aboutWrapper}>
-        <p className={styles.description}>
-          iHELP — це благодійний фонд, що допомагає сім’ям, дітям та вразливим групам населення у найбільш постраждалих
-          регіонах України. Ми доставляємо гуманітарну допомогу, підтримуємо громади та працюємо над відновленням
-          країни. Разом ми можемо змінити життя на краще.
-        </p>
-        <h2>Основні програми</h2>
+        <p className={styles.description}>{t("about.description")}</p>
+        <h2>{t("about.title")}</h2>
         <div className={styles.aboutContainer}>
           <div className={`${styles.aboutBlock} ${styles.firstBlock}`}>
             <div className={styles.contentBlock}>
               <h3>
                 <Link className={styles.titleLink} href="/frontline-people">
-                  Надання екстреної допомоги
+                  {t("about.firstProject")}
                 </Link>
               </h3>
-              <p>
-                Доставка продуктів, ліків, гігієнічних наборів та теплого одягу сім’ям, які цього найбільше потребують.
-              </p>
-              <Link href="/frontline-people">Дізнатися більше</Link>
+              <p>{t("about.firstProjectDescription")}</p>
+              <Link href="/frontline-people">{t("about.learnMore")}</Link>
             </div>
             <div className={styles.imgBlock}>
-              <Image src={aboutFirstPhoto} alt="Image 1" />
+              <Image src={aboutFirstPhoto} alt={t("about.1stPhotoAlt")} />
             </div>
           </div>
           <div className={`${styles.aboutBlock} ${styles.secondBlock}`}>
             <div className={styles.imgBlock}>
-              <Image src={aboutSecondPhoto} alt="Image 2" />
+              <Image src={aboutSecondPhoto} alt={t("about.2ndPhotoAlt")} />
             </div>
             <div className={styles.contentBlock}>
               <h3>
                 <Link className={styles.titleLink} href="/social-taxi">
-                  Відновлення громад та інфраструктури
+                  {t("about.secondProject")}
                 </Link>
               </h3>
-              <p>Відбудова житлових будинків, шкіл та критичної інфраструктури у зруйнованих регіонах.</p>
-              <Link href="/social-taxi">Дізнатися більше</Link>
+              <p>{t("about.secondProjectDescription")}</p>
+              <Link href="/social-taxi">{t("about.learnMore")}</Link>
             </div>
           </div>
           <div className={`${styles.aboutBlock} ${styles.thirdBlock}`}>
             <div className={styles.contentBlock}>
               <h3>
                 <Link className={styles.titleLink} href="/kherson-children">
-                  Допомога дітям та освітні ініціативи
+                  {t("about.thirdProject")}
                 </Link>
               </h3>
-              <p>
-                Емоційна та освітня підтримка дітей, які постраждали від війни, через психологічну допомогу, навчальні
-                матеріали та розвиваючі заходи.
-              </p>
-              <Link href="/kherson-children">Дізнатися більше</Link>
+              <p>{t("about.thirdProjectDescription")}</p>
+              <Link href="/kherson-children">{t("about.learnMore")}</Link>
             </div>
             <div className={styles.imgBlock}>
-              <Image src={aboutThirdPhoto} alt="Image 3" />
+              <Image src={aboutThirdPhoto} alt={t("about.3rdPhotoAlt")} />
             </div>
           </div>
         </div>

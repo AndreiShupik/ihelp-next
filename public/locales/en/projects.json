@@ -1,0 +1,47 @@
+{
+  "title": {
+    "1stTitlePart": "Charitable Foundation",
+    "2ndTitlePart": "“I HELP”: Our Projects",
+    "subtitle": "From humanitarian support to the recovery of Ukraine",
+    "1stDescription": "The “I HELP” / iHELP Charitable Foundation began its work in the first days of the full-scale invasion as a volunteer initiative, creating a logistics system to support people who lost their homes and were forced to live in bomb shelters. Today, iHELP is a humanitarian operator working in the Kyiv and Kherson regions, with an extensive network of local volunteers and partnerships with communities, local authorities, and businesses.",
+    "2ndDescription": "We believe that help is an infrastructure of trust that forms the foundation for the sustainable recovery and development of Ukraine.",
+    "imageAlt": "iHELP volunteers unloading humanitarian aid"
+  },
+  "ourProjects": {
+    "1stProject": {
+      "title": "1. Mobility and Accessibility: the “Road of Life. South” Project",
+      "description": "30+ trips per month for people with disabilities, individuals with limited mobility, and seriously ill residents of frontline communities in the Kherson and Mykolaiv regions to access life-saving procedures.",
+      "point1": "A project coordinated with the Kherson Regional State Administration and the Shevchenkove community of the Mykolaiv region.",
+      "point2": "Transportation to hospitals, rehabilitation centers, and social services.",
+      "point3": "Evacuation routes for residents who are unable to leave on their own.",
+      "subtitle": "Provides vital access to medical and social assistance. The goal is to create a model of social mobility that can be scaled to other regions of Ukraine."
+    },
+    "2ndProject": {
+      "title": "2. Children and Education: “To the Children of the Kherson Region from the Children of Kyiv”",
+      "description": "15,139 children’s support kits and 34 schools in Kyiv and the Kherson region united into a single network of solidarity.",
+      "point1": "Students, parents, and administrations of educational institutions in Kyiv collect support kits for children in frontline communities.",
+      "point2": "Holiday gifts.",
+      "point3": "Each package includes a letter or a drawing - a symbol of friendship and care.",
+      "point4": "The program fosters a culture of mutual support, social responsibility, and philanthropy among young people.",
+      "subtitle": "It shapes a new generation of citizens for whom charity and compassion are part of their identity. The project strengthens educational resilience and contributes to the recovery of schools in communities affected by the war."
+    },
+    "3rdProject": {
+      "title": "3. Veterans and Their Families: the “Veteran Family Space” Program",
+      "description": "A safe space for reintegration, support, and shared development.",
+      "point1": "Group and individual sessions with psychologists and veteran facilitators.",
+      "point2": "Cultural events, trainings, and family activities.",
+      "point3": "A peer-to-peer approach - veterans supporting veterans.",
+      "subtitle": "The program restores a sense of belonging, strength, and dignity. Veterans become active providers of support, not just its recipients."
+    },
+    "imageAlt": "iHELP. Children and education: “To the Children of Kherson Region from the Children of Kyiv”"
+  },
+  "ourVision": {
+    "title": "Volunteering and Partnerships",
+    "subtitle": "People are the heart of our work.",
+    "point1": "30+ active volunteers in the Kyiv and Kherson regions.",
+    "point2": "Partnerships with businesses, civil society organizations, local authorities, and international foundations.",
+    "description": "We are building a network of trust that connects communities, the state, and partners around a shared goal - support and recovery.",
+    "imageAlt": "iHelp. Our vision",
+    "ctaLink": "Join us!"
+  }
+}

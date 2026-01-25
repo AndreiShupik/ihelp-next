@@ -256,7 +256,8 @@
         }
         .firstBlock {
           .contentBlock {
-            left: 2vw;
+            // left: 2vw;
+            left: 1vw;
             top: 6vw;
 
             p {
@@ -280,7 +281,8 @@
             margin-top: -10.45vw;
           }
           .contentBlock {
-            top: 21vw;
+            // top: 21vw;
+            top: 17vw;
             right: -11vw;
 
             p {
@@ -336,7 +338,7 @@
 
 @media (max-width: 576px) {
   .about {
-    padding: 20px 15px;
+    padding: 20px 15px 50px;
 
     .aboutWrapper {
       .aboutContainer {

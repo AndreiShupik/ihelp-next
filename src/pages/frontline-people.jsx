@@ -1,15 +1,52 @@
-import React from "react";
-import FrontlinePeople from "../features/frontlinePeople/FrontlinePeoplePage";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+"use client";
 
-export default function FrontlinePeoplePage() {
-  return <FrontlinePeople />;
-}
+import React from "react";
+import Head from "next/head";
+
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useRouter } from "next/router";
+
+import FrontlinePeopleEn from "@/features/frontlinePeople/FrontlinePeoplePage.en";
+import FrontlinePeopleUa from "@/features/frontlinePeople/FrontlinePeoplePage.ua";
+
+const FrontlinePeople = () => {
+  const { locale } = useRouter();
+  const { t } = useTranslation("common");
+
+  return (
+    <>
+      <Head>
+        <link rel="alternate" hrefLang="en" href="https://ihelp.org.ua/frontline-people" />
+        <link rel="alternate" hrefLang="ua" href="https://ihelp.org.ua/ua/frontline-people" />
+
+        <meta name="description" content={t("meta.frontlinePeople.description")} />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
+
+        <meta property="og:title" content={t("meta.frontlinePeople.title")} />
+        <meta property="og:description" content={t("meta.frontlinePeople.description")} />
+        <meta property="og:url" content="https://ihelp.org.ua/frontline-people" />
+
+        <meta name="twitter:title" content={t("meta.frontlinePeople.title")} />
+        <meta name="twitter:description" content={t("meta.frontlinePeople.description")} />
+
+        <title>{t("meta.frontlinePeople.title")}</title>
+        <link
+          rel="canonical"
+          href={locale === "ua" ? "https://ihelp.org.ua/ua/frontline-people" : "https://ihelp.org.ua/frontline-people"}
+        />
+      </Head>
+      {locale === "ua" ? <FrontlinePeopleUa /> : <FrontlinePeopleEn />}
+    </>
+  );
+};
 
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common"])),
+      ...(await serverSideTranslations(locale, ["common", "payment", "contactForm"])),
     },
   };
 }
+
+export default FrontlinePeople;

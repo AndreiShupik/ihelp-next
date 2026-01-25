@@ -22,20 +22,21 @@ export default function SocialTaxiPage() {
       <div className={styles.parallaxBg}></div> {/* <-- fake parallax background */}
       <div className={styles.socialTaxiContainer}>
         <div className={styles.title}>
-          <h1>Проєкт "Соціальне таксі у Херсонській області"</h1>
+          <h1>Project: Social Taxi in Kherson Region</h1>
           <h2>
-            "Дорога життя. Південь" створений для тих, кому потрібен транспорт, щоб дістатися лікарні, соціальних служб
-            або місць, де вони можуть отримати допомогу та підтримку.
+            “Road of Life – South” a transport service for those who need to reach hospitals, social services, or places
+            where they can receive help and support.
           </h2>
         </div>
       </div>
       <div className={styles.blankContent}>
         <div className={styles.blankContainer}>
           <p>
-            Люди з інвалідністю та обмежено рухливі у прифронтових районах щодня стикаються з труднощами, які для інших
-            здаються звичайними: як доїхати на прийом до лікаря, оформити документи, пройти реабілітацію чи отримати
-            гуманітарну допомогу. У багатьох немає можливості самостійно пересуватися, а громадський транспорт або не
-            працює, або його використання є небезпечним через бойові дії.
+            In frontline areas of Kherson Region, people with disabilities and limited mobility face daily challenges
+            that most of us take for granted: How to get to a doctor’s appointment, apply for essential documents,
+            attend rehabilitation, or collect humanitarian aid. Many are unable to move on their own. Public transport
+            is either unavailable or too dangerous due to shelling and drones. This project fills a critical gap in
+            access and safety.
           </p>
         </div>
       </div>
@@ -52,34 +53,39 @@ export default function SocialTaxiPage() {
               </div>
 
               <div className={styles.contentWrapper}>
-                <h2 className={styles.heading}>Як працює проєкт?</h2>
+                <h2 className={styles.heading}>How the project works</h2>
 
                 <div className={styles.block}>
                   <p className={styles.heading}>
-                    <strong>Для кого?</strong>
-                  </p>
-                  <p>Для людей з інвалідністю, поранених, маломобільних осіб, які потребують безпечного транспорту.</p>
-                </div>
-
-                <div className={styles.block}>
-                  <p className={styles.heading}>
-                    <strong>Куди?</strong>
+                    <strong>Who is it for?</strong>
                   </p>
                   <p>
-                    До лікарень, центрів реабілітації, соціальних служб, адміністративних установ чи безпечних місць
-                    евакуації.
+                    People with disabilities, injured civilians, and those with limited mobility who need safe and
+                    reliable transportation.
                   </p>
                 </div>
 
                 <div className={styles.block}>
                   <p className={styles.heading}>
-                    <strong>Хто допомагає?</strong>
+                    <strong>Where does it go?</strong>
                   </p>
-                  <p>Водії, координатори та волонтери, які дбають про кожного пасажира.</p>
+                  <p>
+                    To hospitals, rehabilitation centres, social service offices, administrative buildings, and
+                    evacuation zones.
+                  </p>
+                </div>
+
+                <div className={styles.block}>
+                  <p className={styles.heading}>
+                    <strong>Who makes it happen?</strong>
+                  </p>
+                  <p>
+                    Drivers, coordinators, and volunteers who care deeply about each passenger’s dignity and safety.
+                  </p>
                 </div>
                 <p>
-                  Соціальне таксі працює там, де люди не мають іншого способу вчасно й безпечно дістатися лікарень,
-                  адміністративних послуг та центрів соціальної підтримки.
+                  This Social Taxi operates where people would otherwise have no way to reach essential services -
+                  healthcare, legal support, or protection - on time and without danger.
                 </p>
               </div>
             </section>
@@ -88,13 +94,13 @@ export default function SocialTaxiPage() {
       </div>
       <div className={styles.blankContent}>
         <div className={styles.blankContainer}>
-          <h3>Чому це важливо?</h3>
+          <h3>Why it’s essential</h3>
           <p>
-            У Херсонській області зруйнована інфраструктура, нестача транспорту, постійна загроза обстрілів і дронів.
-            Але попри це, люди продовжують жити. Їм потрібно лікуватися, отримувати соціальні послуги, рухатися.
+            Kherson’s infrastructure has been heavily damaged. Public transit is scarce. Shelling and drone attacks
+            remain a constant threat. Yet people still need to live, move, heal, and survive.
           </p>
           <p>
-            <strong>Для них соціальне таксі — це не зручність, а єдина можливість жити гідно.</strong>
+            <strong>For many, this taxi service isn’t a convenience - it’s the only path to a dignified life.</strong>
           </p>
         </div>
       </div>
@@ -127,15 +133,15 @@ export default function SocialTaxiPage() {
       <section className={styles.projectResults}>
         <div className={styles.wrapper}>
           <div className={styles.imageWrapper}>
-            <Image src={socialTaxiImg} alt="iHelp. Соціальне таксі" />
+            <Image src={socialTaxiImg} alt="iHelp. Social taxi" />
           </div>
           <div className={styles.container}>
-            <h3 className={styles.heading}>Щомісячні витрати на роботу таксі:</h3>
+            <h3 className={styles.heading}>Monthly costs of the project</h3>
             <ul className={styles.resultsList}>
-              <li>Пальне для поїздок</li>
-              <li>Ремонт і обслуговування машин</li>
-              <li>Логістичне та технічне забезпечення</li>
-              <li>Адміністративні витрати</li>
+              <li>Fuel for trips</li>
+              <li>Vehicle repairs and maintenance</li>
+              <li>Logistical and technical operations</li>
+              <li>Administrative expenses</li>
             </ul>
           </div>
         </div>
@@ -143,13 +149,14 @@ export default function SocialTaxiPage() {
       <div className={styles.backgroundWrapper}>
         <section className={styles.howToHelp}>
           <div className={styles.textContent}>
-            <h2 className={styles.heading}>Долучайтеся!</h2>
+            <h2 className={styles.heading}>Join us</h2>
             <p>
-              Це не просто допомога — це шанс змінити життя людей, для яких кожна поїздка означає доступ до лікаря,
-              соціальних послуг чи безпечного місця.
+              This isn’t just transportation - it’s a lifeline. Every ride brings someone closer to medical care, to
+              safety, to support.
             </p>
             <p>
-              Підтримайте проєкт "Соціальне таксі у Херсонській області" та станьте частиною змін, які рятують життя.
+              Support the “Social Taxi in Kherson Region” project and be part of real change - the kind that saves
+              lives.
             </p>
           </div>
           {/* <div className={styles.taxiImagesBlock}>

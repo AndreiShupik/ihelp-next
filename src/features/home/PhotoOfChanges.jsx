@@ -1,55 +1,52 @@
 import React, { useEffect } from "react";
+import { useTranslation } from "next-i18next";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Keyboard, Mousewheel } from "swiper/modules";
 
-const slides = [
-  {
-    // title: "Jellyfish",
-    description:
-      '"Волонтери принесли їжу до нашого укриття, коли ми втратили надію. Дякуємо iHELP!" – Анна, Київська область.',
-    // link: "https://en.wikipedia.org/wiki/Jellyfish",
-    className: "swiper-slide--one",
-  },
-  {
-    // title: "Seahorse",
-    description:
-      '"Волонтери принесли їжу до нашого укриття, коли ми втратили надію. Дякуємо iHELP!" – Анна, Київська область.',
-    // link: "https://en.wikipedia.org/wiki/Seahorse",
-    className: "swiper-slide--two",
-  },
-  {
-    // title: "Octopus",
-    description:
-      '"Волонтери принесли їжу до нашого укриття, коли ми втратили надію. Дякуємо iHELP!" – Анна, Київська область.',
-    // link: "https://en.wikipedia.org/wiki/Octopus",
-    className: "swiper-slide--three",
-  },
-  {
-    // title: "Shark",
-    description:
-      '"Волонтери принесли їжу до нашого укриття, коли ми втратили надію. Дякуємо iHELP!" – Анна, Київська область.',
-    // link: "https://en.wikipedia.org/wiki/Shark",
-    className: "swiper-slide--four",
-  },
-  {
-    // title: "Dolphin",
-    description:
-      '"Волонтери принесли їжу до нашого укриття, коли ми втратили надію. Дякуємо iHELP!" – Анна, Київська область.',
-    // link: "https://en.wikipedia.org/wiki/Dolphin",
-    className: "swiper-slide--five",
-  },
-  {
-    // title: "Dolphin",
-    description:
-      '"Волонтери принесли їжу до нашого укриття, коли ми втратили надію. Дякуємо iHELP!" – Анна, Київська область.',
-    // link: "https://en.wikipedia.org/wiki/Dolphin",
-    className: "swiper-slide--six",
-  },
-];
-
 function PhotoOfChanges() {
+  const { t } = useTranslation("home");
   const [isResizing, setIsResizing] = React.useState(false);
   // const [activeIndex, setActiveIndex] = React.useState(0);
+
+  const slides = [
+    {
+      // title: "Jellyfish",
+      description: t("photoOfChanges.firstPhoto"),
+      // link: "https://en.wikipedia.org/wiki/Jellyfish",
+      className: "swiper-slide--one",
+    },
+    {
+      // title: "Seahorse",
+      description: t("photoOfChanges.secondPhoto"),
+      // link: "https://en.wikipedia.org/wiki/Seahorse",
+      className: "swiper-slide--two",
+    },
+    {
+      // title: "Octopus",
+      description: t("photoOfChanges.thirdPhoto"),
+      // link: "https://en.wikipedia.org/wiki/Octopus",
+      className: "swiper-slide--three",
+    },
+    {
+      // title: "Shark",
+      description: t("photoOfChanges.fourthPhoto"),
+      // link: "https://en.wikipedia.org/wiki/Shark",
+      className: "swiper-slide--four",
+    },
+    {
+      // title: "Dolphin",
+      description: t("photoOfChanges.fifthPhoto"),
+      // link: "https://en.wikipedia.org/wiki/Dolphin",
+      className: "swiper-slide--five",
+    },
+    {
+      // title: "Dolphin",
+      description: t("photoOfChanges.sixthPhoto"),
+      // link: "https://en.wikipedia.org/wiki/Dolphin",
+      className: "swiper-slide--six",
+    },
+  ];
 
   useEffect(() => {
     const handleResize = () => {
@@ -66,9 +63,9 @@ function PhotoOfChanges() {
     <section className="photo-of-changes">
       <div className="text-block">
         {/* <span>Приєднуйся</span> */}
-        <h3>Голос змін</h3>
+        <h3>{t("photoOfChanges.title")}</h3>
         <hr />
-        <p>Ми віримо, що маленькі вчинки створюють великі зміни. Разом ми допомагаємо творити майбутнє.</p>
+        <p>{t("photoOfChanges.subtitle")}</p>
         {/* <p>{slides[activeIndex].description}</p> */}
         {/* <Button>Download App</Button> */}
       </div>

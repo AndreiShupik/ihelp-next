@@ -23,7 +23,7 @@ export default async function handler(req, res) {
     from: '"iHELP Website" <lovengiro@gmail.com>',
     to: process.env.EMAIL_RECEIVER,
     subject: `Новий контакт: ${type || "форма зворотнього зв'язку"}`,
-    text: `Ім'я: ${name}\nТип форми: ${type || "(не вказано)"}\nПовідомлення: ${
+    text: `Ім'я: ${name}\nТип форми: ${type || 'Через сторінку "Контакти"'}\nПовідомлення: ${
       message || "(немає)"
     }\nТелефон: ${phone}`,
   };

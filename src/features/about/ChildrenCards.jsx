@@ -1,5 +1,7 @@
 import React, { useRef, useEffect } from "react";
+
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
 import * as styles from "./ChildrenCards.module.scss";
 
@@ -10,6 +12,7 @@ import ChildrenPhoto4 from "../../../public/assets/images/children-4.jpg";
 import ChildrenPhoto5 from "../../../public/assets/images/children-5.jpg";
 
 function ChildrenCards() {
+  const { t } = useTranslation("about");
   const cardsRef = useRef(null);
 
   useEffect(() => {
@@ -116,7 +119,7 @@ function ChildrenCards() {
     <div className={styles.cards} ref={cardsRef}>
       <input type="radio" id="radio-1" name="radio-card" defaultChecked />
       <article className={styles.card} style={{ "--angle": "4deg" }}>
-        <Image className={styles.cardImg} src={ChildrenPhoto1} alt="iHELP. Children 1st photo" />
+        <Image className={styles.cardImg} src={ChildrenPhoto1} alt={t("1stChildrenCardAlt")} />
         <div className={styles.cardData}>
           <span className={styles.cardNum}>1/5</span>
           <footer>
@@ -132,7 +135,7 @@ function ChildrenCards() {
 
       <input type="radio" id="radio-2" name="radio-card" />
       <article className={styles.card} style={{ "--angle": "-8deg" }}>
-        <Image className={styles.cardImg} src={ChildrenPhoto2} alt="iHELP. Children 2nd photo" />
+        <Image className={styles.cardImg} src={ChildrenPhoto2} alt={t("2ndChildrenCardAlt")} />
         <div className={styles.cardData}>
           <span className={styles.cardNum}>2/5</span>
           <footer>
@@ -148,7 +151,7 @@ function ChildrenCards() {
 
       <input type="radio" id="radio-3" name="radio-card" />
       <article className={styles.card} style={{ "--angle": "-7deg" }}>
-        <Image className={styles.cardImg} src={ChildrenPhoto3} alt="iHELP. Children 3rd photo" />
+        <Image className={styles.cardImg} src={ChildrenPhoto3} alt={t("3rdChildrenCardAlt")} />
         <div className={styles.cardData}>
           <span className={styles.cardNum}>3/5</span>
           <footer>
@@ -164,7 +167,7 @@ function ChildrenCards() {
 
       <input type="radio" id="radio-4" name="radio-card" />
       <article className={styles.card} style={{ "--angle": "11deg" }}>
-        <Image className={styles.cardImg} src={ChildrenPhoto4} alt="iHELP. Children 4th photo" />
+        <Image className={styles.cardImg} src={ChildrenPhoto4} alt={t("4thChildrenCardAlt")} />
         <div className={styles.cardData}>
           <span className={styles.cardNum}>4/5</span>
           <footer>
@@ -180,7 +183,7 @@ function ChildrenCards() {
 
       <input type="radio" id="radio-5" name="radio-card" />
       <article className={styles.card} style={{ "--angle": "13deg" }}>
-        <Image className={styles.cardImg} src={ChildrenPhoto5} alt="iHELP. Children 5th photo" />
+        <Image className={styles.cardImg} src={ChildrenPhoto5} alt={t("5thChildrenCardAlt")} />
         <div className={styles.cardData}>
           <span className={styles.cardNum}>5/5</span>
           <footer>

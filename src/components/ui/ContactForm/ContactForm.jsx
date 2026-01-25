@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 import "react-phone-number-input/style.css";
+import { useTranslation } from "next-i18next";
 
 import * as styles from "./ContactForm.module.scss";
 
 function ContactForm({ type }) {
+  const { t } = useTranslation("contactForm");
+
   const [formData, setFormData] = useState({
     name: "",
     message: "",
@@ -19,11 +22,11 @@ function ContactForm({ type }) {
   const validate = () => {
     const newErrors = {};
 
-    if (!formData.name.trim()) newErrors.name = "Ім’я обов’язкове.";
+    if (!formData.name.trim()) newErrors.name = t("errors.nameRequired");
     if (!phone) {
-      newErrors.phone = "Телефон обов’язковий.";
+      newErrors.phone = t("errors.phoneRequired");
     } else if (!isValidPhoneNumber(phone)) {
-      newErrors.phone = "Невірний номер телефону.";
+      newErrors.phone = t("errors.phoneInvalid");
     }
 
     return newErrors;
@@ -58,7 +61,7 @@ function ContactForm({ type }) {
 
       if (!res.ok) {
         const errorData = await res.json();
-        throw new Error(errorData.error || "Помилка при відправці форми");
+        throw new Error(errorData.error || t("errors.submitError"));
       }
 
       setSubmitted(true);
@@ -66,7 +69,7 @@ function ContactForm({ type }) {
       setPhone("");
       setErrors({});
     } catch (error) {
-      setSubmitError(error.message);
+      setSubmitError(t("errors.submitError"));
     } finally {
       setLoading(false);
     }
@@ -74,20 +77,20 @@ function ContactForm({ type }) {
 
   return (
     <section className={styles.formWrapper}>
-      <h4>Форма зворотнього зв'язку</h4>
+      <h4>{t("title")}</h4>
 
       {submitted ? (
-        <p className={styles.success}>Дякуємо! Ми з вами зв’яжемось найближчим часом.</p>
+        <p className={styles.success}>{t("successMessage")}</p>
       ) : (
         <form onSubmit={handleSubmit} className={styles.form} noValidate>
           <label>
-            Ім’я
+            {t("fields.name")}
             <input type="text" name="name" autoComplete="name" value={formData.name} onChange={handleChange} />
             {errors.name && <span className={styles.error}>{errors.name}</span>}
           </label>
 
           <label>
-            Телефон
+            {t("fields.phone")}
             <PhoneInput
               name="phone"
               autoComplete="tel"
@@ -104,19 +107,19 @@ function ContactForm({ type }) {
           </label>
 
           <label>
-            Повідомлення
+            {t("fields.message")}
             <textarea
               name="message"
               autoComplete="off"
               value={formData.message}
               onChange={handleChange}
               rows={4}
-              placeholder="Ваше повідомлення..."
+              placeholder={t("fields.messagePlaceholder")}
             />
           </label>
 
           <button type="submit" disabled={loading}>
-            {loading ? "Відправляємо..." : "Надіслати"}
+            {loading ? t("buttons.sending") : t("buttons.send")}
           </button>
 
           {submitError && <p className={styles.error}>{submitError}</p>}

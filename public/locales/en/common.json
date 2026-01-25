@@ -3,7 +3,8 @@
     "home": "Home",
     "about": "About Us",
     "projects": "Our Projects",
-    "contact": "Contact"
+    "contact": "Contact",
+    "ctaButton": "Make a donation"
   },
   "footer": {
     "contactInfo": "Contact Information",
@@ -20,13 +21,43 @@
     "followUs": "Follow us on social media"
   },
   "meta": {
+    "imageAlt": "iHELP Charity Foundation",
+
     "about": {
-      "title": "About Us | iHELP",
-      "description": "We support Ukraine during tough times. Learn about our mission and how you can help."
+      "title": "iHELP Charitable Foundation – Humanitarian Aid for Ukraine in War",
+      "description": "Support iHELP, a Ukrainian charitable foundation delivering food, medicine, and emergency aid."
     },
     "home": {
-      "title": "Home | iHELP",
-      "description": "Welcome to iHELP. Discover our projects and ways to get involved."
+      "title": "iHELP Charity Foundation – reliable support for Ukraine in the most difficult times",
+      "description": "The iHELP charity foundation has been helping Ukraine since 2022: humanitarian aid, community reconstruction, and support for children. Join us"
+    },
+    "privacy": {
+      "title": "Privacy | iHELP",
+      "description": "Welcome to iHELP Privacy. Discover our projects and ways to get involved."
+    },
+    "terms": {
+      "title": "Terms | iHELP",
+      "description": "Welcome to Terms of Use iHELP. Discover our projects and ways to get involved."
+    },
+    "frontlinePeople": {
+      "title": "Humanitarian aid to frontline zones | iHELP Ukraine",
+      "description": "Frontline areas are a daily struggle for life. iHELP provides humanitarian and medical assistance, supports hospitals and rescuers in the most difficult conditions."
+    },
+    "socialTaxi": {
+      "title": "Social taxi for people with limited mobility | iHELP Kherson region",
+      "description": "The iHELP social taxi helps people with disabilities and people with limited mobility safely get to hospitals, social services, and rehabilitation centers in front-line areas of the Kherson region."
+    },
+    "khersonChildren": {
+      "title": "Supporting children and education during war | iHELP",
+      "description": "The iHELP initiative helps children in frontline communities receive what they need for education, development, and survival, as well as feel supported and united."
+    },
+    "projects": {
+      "title": "iHELP projects - from humanitarian aid to the reconstruction of Ukraine",
+      "description": "The projects of the iHELP charitable foundation unite volunteers, communities, businesses, and authorities to support people and create a foundation for the sustainable development of Ukraine."
+    },
+    "contact": {
+      "title": "Contacts iHELP - Partnership, assistance, cooperation",
+      "description": "Official contacts of the iHELP Foundation. Write to us to receive information or to join in helping Ukraine."
     }
   },
   "page404": {

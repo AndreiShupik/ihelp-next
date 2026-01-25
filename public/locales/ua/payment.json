@@ -1,0 +1,25 @@
+{
+  "bankUAH": {
+    "title": "Донати на банківський рахунок (ГРН)",
+    "beneficiary": "БФ «Я Допомагаю»",
+    "edrpou": "ЄДРПОУ",
+    "bank": "Банк",
+    "onlineDonation": "Зробити донат онлайн"
+  },
+  "bankUSD": {
+    "title": "Донати на банківський рахунок (USD)"
+  },
+  "monobankCard": {
+    "title": "Картка Monobank (ГРН)"
+  },
+  "monobankJar": {
+    "title": "Банка Monobank"
+  },
+  "crypto": {
+    "title": "Донати в криптовалюті"
+  },
+
+  "paymentPurpose": "Призначення платежу",
+  "copy": "Скопіювати",
+  "copied": "Скопійовано"
+}
