@@ -149,7 +149,7 @@ function PaymentInfoBlock({ page, copiedValue, setCopiedValue, data, blockStyle 
         </>
       )}
 
-      {data.crypto && (
+      {/* {data.crypto && (
         <div className={styles.crypto}>
           <strong>{t("crypto.title")}:</strong>
           {data.crypto.map((cryptoAcc) => (
@@ -168,7 +168,7 @@ function PaymentInfoBlock({ page, copiedValue, setCopiedValue, data, blockStyle 
             </div>
           ))}
         </div>
-      )}
+      )} */}
     </section>
   );
 }

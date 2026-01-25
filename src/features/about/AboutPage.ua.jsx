@@ -21,7 +21,7 @@ import regionSecondPhoto from "../../../public/assets/images/ihelp-region2.jpg";
 import hotSpotPhoto1 from "../../../public/assets/images/hotspot-1.jpg";
 import hotSpotPhoto2 from "../../../public/assets/images/hotspot-2.jpg";
 import hotSpotPhoto3 from "../../../public/assets/images/hotspot-3.jpg";
-import hotSpotPhoto4 from "../../../public/assets/images/hotspot-6.jpg";
+import hotSpotPhoto4 from "../../../public/assets/images/hotspot-4.jpg";
 import hotSpotPhoto5 from "../../../public/assets/images/hotspot-5.jpg";
 
 import iHelpTodayPhoto from "../../../public/assets/images/ihelp-today.jpg";
