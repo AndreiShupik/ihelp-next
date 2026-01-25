@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "next-i18next";
 
 import Image from "next/image";
 import Button from "../../components/ui/Button";
@@ -10,26 +11,24 @@ import { useModal } from "@/components/ui/ModalActions/ModalContext";
 import * as styles from "./JoinUsSection.module.scss";
 
 function JoinUsSection() {
+  const { t } = useTranslation("home");
   const { openModal } = useModal();
 
-  const joinUsBtnText = "Стати волонтером";
+  const joinUsBtnText = t("joinUs.ctaButton");
   const joinUsBtnType = "secondary";
   return (
     <section className={styles.joinUs}>
       <div className={styles.imageWrapper}>
-        <Image src={joinUsPhoto} alt="iHELP team" />
+        <Image src={joinUsPhoto} alt={t("joinUs.photoAlt")} />
       </div>
       <div className={styles.content}>
-        <h3>Долучайтеся до місії iHELP – разом ми здатні змінювати життя!</h3>
-        <p>
-          Завдяки вашій підтримці ми охопили тисячі родин у звільнених регіонах Київщини, Херсонщини, Донеччини та інших
-          гарячих точках. Ми не лише задовольняємо базові потреби, а й допомагаємо повернути віру в краще майбутнє.
-        </p>
+        <h3>{t("joinUs.title")}</h3>
+        <p>{t("joinUs.description")}</p>
         <div className={styles.btnContainer}>
           <Button type={joinUsBtnType} text={joinUsBtnText} onClick={() => openModal("volunteer")} />
         </div>
         <div className={styles.socialBlock}>
-          <p>Наші соцмережі:</p>
+          <p>{t("joinUs.ourSocials")}</p>
           <OurSocials place="page" />
         </div>
       </div>

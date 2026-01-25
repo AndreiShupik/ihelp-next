@@ -1,6 +1,7 @@
 import React from "react";
-import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
+import Image from "next/image";
 import * as styles from "./CopyBlock.module.scss";
 
 import copyIcon from "../../../../public/assets/icons/copy.svg";
@@ -8,11 +9,13 @@ import copyIcon from "../../../../public/assets/icons/copy.svg";
 import copyMarks from "../../../../public/assets/icons/copied.png";
 
 function CopyBlock({ value, copiedValue }) {
+  const { t } = useTranslation("payment");
+
   const isCopied = copiedValue === value;
 
   return (
     <div className={styles.copyBlock}>
-      <span>{isCopied ? "Скопійовано!" : "Скопіювати"}</span>
+      <span>{isCopied ? t("copied") : t("copy")}</span>
       <Image src={isCopied ? copyMarks : copyIcon} alt="Copy" className={styles.copyIcon} />
     </div>
   );

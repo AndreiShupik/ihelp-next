@@ -26,7 +26,7 @@ function Footer() {
               Email: <a href="mailto:info@ihelp-ukraine.org">info@ihelp-ukraine.org</a>
             </p>
             <p>
-              {t("footer.phone")} <a href="tel:+380XXXXXXXXX">+380-XX-XXXX-XXXX</a>
+              {t("footer.phone")} <a href="tel:+380636123224">+38 (063) 612-32-24</a>
             </p>
             <p>{t("footer.address")}</p>
           </div>

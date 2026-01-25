@@ -1,28 +1,85 @@
-import React, { useState } from "react";
+// "use client";
+
+import React, { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import * as styles from "./CtaForm.module.scss";
-import { FORM_CONFIG } from "./formConfig";
+// import { FORM_CONFIG } from "./formConfig";
+import { getFormConfig } from "./formConfig";
 
 import PageAccordion from "./PageAccordion";
 import ModalDirect from "./ModalDirect";
 import ModalList from "./ModalList";
+
 import PaymentInfoBlock from "./PaymentInfoBlock";
+import VolunteerInfoBlock from "./VolunteerInfoBlock";
+import PartnerInfoBlock from "./PartnerInfoBlock";
 
 function CtaForm({ page = "Default", modalType = null, defaultOpen, onClose }) {
+  const router = useRouter();
+  const [mounted, setMounted] = useState(false);
+  // const { locale } = useRouter();
+  // const config = getFormConfig(locale);
+
   const [openId, setOpenId] = useState(defaultOpen);
   const [activeTitle, setActiveTitle] = useState(null);
   const [viewMode, setViewMode] = useState(modalType ? "list" : null);
   const [copiedValue, setCopiedValue] = useState("");
 
-  const filteredForms = FORM_CONFIG.filter((item) => {
-    if (modalType === "ihelp") return true; // ✅ Show all blocks
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Now it is SAFE to conditionally return UI
+  if (!mounted || !router.locale) {
+    return null; // safe now
+  }
+
+  // Locale is guaranteed now
+  const config = getFormConfig(router.locale);
+
+  const filteredForms = config.filter((item) => {
+    if (modalType === "ihelp") return true;
     if (modalType) return item.modalType.includes(modalType);
     if (page && page !== "Default") return item.pages.includes(page) || item.pages.includes("Default");
     return true;
   });
 
-  const formsWithContent = filteredForms.map((item) =>
-    item.data
-      ? {
+  // const formsWithContent = filteredForms.map((item) =>
+  //   item.data
+  //     ? {
+  //         ...item,
+  //         content: (
+  //           <PaymentInfoBlock
+  //             key={item.id}
+  //             page={page}
+  //             copiedValue={copiedValue}
+  //             setCopiedValue={setCopiedValue}
+  //             data={item.data}
+  //             blockStyle={styles[item.blockStyle]}
+  //           />
+  //         ),
+  //       }
+  //     : item
+  // );
+
+  const formsWithContent = filteredForms.map((item) => {
+    // if (!item.data) return item;
+
+    switch (item.id) {
+      case "Volunteer":
+        return {
+          ...item,
+          content: <VolunteerInfoBlock key={item.id} data={item.contentData} />,
+        };
+
+      case "Partner":
+        return {
+          ...item,
+          content: <PartnerInfoBlock key={item.id} data={item.contentData} />,
+        };
+
+      default:
+        return {
           ...item,
           content: (
             <PaymentInfoBlock
@@ -34,9 +91,9 @@ function CtaForm({ page = "Default", modalType = null, defaultOpen, onClose }) {
               blockStyle={styles[item.blockStyle]}
             />
           ),
-        }
-      : item
-  );
+        };
+    }
+  });
 
   const activeContent = formsWithContent.find((item) => item.id === openId)?.content;
 
@@ -395,7 +452,7 @@ export default CtaForm;
 //               <h3 className={styles.title}>Кожна пара рук і кожна ідея важливі!</h3>
 //               <p className={styles.intro}>
 //                 Я, твій побратим <em>Анатолій Дзюбенко</em>, засновник <em>iHELP</em>, запрошую тебе стати пліч-о-пліч
-//                 із нашою командою — як фізичною працею, так і розумовою діяльністю. Разом ми здатні зробити більше!
+//                 із нашою командою - як фізичною працею, так і розумовою діяльністю. Разом ми здатні зробити більше!
 //               </p>
 //               <div className={styles.bullets}>
 //                 <p>Твоя участь стане рушійною силою в iHELP:</p>
@@ -415,7 +472,7 @@ export default CtaForm;
 //                 </ul>
 //               </div>
 //               <p className={styles.closing}>
-//                 Твій талант, час і зусилля — це внесок, що дарує гідне життя і творить жадане майбутнє сильної України!
+//                 Твій талант, час і зусилля - це внесок, що дарує гідне життя і творить жадане майбутнє сильної України!
 //               </p>
 //               <div className={styles.contact}>
 //                 <p>
@@ -954,7 +1011,7 @@ export default CtaForm;
 //               <h3 className={styles.title}>Кожна пара рук і кожна ідея важливі!</h3>
 //               <p className={styles.intro}>
 //                 Я, твій побратим <em>Анатолій Дзюбенко</em>, засновник <em>iHELP</em>, запрошую тебе стати пліч-о-пліч
-//                 із нашою командою — як фізичною працею, так і розумовою діяльністю. Разом ми здатні зробити більше!
+//                 із нашою командою - як фізичною працею, так і розумовою діяльністю. Разом ми здатні зробити більше!
 //               </p>
 //               <div className={styles.bullets}>
 //                 <p>Твоя участь стане рушійною силою в iHELP:</p>
@@ -974,7 +1031,7 @@ export default CtaForm;
 //                 </ul>
 //               </div>
 //               <p className={styles.closing}>
-//                 Твій талант, час і зусилля — це внесок, що дарує гідне життя і творить жадане майбутнє сильної України!
+//                 Твій талант, час і зусилля - це внесок, що дарує гідне життя і творить жадане майбутнє сильної України!
 //               </p>
 //               <div className={styles.contact}>
 //                 <p>

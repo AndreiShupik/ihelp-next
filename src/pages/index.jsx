@@ -1,10 +1,41 @@
 import React from "react";
+import Head from "next/head";
+
+import { useTranslation } from "next-i18next";
 import HomePage from "../features/home/HomePage";
+
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { supabase } from "../../lib/supabaseClient";
 
+import { useRouter } from "next/router";
+
 export default function Home({ posts, media }) {
-  return <HomePage posts={posts} media={media} />;
+  const { locale } = useRouter();
+  const { t } = useTranslation("common");
+
+  return (
+    <>
+      <Head>
+        <link rel="alternate" hrefLang="en" href="https://ihelp.org.ua/" />
+        <link rel="alternate" hrefLang="ua" href="https://ihelp.org.ua/ua" />
+
+        <meta name="description" content={t("meta.home.description")} />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
+
+        <meta property="og:title" content={t("meta.home.title")} />
+        <meta property="og:description" content={t("meta.home.description")} />
+        <meta property="og:url" content="https://ihelp.org.ua/" />
+
+        <meta name="twitter:title" content={t("meta.home.title")} />
+        <meta name="twitter:description" content={t("meta.home.description")} />
+
+        <title>{t("meta.home.title")}</title>
+        <link rel="canonical" href={locale === "ua" ? "https://ihelp.org.ua/ua" : "https://ihelp.org.ua/"} />
+      </Head>
+
+      <HomePage posts={posts} media={media} />
+    </>
+  );
 }
 
 export async function getStaticProps({ locale }) {
@@ -27,7 +58,7 @@ export async function getStaticProps({ locale }) {
 
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common"])),
+      ...(await serverSideTranslations(locale, ["common", "home", "payment", "contactForm"])),
       posts: posts || [],
       media: media || [],
     },

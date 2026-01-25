@@ -1,0 +1,25 @@
+{
+  "bankUAH": {
+    "title": "Donations to Bank Account (UAH)",
+    "beneficiary": "Charitable Fund “I Help” (БФ «Я Допомагаю»)",
+    "edrpou": "EDRPOU",
+    "bank": "Bank",
+    "onlineDonation": "Make a donation online"
+  },
+  "bankUSD": {
+    "title": "Donations to Bank Account (USD)"
+  },
+  "monobankCard": {
+    "title": "Monobank Card (UAH)"
+  },
+  "monobankJar": {
+    "title": "Monobank Jar"
+  },
+  "crypto": {
+    "title": "Crypto Donations"
+  },
+
+  "paymentPurpose": "Payment Purpose",
+  "copy": "Copy",
+  "copied": "Copied"
+}

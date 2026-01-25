@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
+import Image from "next/image";
 import useIsMobile from "@/utils/useIsMobile";
+
 import * as styles from "./BlogSection.module.scss";
 
 // // ✅ Custom hook to detect mobile screen
@@ -19,20 +21,31 @@ import * as styles from "./BlogSection.module.scss";
 // }
 
 export default function BlogSection({ posts }) {
+  const { t, i18n } = useTranslation("home");
+  const locale = i18n.language;
   // const isMobile = useIsMobile();
   const [visibleCount, setVisibleCount] = useState(4);
   const isMobile = useIsMobile(767);
 
   // Format posts with date formatting
-  const formattedPosts = posts.map((post) => ({
-    ...post,
-    date: new Date(post.created_at).toLocaleDateString("uk-UA", {
-      year: "numeric",
-      month: "2-digit",
-      day: "2-digit",
-    }),
-    link: "#", // you can update this if you have post pages
-  }));
+  const formattedPosts = posts.map((post) => {
+    const hasTranslation = post.translations && post.translations[locale];
+
+    const title = hasTranslation ? post.translations[locale].title : post.title;
+    const description = hasTranslation ? post.translations[locale].description : post.description;
+
+    return {
+      ...post,
+      title,
+      description,
+      date: new Date(post.created_at).toLocaleDateString("uk-UA", {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+      }),
+      link: "#",
+    };
+  });
 
   // ✅ Format posts with custom date format (dd/mm/yyyy)
   // const formattedPosts = posts.map((post) => {
@@ -59,11 +72,8 @@ export default function BlogSection({ posts }) {
   return (
     <section className={styles.blogSection}>
       <div className={styles.wrapper}>
-        <h3>Останні новини</h3>
-        <p className={styles.description}>
-          Блог iHELP — це місце для щирих історій, новин про проєкти, порад і натхнення. Ми пишемо про виклики й щоденні
-          зусилля, що нас гартують та перемоги, які мотивують до невпинного руху вперед.
-        </p>
+        <h3>{t("blog.title")}</h3>
+        <p className={styles.description}>{t("blog.subtitle")}</p>
 
         <div className={styles.blogs}>
           {topPosts.length > 0 && (
@@ -117,7 +127,7 @@ export default function BlogSection({ posts }) {
           {/* ✅ Load More Button */}
           {visibleCount < formattedPosts.length && (
             <span className={styles.loadMore} onClick={() => setVisibleCount((prev) => prev + 4)}>
-              Більше новин
+              {t("blog.moreNews")}
             </span>
           )}
         </div>
@@ -137,7 +147,7 @@ export default function BlogSection({ posts }) {
 //     title: "500 зимових наборів доставлено до Миколаївської області",
 //     image: blogFirstPhoto,
 //     excerpt:
-//       "У наборах — теплі ковдри, термобілизна, засоби гігієни та продукти тривалого зберігання. Це критично важлива допомога для людей, які залишились без стабільного опалення в умовах холодної зими...",
+//       "У наборах - теплі ковдри, термобілизна, засоби гігієни та продукти тривалого зберігання. Це критично важлива допомога для людей, які залишились без стабільного опалення в умовах холодної зими...",
 //     date: "1/1/2025",
 //     link: "#",
 //   },
@@ -155,7 +165,7 @@ export default function BlogSection({ posts }) {
 //     title: "Історії волонтерів: робота на передовій",
 //     image: blogThirdPhoto,
 //     excerpt:
-//       "Щодня наші волонтери ризикують життям, доставляючи допомогу у прифронтові зони. Один із таких героїв — Олексій, який уже понад рік перевозить медикаменти та продукти в найнебезпечніші райони...",
+//       "Щодня наші волонтери ризикують життям, доставляючи допомогу у прифронтові зони. Один із таких героїв - Олексій, який уже понад рік перевозить медикаменти та продукти в найнебезпечніші райони...",
 //     date: "1/1/2025",
 //     link: "#",
 //   },
@@ -164,7 +174,7 @@ export default function BlogSection({ posts }) {
 //     title: "До Херсону доставлена екстрена допомога",
 //     image: blogFourthPhoto,
 //     excerpt:
-//       "Нещодавно до Херсону прибула чергова партія екстреної допомоги. У вантажі — генератори, питна вода, медикаменти та набори першої необхідності. Це стало можливим завдяки оперативному реагуванню партнерських організацій і волонтерів...",
+//       "Нещодавно до Херсону прибула чергова партія екстреної допомоги. У вантажі - генератори, питна вода, медикаменти та набори першої необхідності. Це стало можливим завдяки оперативному реагуванню партнерських організацій і волонтерів...",
 //     date: "1/1/2025",
 //     link: "#",
 //   },
@@ -182,7 +192,7 @@ export default function BlogSection({ posts }) {
 //     title: "Історії волонтерів: робота на передовій",
 //     image: blogThirdPhoto,
 //     excerpt:
-//       "Щодня наші волонтери ризикують життям, доставляючи допомогу у прифронтові зони. Один із таких героїв — Олексій, який уже понад рік перевозить медикаменти та продукти в найнебезпечніші райони...",
+//       "Щодня наші волонтери ризикують життям, доставляючи допомогу у прифронтові зони. Один із таких героїв - Олексій, який уже понад рік перевозить медикаменти та продукти в найнебезпечніші райони...",
 //     date: "1/1/2025",
 //     link: "#",
 //   },
@@ -191,7 +201,7 @@ export default function BlogSection({ posts }) {
 //     title: "До Херсону доставлена екстрена допомога",
 //     image: blogFourthPhoto,
 //     excerpt:
-//       "Нещодавно до Херсону прибула чергова партія екстреної допомоги. У вантажі — генератори, питна вода, медикаменти та набори першої необхідності. Це стало можливим завдяки оперативному реагуванню партнерських організацій і волонтерів...",
+//       "Нещодавно до Херсону прибула чергова партія екстреної допомоги. У вантажі - генератори, питна вода, медикаменти та набори першої необхідності. Це стало можливим завдяки оперативному реагуванню партнерських організацій і волонтерів...",
 //     date: "1/1/2025",
 //     link: "#",
 //   },
@@ -225,7 +235,7 @@ export default function BlogSection({ posts }) {
 //       <div className={styles.wrapper}>
 //         <h3>Останні новини</h3>
 //         <p className={styles.description}>
-//           Блог iHELP — це місце для щирих історій, новин про проєкти, порад і натхнення. Ми пишемо про виклики й щоденні
+//           Блог iHELP - це місце для щирих історій, новин про проєкти, порад і натхнення. Ми пишемо про виклики й щоденні
 //           зусилля, що нас гартують та перемоги, які мотивують до невпинного руху вперед.
 //         </p>
 //         <div className={styles.blogs}>

@@ -24,7 +24,7 @@ function Header() {
   const pathname = usePathname();
   const { t } = useTranslation("common");
 
-  const headerBtnText = "Зробити пожертву";
+  const headerBtnText = t("header.ctaButton");
   const headerBtnType = "primary";
 
   // useEffect(() => {
@@ -58,7 +58,7 @@ function Header() {
       <div className={styles.headerContainer}>
         <div className={styles.logoContainer}>
           <Link href="/">
-            <Image src={logoImg} alt="ihelp logo" priority />
+            <Image src={logoImg} alt="iHELP logo" priority />
           </Link>
         </div>
 

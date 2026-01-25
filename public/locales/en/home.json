@@ -1,0 +1,81 @@
+{
+  "hero": {
+    "title": "Together, we help rebuild lives in Ukraine",
+    "subtitle": "We provide aid, restore communities, and bring hope.",
+    "learnMore": "Learn more about us"
+  },
+  "about": {
+    "description": "iHELP is a charitable foundation that supports families, children, and vulnerable groups in Ukraine’s hardest-hit regions. We deliver humanitarian aid, strengthen communities, and contribute to the country’s recovery. Together, we can change lives for the better.",
+    "title": "Core Programmes",
+    "firstProject": "Emergency Aid",
+    "firstProjectDescription": "We deliver food, medicine, hygiene kits, and warm clothing to families in urgent need.",
+    "learnMore": "Learn more",
+    "secondProject": "Social taxi «Road of life. South»",
+    "secondProjectDescription": "ansportation for people with disabilities and residents of frontline communities in Kherson and Mykolaiv regions with limited mobility to undergo vital procedures.",
+    "thirdProject": "Support for Children and Education",
+    "thirdProjectDescription": "We provide emotional and educational support to children affected by war - including psychological care, learning materials, and creative programmes.",
+    "1stPhotoAlt": "iHELP. Emergency Aid Programme",
+    "2ndPhotoAlt": "iHELP. Social taxi «Road of life. South» Programme",
+    "3rdPhotoAlt": "iHELP. Support for Children and Education Programme"
+  },
+  "impact": {
+    "title": "Our Impact",
+    "description": "Since 2022, our routes have reached some of the most dangerous regions - including Bakhmut, Soledar, Izium, and Kherson. We work where support is desperately needed, despite risk and hardship.",
+    "familyHelp": "families received humanitarian assistance",
+    "communityHelp": "communities of Kherson/Mykolaiv regions have established stable contacts",
+    "childrenHelp": "children supported with education and psychological care",
+    "ctaButton": "Every donation changes lives"
+  },
+  "joinUs": {
+    "title": "Join the iHELP Mission - Together We Can Change Lives",
+    "description": "Thanks to your support, we’ve reached thousands of families in liberated areas of Kyiv, Kherson, and Donetsk regions - and other war-affected zones. We meet urgent needs, but also help people believe in a better future.",
+    "ctaButton": "Become a Volunteer",
+    "ourSocials": "Follow us on social media:",
+    "photoAlt": "Join the iHELP Mission"
+  },
+  "photoOfChanges": {
+    "title": "Voices of Change",
+    "subtitle": "We believe small acts create big change. Together, we’re helping build the future.",
+    "firstPhoto": "In every child's smile is a victory over war. That is why supporting families with children is so important.",
+    "secondPhoto": "We were the first to arrive in Stanislav, a newly liberated village in the Kherson region. We brought not only aid, but also, most importantly, the feeling that people were remembered.",
+    "thirdPhoto": "Treats, books, toys - anything to relieve the tension of war and bring smiles back to children.",
+    "fourthPhoto": "We are providing the people of Donetsk region with blankets and household items so that comfort can return to their homes.",
+    "fifthPhoto": "We help children of the Kherson region learn, dream, and feel that childhood continues.",
+    "sixthPhoto": "Even during the war, the women of the Kherson region continue to give light and beauty to the world. We are here to support them with care, attention, and quality cosmetics."
+  },
+  "media": {
+    "title": "In the Media",
+    "subtitle": "We’re proud to share our results - and the media is talking about us. Transparency and trust are the foundation of everything we do.",
+    "article": "article about us"
+  },
+  "partners": {
+    "title": "We are helped",
+    "subtitle": "We gratefully acknowledge those walking this path with us - sponsors, businesses, volunteer hubs, and civil society groups. Thanks to them, we deliver vital aid and create lasting social impact.",
+    "ctaButton": "Become a Partner"
+  },
+  "initiatives": {
+    "title": "Together, We Can Provide",
+    "firstInitiative": "Food kits for affected families",
+    "firstAlt": "iHELP. Food kits",
+    "secondInitiative": "Medicines and first aid",
+    "secondAlt": "iHELP. Medicines",
+    "thirdInitiative": "Support for children: from school supplies to holiday gifts",
+    "thirdAlt": "iHELP. Support for children",
+    "fourthInitiative": "Infrastructure repair: homes, schools, hospitals",
+    "fourthAlt": "iHELP. Infrastructure repair",
+    "fifthInitiative": "Assistance for people with disabilities",
+    "fifthAlt": "iHELP. Social Taxi"
+  },
+  "aidForUkraine": {
+    "title": "Every donation changes a life",
+    "subtitle": "Your support gives thousands of families a chance to rebuild.",
+    "makeDonation": "Make a Donation",
+    "becomePartner": "Become a Partner",
+    "joinVolunteer": "Join the Volunteer Team"
+  },
+  "blog": {
+    "title": "Latest News",
+    "subtitle": "The iHELP Blog is a space for honest stories, project updates, helpful insights, and inspiration. We write about the challenges we face, the resilience we build, and the victories that keep us moving forward.",
+    "moreNews": "More News"
+  }
+}

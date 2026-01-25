@@ -1,9 +1,13 @@
 // PaymentInfoBlock.jsx
 import React from "react";
+import { useTranslation } from "next-i18next";
+
 import * as styles from "./CtaForm.module.scss";
 import CopyBlock from "./CopyBlock";
 
 function PaymentInfoBlock({ page, copiedValue, setCopiedValue, data, blockStyle }) {
+  const { t } = useTranslation("payment");
+
   const getAccountBlockClass = (value) =>
     `${styles.accountBlock} ${copiedValue === value ? styles.active : ""} ${
       page !== "Default" ? styles.mainColor : ""
@@ -11,44 +15,143 @@ function PaymentInfoBlock({ page, copiedValue, setCopiedValue, data, blockStyle 
 
   return (
     <section className={`${styles.paymentInfo} ${blockStyle}`}>
-      <h4>БФ &quot;Я допомагаю&quot;</h4>
-      <p>
-        <strong>ЄДРПОУ:</strong> {data.edrpou}
-      </p>
+      {/* <h4>БФ &quot;Я допомагаю&quot;</h4>
       <p>
         <strong>Призначення платежу:</strong> {data.purpose}
       </p>
+      <p>
+        <strong>ЄДРПОУ:</strong> {data.edrpou}
+      </p> */}
 
-      {data.accounts.map((acc) => (
-        <div
-          key={acc.value}
-          className={getAccountBlockClass(acc.value)}
-          onClick={() => {
-            navigator.clipboard.writeText(acc.value);
-            setCopiedValue(acc.value);
-          }}
-        >
-          <span>
-            <strong>{acc.label}:</strong>
-            <br /> {acc.value}
-          </span>
-          <CopyBlock value={acc.value} copiedValue={copiedValue} />
-        </div>
-      ))}
+      {data.bankUAH && (
+        <>
+          <h4>{t("bankUAH.title")}:</h4>
+          <div
+            key={data.bankUAH.edrpou}
+            className={getAccountBlockClass(data.bankUAH.iban)}
+            onClick={() => {
+              navigator.clipboard.writeText(data.bankUAH.iban);
+              setCopiedValue(data.bankUAH.iban);
+            }}
+          >
+            <section>
+              <h4>{data.bankUAH.beneficiary}</h4>
+              <p>
+                <strong>{t("bankUAH.edrpou")}:</strong> {data.bankUAH.edrpou}
+              </p>
+              <p>
+                <strong>IBAN:</strong>
+                <br /> {data.bankUAH.iban}
+              </p>
+              <p>
+                <strong>{t("bankUAH.bank")}: </strong> {data.bankUAH.bank}
+              </p>
+              <p>
+                <strong>{t("paymentPurpose")}:</strong>
+                <br /> {data.bankUAH.purpose}
+              </p>
+              <CopyBlock value={data.bankUAH.iban} copiedValue={copiedValue} />
+            </section>
+          </div>
+          <p className={styles.donateNow}>
+            <a href={data.bankUAH.link} target="blank">
+              {t("bankUAH.onlineDonation")}
+            </a>
+            <br />
+          </p>
+        </>
+      )}
+
+      {data.bankUSD && (
+        <>
+          <h4>{t("bankUSD.title")}:</h4>
+          <div
+            key={data.bankUSD.edrpou}
+            className={getAccountBlockClass(data.bankUSD.iban)}
+            onClick={() => {
+              navigator.clipboard.writeText(data.bankUSD.iban);
+              setCopiedValue(data.bankUSD.iban);
+            }}
+          >
+            <section>
+              <h4>Beneficiary: {data.bankUSD.beneficiary}</h4>
+              <p>
+                <strong>IBAN:</strong>
+                <br /> {data.bankUSD.iban}
+              </p>
+              <p>
+                <strong>Bank:</strong> {data.bankUSD.bank}
+              </p>
+              <p>
+                <strong>SWIFT:</strong> {data.bankUSD.swift}
+              </p>
+              <p>
+                <strong>Correspondent bank:</strong> {data.bankUSD.correspondent}
+              </p>
+              <p>
+                <strong>SWIFT:</strong> {data.bankUSD.correspondentSwift}
+              </p>
+              <p>
+                <strong>Account:</strong> {data.bankUSD.account}
+              </p>
+              <p>
+                <strong>{t("paymentPurpose")}</strong>
+                <br /> {data.bankUSD.purpose}
+              </p>
+              <CopyBlock value={data.bankUSD.iban} copiedValue={copiedValue} />
+            </section>
+          </div>
+        </>
+      )}
+
+      {data.monobankCard && (
+        <>
+          <h4>{t("monobankCard.title")}:</h4>
+          <div
+            className={`${getAccountBlockClass(data.monobankCard)} ${styles.paymentBlock}`}
+            onClick={() => {
+              navigator.clipboard.writeText(data.monobankCard);
+              setCopiedValue(data.monobankCard);
+            }}
+          >
+            <p>{data.monobankCard}</p>
+
+            <CopyBlock value={data.monobankCard} copiedValue={copiedValue} />
+          </div>
+        </>
+      )}
 
       {data.bankLink && (
-        <div className={styles.bankLink}>
-          <strong>{data.bankLink.label}</strong>
-          <br />
-          <a href={data.bankLink.url} target="_blank" rel="noopener noreferrer">
-            {data.bankLink.url}
-          </a>
-        </div>
+        <>
+          <h4>{t("monobankJar.title")}:</h4>
+          <div className={`${styles.bankLink}`}>
+            <a href={data.bankLink} target="_blank" rel="noopener noreferrer">
+              {data.bankLink}
+            </a>
+          </div>
+        </>
+      )}
+
+      {data.payPal && (
+        <>
+          <h4>PayPal:</h4>
+          <div
+            className={`${getAccountBlockClass(data.payPal)} ${styles.paymentBlock}`}
+            onClick={() => {
+              navigator.clipboard.writeText(data.payPal);
+              setCopiedValue(data.payPal);
+            }}
+          >
+            <p>{data.payPal}</p>
+
+            <CopyBlock value={data.payPal} copiedValue={copiedValue} />
+          </div>
+        </>
       )}
 
       {data.crypto && (
         <div className={styles.crypto}>
-          <strong>Донати в криптовалюті:</strong>
+          <strong>{t("crypto.title")}:</strong>
           {data.crypto.map((cryptoAcc) => (
             <div
               key={cryptoAcc.value}
@@ -58,7 +161,7 @@ function PaymentInfoBlock({ page, copiedValue, setCopiedValue, data, blockStyle 
                 setCopiedValue(cryptoAcc.value);
               }}
             >
-              <span>
+              <span className={styles.breakable}>
                 <strong>{cryptoAcc.label}:</strong> {cryptoAcc.value}
               </span>
               <CopyBlock value={cryptoAcc.value} copiedValue={copiedValue} />

@@ -6,14 +6,15 @@ export default function AboutOvercome() {
     <section className={styles.aboutHero}>
       <div className={styles.content}>
         <div className={styles.container}>
-          <h2>Challenges and perseverance</h2>
+          <h2>Facing Hardship Head-On</h2>
+          <p>Crossing minefields and destruction to support war-torn communities</p>
           <p>
-            Every trip was a test. In villages like Oleksandrivka in Kherson region or the towns of Kamyanka or Izyum in
-            Kharkiv region, we walked through ruins where every step could be our last.
+            In villages like Oleksandrivka, Kamianka, and Izium, we walked through ruins where every step could be the
+            last. True patriotism is action.
           </p>
           <p>
-            Заміновані дороги, холодний вітер, обстріл — усе це не змогло зупинити команду iHELP, котра приносила
-            гуманітарну допомогу навіть у ці найнебезпечніші місця. Бо нам відомо: справжній патріотизм — це дія.
+            Mine-filled roads, cold winds, shelling - none of this could stop the iHELP team, which brought humanitarian
+            aid even to these most dangerous places. Because we know: true patriotism is action.
           </p>
         </div>
       </div>
