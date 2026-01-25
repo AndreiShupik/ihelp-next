@@ -66,7 +66,7 @@ function AboutPage() {
         <div>
           <h1 className={styles.title}>Charitable Foundation "IHELP"</h1>
           <span className={styles.short}>
-            <b>iHELP – Helping Ukraine During Wartime: Food. Medicine. Humanitarian Action.</b>
+            iHELP – Helping Ukraine During Wartime: Food. Medicine. Humanitarian Action.
           </span>
           <p>
             When the first explosion shook Kyiv, countless lives changed in an instant. Tetiana Dziubenko didn’t
