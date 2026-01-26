@@ -5,7 +5,7 @@ import Image from "next/image";
 import Button from "../../components/ui/Button";
 
 import OurSocials from "../../components/layout/Footer/OurSocials";
-import joinUsPhoto from "../../../public/assets/images/join-us.jpg";
+import joinUsPhoto from "../../../public/assets/images/join-us.webp";
 
 import { useModal } from "@/components/ui/ModalActions/ModalContext";
 import * as styles from "./JoinUsSection.module.scss";
@@ -29,7 +29,7 @@ function JoinUsSection() {
         </div>
         <div className={styles.socialBlock}>
           <p>{t("joinUs.ourSocials")}</p>
-          <OurSocials place="page" />
+          <OurSocials />
         </div>
       </div>
     </section>

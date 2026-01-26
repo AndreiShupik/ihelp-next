@@ -4,11 +4,11 @@ import Image from "next/image";
 import { useTranslation } from "next-i18next";
 import * as styles from "./OurProjectsProjects.module.scss";
 
-// import childrenImage from "../../../public/assets/images/pr.jpg";
-// import disabledImage from "../../../public/assets/images/pr.jpg";
-// import educationImage from "../../../public/assets/images/pr.jpg";
+// import childrenImage from "../../../public/assets/images/pr.webp";
+// import disabledImage from "../../../public/assets/images/pr.webp";
+// import educationImage from "../../../public/assets/images/pr.webp";
 
-import girlAndFlag from "../../../public/assets/images/ukrainian-girl.png";
+import girlAndFlag from "../../../public/assets/images/ukrainian-girl.webp";
 
 function OurProjectsProjects() {
   const { t } = useTranslation("projects");

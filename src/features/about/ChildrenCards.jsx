@@ -5,11 +5,11 @@ import { useTranslation } from "next-i18next";
 
 import * as styles from "./ChildrenCards.module.scss";
 
-import ChildrenPhoto1 from "../../../public/assets/images/children-1.jpg";
-import ChildrenPhoto2 from "../../../public/assets/images/children-2.jpg";
-import ChildrenPhoto3 from "../../../public/assets/images/children-3.jpg";
-import ChildrenPhoto4 from "../../../public/assets/images/children-4.jpg";
-import ChildrenPhoto5 from "../../../public/assets/images/children-5.jpg";
+import ChildrenPhoto1 from "../../../public/assets/images/children-1.webp";
+import ChildrenPhoto2 from "../../../public/assets/images/children-2.webp";
+import ChildrenPhoto3 from "../../../public/assets/images/children-3.webp";
+import ChildrenPhoto4 from "../../../public/assets/images/children-4.webp";
+import ChildrenPhoto5 from "../../../public/assets/images/children-5.webp";
 
 function ChildrenCards() {
   const { t } = useTranslation("about");
@@ -208,13 +208,13 @@ export default ChildrenCards;
 
 // import * as styles from "./ChildrenCards.module.scss";
 
-// import ChildrenPhoto1 from "../../../public/assets/images/children-1.jpg";
-// import ChildrenPhoto2 from "../../../public/assets/images/children-2.jpg";
-// import ChildrenPhoto3 from "../../../public/assets/images/children-3.jpg";
-// import ChildrenPhoto4 from "../../../public/assets/images/children-4.jpg";
-// import ChildrenPhoto5 from "../../../public/assets/images/children-5.jpg";
-// // import ChildrenPhoto6 from "../../../public/assets/images/children-6.jpg";
-// // import ChildrenPhoto7 from "../../../public/assets/images/children-7.jpg";
+// import ChildrenPhoto1 from "../../../public/assets/images/children-1.webp";
+// import ChildrenPhoto2 from "../../../public/assets/images/children-2.webp";
+// import ChildrenPhoto3 from "../../../public/assets/images/children-3.webp";
+// import ChildrenPhoto4 from "../../../public/assets/images/children-4.webp";
+// import ChildrenPhoto5 from "../../../public/assets/images/children-5.webp";
+// // import ChildrenPhoto6 from "../../../public/assets/images/children-6.webp";
+// // import ChildrenPhoto7 from "../../../public/assets/images/children-7.webp";
 
 // function ChildrenCards() {
 //   const cardsRef = useRef(null);
@@ -480,13 +480,13 @@ export default ChildrenCards;
 
 // import * as styles from "./ChildrenCards.module.scss";
 
-// import ChildrenPhoto1 from "../../../public/assets/images/children-1.jpg";
-// import ChildrenPhoto2 from "../../../public/assets/images/children-2.jpg";
-// import ChildrenPhoto3 from "../../../public/assets/images/children-3.jpg";
-// import ChildrenPhoto4 from "../../../public/assets/images/children-4.jpg";
-// import ChildrenPhoto5 from "../../../public/assets/images/children-5.jpg";
-// // import ChildrenPhoto6 from "../../../public/assets/images/children-6.jpg";
-// // import ChildrenPhoto7 from "../../../public/assets/images/children-7.jpg";
+// import ChildrenPhoto1 from "../../../public/assets/images/children-1.webp";
+// import ChildrenPhoto2 from "../../../public/assets/images/children-2.webp";
+// import ChildrenPhoto3 from "../../../public/assets/images/children-3.webp";
+// import ChildrenPhoto4 from "../../../public/assets/images/children-4.webp";
+// import ChildrenPhoto5 from "../../../public/assets/images/children-5.webp";
+// // import ChildrenPhoto6 from "../../../public/assets/images/children-6.webp";
+// // import ChildrenPhoto7 from "../../../public/assets/images/children-7.webp";
 
 // function ChildrenCards() {
 //   return (

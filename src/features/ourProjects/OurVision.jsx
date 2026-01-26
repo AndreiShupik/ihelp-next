@@ -5,7 +5,7 @@ import { useTranslation } from "next-i18next";
 import { useModal } from "@/components/ui/ModalActions/ModalContext";
 
 import * as styles from "./OurVision.module.scss";
-import image from "../../../public/assets/images/our-vision.jpg"; // adjust path
+import image from "../../../public/assets/images/our-vision.webp"; // adjust path
 
 function OurVision() {
   const { t } = useTranslation("projects");

@@ -7,7 +7,7 @@ import { useLockHeight } from "@/utils/useLockHeight";
 import * as styles from "./KhersonChildrenPage.module.scss";
 
 import CtaForm from "../../components/ui/CtaForm/CtaForm";
-import howToHelpImg from "../../../public/assets/images/how-help.jpg";
+import howToHelpImg from "../../../public/assets/images/how-help.webp";
 
 export default function KhersonChildrenPage() {
   const [ios, setIos] = useState(false);

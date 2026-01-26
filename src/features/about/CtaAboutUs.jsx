@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useTranslation } from "next-i18next";
 
 import * as styles from "./CtaAboutUs.module.scss";
-// import photo from "../../../public/assets/images/ihelp-help.jpg"; // Adjust the path
+// import photo from "../../../public/assets/images/ihelp-help.webp"; // Adjust the path
 import photo from "../../../public/assets/images/cta-about.webp"; // Adjust the path
 
 function CtaAboutUs() {

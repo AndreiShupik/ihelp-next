@@ -11,7 +11,7 @@ function HeroSection() {
 
   useEffect(() => {
     const img = new Image();
-    img.src = "/assets/images/hero-bg.jpg";
+    img.src = "/assets/images/hero-bg.webp";
     img.onload = () => setBackgroundLoaded(true);
 
     function lockHeroHeight() {

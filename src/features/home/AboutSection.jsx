@@ -4,9 +4,9 @@ import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import Image from "next/image";
 
-import aboutFirstPhoto from "../../../public/assets/images/about-12.jpg";
-import aboutSecondPhoto from "../../../public/assets/images/about-2.jpg";
-import aboutThirdPhoto from "../../../public/assets/images/about-3.jpg";
+import aboutFirstPhoto from "../../../public/assets/images/about-1.webp";
+import aboutSecondPhoto from "../../../public/assets/images/about-2.webp";
+import aboutThirdPhoto from "../../../public/assets/images/about-3.webp";
 
 import * as styles from "./AboutSection.module.scss";
 

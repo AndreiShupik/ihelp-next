@@ -77,7 +77,7 @@ function Footer() {
           <div className={styles.socialBlock}>
             <h4>{t("footer.followUs")}</h4>
             {/* Social Media */}
-            <OurSocials place="footer" />
+            <OurSocials />
           </div>
         </div>
         <CopyrightBlock />

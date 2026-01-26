@@ -7,9 +7,9 @@ import CtaForm from "../../components/ui/CtaForm/CtaForm";
 import { useLockHeight } from "@/utils/useLockHeight";
 import { isIOS } from "@/utils/isIOS";
 
-// import peopleTaxiImg from "../../../public/assets/images/people-taxi.jpg";
-// import peopleTaxiImgSec from "../../../public/assets/images/people-taxi-1.jpg";
-import socialTaxiImg from "../../../public/assets/images/ihelp-social-taxi.jpg";
+// import peopleTaxiImg from "../../../public/assets/images/people-taxi.webp";
+// import peopleTaxiImgSec from "../../../public/assets/images/people-taxi-1.webp";
+import socialTaxiImg from "../../../public/assets/images/ihelp-social-taxi.webp";
 
 export default function SocialTaxiPage() {
   const [ios, setIos] = useState(false);

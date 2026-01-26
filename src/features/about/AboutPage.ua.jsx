@@ -9,22 +9,22 @@ import AboutOvercome from "./AboutOvercome.ua";
 import CtaForm from "../../components/ui/CtaForm/CtaForm";
 import CtaAboutUs from "./CtaAboutUs";
 
-import firstStepsPhoto from "../../../public/assets/images/about-initial.png";
+import firstStepsPhoto from "../../../public/assets/images/about-initial.webp";
 
-import borodyankaFirstPhoto from "../../../public/assets/images/borodyanka-1.jpg";
-import borodyankaSecondPhoto from "../../../public/assets/images/borodyanka-2.jpg";
+import borodyankaFirstPhoto from "../../../public/assets/images/borodyanka-1.webp";
+import borodyankaSecondPhoto from "../../../public/assets/images/borodyanka-2.webp";
 
-import commonPhoto from "../../../public/assets/images/common-photo.png";
-import regionFirstPhoto from "../../../public/assets/images/ihelp-region.jpg";
-import regionSecondPhoto from "../../../public/assets/images/ihelp-region2.jpg";
+import commonPhoto from "../../../public/assets/images/common-photo.webp";
+import regionFirstPhoto from "../../../public/assets/images/ihelp-region.webp";
+import regionSecondPhoto from "../../../public/assets/images/ihelp-region2.webp";
 
-import hotSpotPhoto1 from "../../../public/assets/images/hotspot-1.jpg";
-import hotSpotPhoto2 from "../../../public/assets/images/hotspot-2.jpg";
-import hotSpotPhoto3 from "../../../public/assets/images/hotspot-3.jpg";
-import hotSpotPhoto4 from "../../../public/assets/images/hotspot-4.jpg";
-import hotSpotPhoto5 from "../../../public/assets/images/hotspot-5.jpg";
+import hotSpotPhoto1 from "../../../public/assets/images/hotspot-1.webp";
+import hotSpotPhoto2 from "../../../public/assets/images/hotspot-2.webp";
+import hotSpotPhoto3 from "../../../public/assets/images/hotspot-3.webp";
+import hotSpotPhoto4 from "../../../public/assets/images/hotspot-4.webp";
+import hotSpotPhoto5 from "../../../public/assets/images/hotspot-5.webp";
 
-import iHelpTodayPhoto from "../../../public/assets/images/ihelp-today.jpg";
+import iHelpTodayPhoto from "../../../public/assets/images/ihelp-today.webp";
 
 import * as styles from "./AboutPage.module.scss";
 

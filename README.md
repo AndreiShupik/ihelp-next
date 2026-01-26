@@ -106,7 +106,7 @@ ihelp-next
 │  │  │  ├─ 54d279905dfc6637-s.p.woff2
 │  │  │  ├─ 60181e10ad16e354-s.woff2
 │  │  │  ├─ 9d7436bc73437f75-s.woff2
-│  │  │  ├─ about-12.d2260d6a.jpg
+│  │  │  ├─ about-1.d2260d6a.jpg
 │  │  │  ├─ about-2.5b23f394.jpg
 │  │  │  ├─ about-3.e8f93905.jpg
 │  │  │  ├─ about-initial.d4d6118d.png
@@ -150,7 +150,7 @@ ihelp-next
 │  │  │  ├─ partner-2.42d866fc.svg
 │  │  │  ├─ partner-3.8be2b766.webp
 │  │  │  ├─ ukrainian-girl.8b19b503.png
-│  │  │  ├─ x-black.b8e606fc.png
+│  │  │  ├─ youtube.b8e606fc.png
 │  │  │  └─ x.12e199b4.png
 │  │  └─ webpack
 │  │     ├─ 0182d85403181693.webpack.hot-update.json

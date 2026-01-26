@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useTranslation } from "next-i18next";
 import * as styles from "./OurProjectsTitle.module.scss";
 
-import ourProjectsImg from "../../../public/assets/images/our-projects.jpg";
+import ourProjectsImg from "../../../public/assets/images/our-projects.webp";
 
 function OurProjectsTitle() {
   const { t } = useTranslation("projects");

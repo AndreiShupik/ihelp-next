@@ -7,8 +7,8 @@ import { useLockHeight } from "@/utils/useLockHeight";
 import * as styles from "./FrontlinePeoplePage.module.scss";
 import CtaForm from "../../components/ui/CtaForm/CtaForm";
 
-import howToHelpImg from "../../../public/assets/images/ihelp-team.jpg";
-import helpHospital from "../../../public/assets/images/ihelp-hospital.png";
+import howToHelpImg from "../../../public/assets/images/ihelp-team.webp";
+import helpHospital from "../../../public/assets/images/ihelp-hospital.webp";
 
 export default function FrontlinePeoplePage() {
   const [ios, setIos] = useState(false);

@@ -152,7 +152,7 @@ import partner3 from "../../../public/assets/images/partners/partner-3.png";
 import partner4 from "../../../public/assets/images/partners/partner-4.png";
 import partner5 from "../../../public/assets/images/partners/partner-5.svg";
 import partner6 from "../../../public/assets/images/partners/partner-6.png";
-import partner7 from "../../../public/assets/images/partners/partner-7.jpg";
+import partner7 from "../../../public/assets/images/partners/partner-7.webp";
 import partner8 from "../../../public/assets/images/partners/partner-8.png";
 import partner9 from "../../../public/assets/images/partners/partner-9.png";
 import partner10 from "../../../public/assets/images/partners/partner-10.png";
