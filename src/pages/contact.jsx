@@ -15,8 +15,8 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <link rel="alternate" hrefLang="en" href="https://theihelp.org/contact" />
-        <link rel="alternate" hrefLang="ua" href="https://theihelp.org/ua/contact" />
+        <link rel="alternate" hrefLang="en" href="https://theihelp.org/en/contact" />
+        <link rel="alternate" hrefLang="ua" href="https://theihelp.org/contact" />
 
         <meta name="description" content={t("meta.contact.description")} />
         <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
@@ -31,7 +31,7 @@ export default function Contact() {
         <title>{t("meta.contact.title")}</title>
         <link
           rel="canonical"
-          href={locale === "ua" ? "https://theihelp.org/ua/contact" : "https://theihelp.org/contact"}
+          href={locale === "ua" ? "https://theihelp.org/contact" : "https://theihelp.org/en/contact"}
         />
       </Head>
       <ContactPage />

@@ -16,8 +16,8 @@ export default function KhersonChildrenPage() {
   return (
     <>
       <Head>
-        <link rel="alternate" hrefLang="en" href="https://theihelp.org/kherson-children" />
-        <link rel="alternate" hrefLang="ua" href="https://theihelp.org/ua/kherson-children" />
+        <link rel="alternate" hrefLang="en" href="https://theihelp.org/en/kherson-children" />
+        <link rel="alternate" hrefLang="ua" href="https://theihelp.org/kherson-children" />
 
         <meta name="description" content={t("meta.khersonChildren.description")} />
         <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
@@ -32,7 +32,7 @@ export default function KhersonChildrenPage() {
         <title>{t("meta.khersonChildren.title")}</title>
         <link
           rel="canonical"
-          href={locale === "ua" ? "https://theihelp.org/ua/kherson-children" : "https://theihelp.org/kherson-children"}
+          href={locale === "ua" ? "https://theihelp.org/kherson-children" : "https://theihelp.org/en/kherson-children"}
         />
       </Head>
       {locale === "ua" ? <KhersonChildrenUa /> : <KhersonChildrenEn />}

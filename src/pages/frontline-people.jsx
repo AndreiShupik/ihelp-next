@@ -17,8 +17,8 @@ const FrontlinePeople = () => {
   return (
     <>
       <Head>
-        <link rel="alternate" hrefLang="en" href="https://theihelp.org/frontline-people" />
-        <link rel="alternate" hrefLang="ua" href="https://theihelp.org/ua/frontline-people" />
+        <link rel="alternate" hrefLang="en" href="https://theihelp.org/en/frontline-people" />
+        <link rel="alternate" hrefLang="ua" href="https://theihelp.org/frontline-people" />
 
         <meta name="description" content={t("meta.frontlinePeople.description")} />
         <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
@@ -33,7 +33,7 @@ const FrontlinePeople = () => {
         <title>{t("meta.frontlinePeople.title")}</title>
         <link
           rel="canonical"
-          href={locale === "ua" ? "https://theihelp.org/ua/frontline-people" : "https://theihelp.org/frontline-people"}
+          href={locale === "ua" ? "https://theihelp.org/frontline-people" : "https://theihelp.org/en/frontline-people"}
         />
       </Head>
       {locale === "ua" ? <FrontlinePeopleUa /> : <FrontlinePeopleEn />}

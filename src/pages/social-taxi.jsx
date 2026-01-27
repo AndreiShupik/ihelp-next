@@ -16,8 +16,8 @@ export default function SocialTaxiPage() {
   return (
     <>
       <Head>
-        <link rel="alternate" hrefLang="en" href="https://theihelp.org/social-taxi" />
-        <link rel="alternate" hrefLang="ua" href="https://theihelp.org/ua/social-taxi" />
+        <link rel="alternate" hrefLang="en" href="https://theihelp.org/en/social-taxi" />
+        <link rel="alternate" hrefLang="ua" href="https://theihelp.org/social-taxi" />
 
         <meta name="description" content={t("meta.socialTaxi.description")} />
         <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
@@ -32,7 +32,7 @@ export default function SocialTaxiPage() {
         <title>{t("meta.socialTaxi.title")}</title>
         <link
           rel="canonical"
-          href={locale === "ua" ? "https://theihelp.org/ua/social-taxi" : "https://theihelp.org/social-taxi"}
+          href={locale === "ua" ? "https://theihelp.org/social-taxi" : "https://theihelp.org/en/social-taxi"}
         />
       </Head>
       {locale === "ua" ? <SocialTaxiUa /> : <SocialTaxiEn />}

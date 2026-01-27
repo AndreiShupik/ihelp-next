@@ -14,8 +14,8 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <link rel="alternate" hrefLang="en" href="https://theihelp.org/projects" />
-        <link rel="alternate" hrefLang="ua" href="https://theihelp.org/ua/projects" />
+        <link rel="alternate" hrefLang="en" href="https://theihelp.org/en/projects" />
+        <link rel="alternate" hrefLang="ua" href="https://theihelp.org/projects" />
 
         <meta name="description" content={t("meta.projects.description")} />
         <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
@@ -30,7 +30,7 @@ export default function Projects() {
         <title>{t("meta.projects.title")}</title>
         <link
           rel="canonical"
-          href={locale === "ua" ? "https://theihelp.org/ua/projects" : "https://theihelp.org/projects"}
+          href={locale === "ua" ? "https://theihelp.org/projects" : "https://theihelp.org/en/projects"}
         />
       </Head>
       <OurProjects />

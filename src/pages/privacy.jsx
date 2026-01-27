@@ -16,8 +16,8 @@ const Privacy = () => {
   return (
     <>
       <Head>
-        <link rel="alternate" hrefLang="en" href="https://theihelp.org/privacy" />
-        <link rel="alternate" hrefLang="ua" href="https://theihelp.org/ua/privacy" />
+        <link rel="alternate" hrefLang="en" href="https://theihelp.org/en/privacy" />
+        <link rel="alternate" hrefLang="ua" href="https://theihelp.org/privacy" />
 
         <meta name="description" content={t("meta.privacy.description")} />
         <meta name="robots" content="noindex, nofollow" />
@@ -32,7 +32,7 @@ const Privacy = () => {
         <title>{t("meta.privacy.title")}</title>
         <link
           rel="canonical"
-          href={locale === "ua" ? "https://theihelp.org/ua/privacy" : "https://theihelp.org/privacy"}
+          href={locale === "ua" ? "https://theihelp.org/privacy" : "https://theihelp.org/en/privacy"}
         />
       </Head>
       {locale === "ua" ? <PrivacyUa /> : <PrivacyEn />}

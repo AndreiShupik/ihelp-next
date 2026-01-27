@@ -15,8 +15,8 @@ const Terms = () => {
   return (
     <>
       <Head>
-        <link rel="alternate" hrefLang="en" href="https://theihelp.org/terms" />
-        <link rel="alternate" hrefLang="ua" href="https://theihelp.org/ua/terms" />
+        <link rel="alternate" hrefLang="en" href="https://theihelp.org/en/terms" />
+        <link rel="alternate" hrefLang="ua" href="https://theihelp.org/terms" />
 
         <meta name="description" content={t("meta.terms.description")} />
         <meta name="robots" content="noindex, nofollow" />
@@ -29,7 +29,7 @@ const Terms = () => {
         <meta name="twitter:description" content={t("meta.terms.description")} />
 
         <title>{t("meta.terms.title")}</title>
-        <link rel="canonical" href={locale === "ua" ? "https://theihelp.org/ua/terms" : "https://theihelp.org/terms"} />
+        <link rel="canonical" href={locale === "ua" ? "https://theihelp.org/terms" : "https://theihelp.org/en/terms"} />
       </Head>
       {locale === "ua" ? <TermsUa /> : <TermsEn />}
     </>

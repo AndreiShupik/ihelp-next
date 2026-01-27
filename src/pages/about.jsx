@@ -14,8 +14,8 @@ const About = () => {
   return (
     <>
       <Head>
-        <link rel="alternate" hrefLang="en" href="https://theihelp.org/about" />
-        <link rel="alternate" hrefLang="ua" href="https://theihelp.org//ua/about" />
+        <link rel="alternate" hrefLang="en" href="https://theihelp.org/en/about" />
+        <link rel="alternate" hrefLang="ua" href="https://theihelp.org/about" />
 
         <meta name="description" content={t("meta.about.description")} />
         <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
@@ -28,7 +28,7 @@ const About = () => {
         <meta name="twitter:description" content={t("meta.about.description")} />
 
         <title>{t("meta.about.title")}</title>
-        <link rel="canonical" href={locale === "ua" ? "https://theihelp.org/ua/about" : "https://theihelp.org/about"} />
+        <link rel="canonical" href={locale === "ua" ? "https://theihelp.org/about" : "https://theihelp.org/en/about"} />
       </Head>
       {locale === "ua" ? <AboutPageUa /> : <AboutPageEn />}
     </>
