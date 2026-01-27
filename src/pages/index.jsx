@@ -16,8 +16,8 @@ export default function Home({ posts, media }) {
   return (
     <>
       <Head>
-        <link rel="alternate" hrefLang="en" href="https://theihelp.org/" />
-        <link rel="alternate" hrefLang="ua" href="https://theihelp.org/ua" />
+        <link rel="alternate" hrefLang="en" href="https://theihelp.org/en/" />
+        <link rel="alternate" hrefLang="ua" href="https://theihelp.org" />
 
         <meta name="description" content={t("meta.home.description")} />
         <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
@@ -30,7 +30,7 @@ export default function Home({ posts, media }) {
         <meta name="twitter:description" content={t("meta.home.description")} />
 
         <title>{t("meta.home.title")}</title>
-        <link rel="canonical" href={locale === "ua" ? "https://theihelp.org/ua" : "https://theihelp.org/"} />
+        <link rel="canonical" href={locale === "ua" ? "https://theihelp.org" : "https://theihelp.org/en"} />
       </Head>
 
       <HomePage posts={posts} media={media} />
