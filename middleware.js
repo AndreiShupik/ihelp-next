@@ -52,7 +52,7 @@ export function middleware(request) {
   const acceptLanguage = request.headers.get("accept-language") || "";
 
   // Redirect to /en ONLY if browser explicitly prefers English and NOT Ukrainian
-  if (acceptLanguage.toLowerCase().includes("en") && !acceptLanguage.toLowerCase().includes("ua")) {
+  if (acceptLanguage.toLowerCase().includes("en") && !acceptLanguage.toLowerCase().includes("uk")) {
     const url = new URL(origin + "/en" + pathname + search);
     return NextResponse.redirect(url);
   }
