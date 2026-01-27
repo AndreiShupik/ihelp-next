@@ -11,39 +11,27 @@ function PhotoOfChanges() {
 
   const slides = [
     {
-      // title: "Jellyfish",
       description: t("photoOfChanges.firstPhoto"),
-      // link: "https://en.wikipedia.org/wiki/Jellyfish",
       className: "swiper-slide--one",
     },
     {
-      // title: "Seahorse",
       description: t("photoOfChanges.secondPhoto"),
-      // link: "https://en.wikipedia.org/wiki/Seahorse",
       className: "swiper-slide--two",
     },
     {
-      // title: "Octopus",
       description: t("photoOfChanges.thirdPhoto"),
-      // link: "https://en.wikipedia.org/wiki/Octopus",
       className: "swiper-slide--three",
     },
     {
-      // title: "Shark",
       description: t("photoOfChanges.fourthPhoto"),
-      // link: "https://en.wikipedia.org/wiki/Shark",
       className: "swiper-slide--four",
     },
     {
-      // title: "Dolphin",
       description: t("photoOfChanges.fifthPhoto"),
-      // link: "https://en.wikipedia.org/wiki/Dolphin",
       className: "swiper-slide--five",
     },
     {
-      // title: "Dolphin",
       description: t("photoOfChanges.sixthPhoto"),
-      // link: "https://en.wikipedia.org/wiki/Dolphin",
       className: "swiper-slide--six",
     },
   ];
