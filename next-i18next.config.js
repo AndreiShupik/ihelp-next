@@ -4,7 +4,7 @@ module.exports = {
   i18n: {
     locales: ["ua", "en"],
     defaultLocale: "ua",
-    localeDetection: true,
+    localeDetection: false,
   },
 
   // Explicit path to your translation files

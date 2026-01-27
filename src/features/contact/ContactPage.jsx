@@ -20,8 +20,8 @@ function ContactPage() {
             <h1>{t("title")}</h1>
 
             <p>{t("emailLabel")}</p>
-            <a className={styles.contactInfo} href="mailto:info@ihelp-ukraine.org">
-              info@ihelp-ukraine.org
+            <a className={styles.contactInfo} href="mailto:info@theihelp.org">
+              info@theihelp.org
             </a>
 
             <p>{t("phoneLabel")}</p>
