@@ -16,7 +16,7 @@ export default function Home({ posts, media }) {
   return (
     <>
       <Head>
-        <link rel="alternate" hrefLang="en" href="https://theihelp.org/en/" />
+        <link rel="alternate" hrefLang="en" href="https://theihelp.org/en" />
         <link rel="alternate" hrefLang="ua" href="https://theihelp.org" />
 
         <meta name="description" content={t("meta.home.description")} />
