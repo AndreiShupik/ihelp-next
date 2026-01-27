@@ -17,7 +17,7 @@ export default function DefaultLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://ihelp.org.ua/assets/images/social-logo.jpg" />
+        <meta property="og:image" content="https://theihelp.org/assets/images/social-logo.jpg" />
         <meta property="og:image:width" content="826" />
         <meta property="og:image:height" content="960" />
         <meta property="og:image:type" content="image/jpg" />
@@ -25,9 +25,9 @@ export default function DefaultLayout({ children }) {
         <meta property="og:site_name" content="iHELP" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="https://ihelp.org.ua/assets/images/social-logo.jpg" />
+        <meta name="twitter:image" content="https://theihelp.org/assets/images/social-logo.jpg" />
 
-        <link rel="icon" type="image/x-icon" href="https://ihelp.org.ua/assets/images/favicon.png" />
+        <link rel="icon" type="image/x-icon" href="https://theihelp.org/assets/images/favicon.png" />
       </Head>
       <ScrollToTop />
       <Header />

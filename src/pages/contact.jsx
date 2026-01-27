@@ -15,15 +15,15 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <link rel="alternate" hrefLang="en" href="https://ihelp.org.ua/contact" />
-        <link rel="alternate" hrefLang="ua" href="https://ihelp.org.ua/ua/contact" />
+        <link rel="alternate" hrefLang="en" href="https://theihelp.org/contact" />
+        <link rel="alternate" hrefLang="ua" href="https://theihelp.org/ua/contact" />
 
         <meta name="description" content={t("meta.contact.description")} />
         <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
 
         <meta property="og:title" content={t("meta.contact.title")} />
         <meta property="og:description" content={t("meta.contact.description")} />
-        <meta property="og:url" content="https://ihelp.org.ua/" />
+        <meta property="og:url" content="https://theihelp.org/" />
 
         <meta name="twitter:title" content={t("meta.contact.title")} />
         <meta name="twitter:description" content={t("meta.contact.description")} />
@@ -31,7 +31,7 @@ export default function Contact() {
         <title>{t("meta.contact.title")}</title>
         <link
           rel="canonical"
-          href={locale === "ua" ? "https://ihelp.org.ua/ua/contact" : "https://ihelp.org.ua/contact"}
+          href={locale === "ua" ? "https://theihelp.org/ua/contact" : "https://theihelp.org/contact"}
         />
       </Head>
       <ContactPage />

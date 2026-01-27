@@ -16,15 +16,15 @@ export default function KhersonChildrenPage() {
   return (
     <>
       <Head>
-        <link rel="alternate" hrefLang="en" href="https://ihelp.org.ua/kherson-children" />
-        <link rel="alternate" hrefLang="ua" href="https://ihelp.org.ua/ua/kherson-children" />
+        <link rel="alternate" hrefLang="en" href="https://theihelp.org/kherson-children" />
+        <link rel="alternate" hrefLang="ua" href="https://theihelp.org/ua/kherson-children" />
 
         <meta name="description" content={t("meta.khersonChildren.description")} />
         <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
 
         <meta property="og:title" content={t("meta.khersonChildren.title")} />
         <meta property="og:description" content={t("meta.khersonChildren.description")} />
-        <meta property="og:url" content="https://ihelp.org.ua/kherson-children" />
+        <meta property="og:url" content="https://theihelp.org/kherson-children" />
 
         <meta name="twitter:title" content={t("meta.khersonChildren.title")} />
         <meta name="twitter:description" content={t("meta.khersonChildren.description")} />
@@ -32,7 +32,7 @@ export default function KhersonChildrenPage() {
         <title>{t("meta.khersonChildren.title")}</title>
         <link
           rel="canonical"
-          href={locale === "ua" ? "https://ihelp.org.ua/ua/kherson-children" : "https://ihelp.org.ua/kherson-children"}
+          href={locale === "ua" ? "https://theihelp.org/ua/kherson-children" : "https://theihelp.org/kherson-children"}
         />
       </Head>
       {locale === "ua" ? <KhersonChildrenUa /> : <KhersonChildrenEn />}

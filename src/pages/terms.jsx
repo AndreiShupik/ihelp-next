@@ -15,21 +15,21 @@ const Terms = () => {
   return (
     <>
       <Head>
-        <link rel="alternate" hrefLang="en" href="https://ihelp.org.ua/terms" />
-        <link rel="alternate" hrefLang="ua" href="https://ihelp.org.ua/ua/terms" />
+        <link rel="alternate" hrefLang="en" href="https://theihelp.org/terms" />
+        <link rel="alternate" hrefLang="ua" href="https://theihelp.org/ua/terms" />
 
         <meta name="description" content={t("meta.terms.description")} />
         <meta name="robots" content="noindex, nofollow" />
 
         <meta property="og:title" content={t("meta.terms.title")} />
         <meta property="og:description" content={t("meta.terms.description")} />
-        <meta property="og:url" content="https://ihelp.org.ua/terms" />
+        <meta property="og:url" content="https://theihelp.org/terms" />
 
         <meta name="twitter:title" content={t("meta.terms.title")} />
         <meta name="twitter:description" content={t("meta.terms.description")} />
 
         <title>{t("meta.terms.title")}</title>
-        <link rel="canonical" href={locale === "ua" ? "https://ihelp.org.ua/ua/terms" : "https://ihelp.org.ua/terms"} />
+        <link rel="canonical" href={locale === "ua" ? "https://theihelp.org/ua/terms" : "https://theihelp.org/terms"} />
       </Head>
       {locale === "ua" ? <TermsUa /> : <TermsEn />}
     </>

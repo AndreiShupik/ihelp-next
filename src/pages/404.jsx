@@ -19,13 +19,13 @@ export default function Custom404() {
 
         <meta property="og:title" content={t("page404.title")} />
         <meta property="og:description" content={t("page404.description")} />
-        <meta property="og:url" content="https://ihelp.org.ua/page404" />
+        <meta property="og:url" content="https://theihelp.org/page404" />
 
         <meta name="twitter:title" content={t("page404.title")} />
         <meta name="twitter:description" content={t("page404.description")} />
 
         <title>{t("page404.title")}</title>
-        <link rel="canonical" href="https://ihelp.org.ua/page404" />
+        <link rel="canonical" href="https://theihelp.org/page404" />
       </Head>
       <div
         style={{

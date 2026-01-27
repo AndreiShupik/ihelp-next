@@ -16,21 +16,21 @@ export default function Home({ posts, media }) {
   return (
     <>
       <Head>
-        <link rel="alternate" hrefLang="en" href="https://ihelp.org.ua/" />
-        <link rel="alternate" hrefLang="ua" href="https://ihelp.org.ua/ua" />
+        <link rel="alternate" hrefLang="en" href="https://theihelp.org/" />
+        <link rel="alternate" hrefLang="ua" href="https://theihelp.org/ua" />
 
         <meta name="description" content={t("meta.home.description")} />
         <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
 
         <meta property="og:title" content={t("meta.home.title")} />
         <meta property="og:description" content={t("meta.home.description")} />
-        <meta property="og:url" content="https://ihelp.org.ua/" />
+        <meta property="og:url" content="https://theihelp.org/" />
 
         <meta name="twitter:title" content={t("meta.home.title")} />
         <meta name="twitter:description" content={t("meta.home.description")} />
 
         <title>{t("meta.home.title")}</title>
-        <link rel="canonical" href={locale === "ua" ? "https://ihelp.org.ua/ua" : "https://ihelp.org.ua/"} />
+        <link rel="canonical" href={locale === "ua" ? "https://theihelp.org/ua" : "https://theihelp.org/"} />
       </Head>
 
       <HomePage posts={posts} media={media} />
