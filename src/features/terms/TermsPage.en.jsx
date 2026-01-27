@@ -10,15 +10,15 @@ export default function TermsPage() {
 
       <p>
         Welcome to the website of the charitable organisation <em>iHELP (“I Help”)</em> (hereinafter – «the
-        Foundation»). By accessing or using our website at <a href="https://ihelp-ukraine.org">ihelp-ukraine.org</a>{" "}
-        (hereinafter – «the Site»), you agree to the following terms. Please read them carefully before using the Site.
+        Foundation»). By accessing or using our website at <a href="https://theihelp.org">theihelp.org</a> (hereinafter
+        – «the Site»), you agree to the following terms. Please read them carefully before using the Site.
       </p>
 
       <h2>1. General Provisions</h2>
       <p>
         These Terms of Use govern your access to and use of the Site located at{" "}
-        <a href="https://ihelp-ukraine.org">https://ihelp-ukraine.org</a>, and all of its subdomains. By using the Site,
-        you confirm that you have read, understood, and agree to be bound by these Terms.
+        <a href="https://theihelp.org">https://theihelp.org</a>, and all of its subdomains. By using the Site, you
+        confirm that you have read, understood, and agree to be bound by these Terms.
       </p>
 
       <h2>2. Purpose of the Site</h2>
@@ -78,7 +78,7 @@ export default function TermsPage() {
       <h2>8. Contact Information</h2>
       <p>If you have any questions regarding these Terms of Use, please contact us:</p>
       <span>
-        Email: <Link href="mailto:info@ihelp-ukraine.org">info@ihelp-ukraine.org</Link>{" "}
+        Email: <Link href="mailto:info@theihelp.org">info@theihelp.org</Link>{" "}
       </span>
       <br />
 

@@ -18,8 +18,8 @@ function PrivacyPage() {
         законодавства України (далі – <em>БО «Я допомагаю»</em>), є власником та адміністратором онлайн-платформи для
         збору коштів у формі благодійних внесків. Платформа створена для підтримки гуманітарних, соціальних та оборонних
         ініціатив України та доступна за адресою:{" "}
-        <Link href="https://ihelp-ukraine.org" target="_blank" rel="noopener noreferrer">
-          ihelp-ukraine.org
+        <Link href="https://theihelp.org" target="_blank" rel="noopener noreferrer">
+          theihelp.org
         </Link>
         .
       </p>
@@ -91,10 +91,9 @@ function PrivacyPage() {
       </ul>
 
       <p>
-        Щоб скористатися правами, надішліть запит на{" "}
-        <Link href="mailto:info@ihelp-ukraine.org">info@ihelp-ukraine.org</Link> із темою{" "}
-        <em>«Запит щодо персональних даних»</em>, вказавши свої контактні дані та суть запиту. Ми відповімо протягом 30
-        днів.
+        Щоб скористатися правами, надішліть запит на <Link href="mailto:info@theihelp.org">info@theihelp.org</Link> із
+        темою <em>«Запит щодо персональних даних»</em>, вказавши свої контактні дані та суть запиту. Ми відповімо
+        протягом 30 днів.
       </p>
 
       <h2>5. Розкриття інформації</h2>
@@ -106,7 +105,7 @@ function PrivacyPage() {
       <h2>6. Контакти</h2>
       <p>Якщо у вас є питання чи скарги щодо обробки ваших даних, звертайтеся:</p>
       <span>
-        Email: <Link href="mailto:info@ihelp-ukraine.org">info@ihelp-ukraine.org</Link>{" "}
+        Email: <Link href="mailto:info@theihelp.org">info@theihelp.org</Link>{" "}
       </span>
       <br />
 

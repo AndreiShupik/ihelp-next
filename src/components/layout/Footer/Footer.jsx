@@ -23,7 +23,7 @@ function Footer() {
           <div className={styles.supportBlock}>
             <h4>{t("footer.contactInfo")}</h4>
             <p>
-              Email: <a href="mailto:info@ihelp-ukraine.org">info@ihelp-ukraine.org</a>
+              Email: <a href="mailto:info@theihelp.org">info@theihelp.org</a>
             </p>
             <p>
               {t("footer.phone")} <a href="tel:+380636123224">+38 (063) 612-32-24</a>

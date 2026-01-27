@@ -17,8 +17,8 @@ function PrivacyPage() {
         The Charitable Organization <em>«I Help»</em> (iHELP), registered under Ukrainian law (EDRPOU code 44668404), is
         the owner and administrator of an online platform for collecting charitable donations. The platform supports
         humanitarian, social, and defence-related initiatives in Ukraine and is accessible at:{" "}
-        <Link href="https://ihelp-ukraine.org" target="_blank" rel="noopener noreferrer">
-          ihelp-ukraine.org
+        <Link href="https://theihelp.org" target="_blank" rel="noopener noreferrer">
+          theihelp.org
         </Link>
         .
       </p>
@@ -87,10 +87,9 @@ function PrivacyPage() {
       </ul>
 
       <p>
-        To exercise your rights, please send a request to{" "}
-        <Link href="mailto:info@ihelp-ukraine.org">info@ihelp-ukraine.org</Link> with the subject{" "}
-        <em>«Personal Data Request»</em>, including your contact information and details of your inquiry. We will
-        respond within 30 days.
+        To exercise your rights, please send a request to <Link href="mailto:info@theihelp.org">info@theihelp.org</Link>{" "}
+        with the subject <em>«Personal Data Request»</em>, including your contact information and details of your
+        inquiry. We will respond within 30 days.
       </p>
 
       <h2>5. Disclosure of Information</h2>
@@ -102,7 +101,7 @@ function PrivacyPage() {
       <h2>6. Contact Information</h2>
       <p>For any questions or concerns regarding your data, please contact us:</p>
       <span>
-        Email: <Link href="mailto:info@ihelp-ukraine.org">info@ihelp-ukraine.org</Link>{" "}
+        Email: <Link href="mailto:info@theihelp.org">info@theihelp.org</Link>{" "}
       </span>
       <br />
 
