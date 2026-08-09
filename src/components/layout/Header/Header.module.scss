@@ -4,8 +4,8 @@
   left: 0;
   right: 0;
   z-index: 20;
-  background: #143518;
-  background: #58b764;
+  // background: #143518;
+  background: #1c3a2d;
 }
 
 .navBlock ul a {
@@ -31,7 +31,12 @@
 
     a {
       display: inline-block;
-      width: 100px;
+      width: 210px;
+
+      @media (max-width: 575px) {
+        /* clamp(MIN, VAL, MAX) */
+        width: clamp(100px, 26.08vw, 150px);
+      }
       img {
         width: 100%;
       }
@@ -41,6 +46,17 @@
   .userBlock {
     display: flex;
     gap: 1rem;
+
+    // .headerBtns {
+    //   display: flex;
+    //   flex-direction: column;
+    //   gap: 5px;
+    //   align-items: end;
+
+    //   div {
+    //     width: 100%;
+    //   }
+    // }
 
     @media (max-width: 575px) {
       gap: 0.3rem;
@@ -111,7 +127,7 @@
         z-index: -1;
         width: 75px;
         height: 75px;
-        background: #58b764;
+        background: #1c3a2d;
         border-radius: 50%;
         box-shadow: 0 5px 10px rgba(black, 0.5);
         cursor: pointer;
@@ -124,10 +140,14 @@
     }
 
     .materialContent {
-      padding: 60px 20px 0;
+      padding: 70px 20px 0;
       position: absolute;
       top: 0;
       right: 0;
+
+      @media (max-width: 575px) {
+        padding-top: 50px;
+      }
 
       &.opened {
         z-index: 2;
@@ -220,12 +240,17 @@
 .desktopMenu {
   ul {
     display: flex;
+    align-items: center;
 
     a {
       // font-size: 20px;
       font-weight: bold;
       margin: 0 15px;
       transition: all 0.3s ease-out;
+
+      @media (max-width: 1199px) {
+        margin: 0 8px;
+      }
 
       &.active {
         pointer-events: none;

@@ -22,12 +22,17 @@
     background: #fffbce;
     color: #143518;
     z-index: 3;
+    white-space: nowrap;
   }
 
   .secondary {
     background: linear-gradient(315deg, #fffbce, #aacfaa);
     color: #143518;
   }
+}
+
+.ctaBtn .headerBtn {
+  width: 100%;
 }
 
 @media (max-width: 1200px) {
@@ -41,5 +46,6 @@
   .ctaBtn .primary {
     font-size: 14px;
     padding: 5px 10px;
+    line-height: 1rem;
   }
 }

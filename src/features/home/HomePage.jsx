@@ -1,8 +1,10 @@
 import React from "react";
 
 import HeroSection from "./HeroSection";
-import AboutSection from "./AboutSection";
+// import AboutSection from "./AboutSection";
+import OurProjectsProjects from "./OurProjectsProjects";
 import ImpactSection from "./ImpactSection";
+import WatchNow from "./WatchNow";
 import JoinUsSection from "./JoinUsSection";
 import PhotoOfChanges from "./PhotoOfChanges";
 import MediaCarousel from "./MediaCarousel";
@@ -15,8 +17,10 @@ function HomePage({ posts, media }) {
   return (
     <main>
       <HeroSection />
-      <AboutSection />
+      {/* <AboutSection /> */}
+      <OurProjectsProjects />
       <ImpactSection />
+      <WatchNow />
       <JoinUsSection />
       <PhotoOfChanges />
       <MediaCarousel media={media} />

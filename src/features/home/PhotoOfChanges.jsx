@@ -51,7 +51,7 @@ function PhotoOfChanges() {
     <section className="photo-of-changes">
       <div className="text-block">
         {/* <span>Приєднуйся</span> */}
-        <h3>{t("photoOfChanges.title")}</h3>
+        <h3 className="leftHeader">{t("photoOfChanges.title")}</h3>
         <hr />
         <p>{t("photoOfChanges.subtitle")}</p>
         {/* <p>{slides[activeIndex].description}</p> */}

@@ -10,6 +10,7 @@ function ContactForm({ type }) {
 
   const [formData, setFormData] = useState({
     name: "",
+    email: "",
     message: "",
   });
 
@@ -19,10 +20,24 @@ function ContactForm({ type }) {
   const [submitError, setSubmitError] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  const isValidEmail = (email) => {
+    const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email);
+  };
+
   const validate = () => {
     const newErrors = {};
 
-    if (!formData.name.trim()) newErrors.name = t("errors.nameRequired");
+    if (!formData.name.trim()) {
+      newErrors.name = t("errors.nameRequired");
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = t("errors.emailRequired");
+    } else if (!isValidEmail(formData.email)) {
+      newErrors.email = t("errors.emailInvalid");
+    }
+
     if (!phone) {
       newErrors.phone = t("errors.phoneRequired");
     } else if (!isValidPhoneNumber(phone)) {
@@ -34,8 +49,16 @@ function ContactForm({ type }) {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-    setErrors((prev) => ({ ...prev, [name]: "" }));
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+
+    setErrors((prev) => ({
+      ...prev,
+      [name]: "",
+    }));
   };
 
   const handleSubmit = async (e) => {
@@ -43,19 +66,26 @@ function ContactForm({ type }) {
     setSubmitError(null);
 
     const validationErrors = validate();
+
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;
     }
 
-    const fullData = { ...formData, phone, type };
+    const fullData = {
+      ...formData,
+      phone,
+      type,
+    };
 
     try {
       setLoading(true);
 
       const res = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify(fullData),
       });
 
@@ -65,7 +95,13 @@ function ContactForm({ type }) {
       }
 
       setSubmitted(true);
-      setFormData({ name: "", message: "" });
+
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+
       setPhone("");
       setErrors({});
     } catch (error) {
@@ -83,12 +119,28 @@ function ContactForm({ type }) {
         <p className={styles.success}>{t("successMessage")}</p>
       ) : (
         <form onSubmit={handleSubmit} className={styles.form} noValidate>
+          {/* NAME */}
           <label>
             {t("fields.name")}
             <input type="text" name="name" autoComplete="name" value={formData.name} onChange={handleChange} />
             {errors.name && <span className={styles.error}>{errors.name}</span>}
           </label>
 
+          {/* EMAIL */}
+          <label>
+            {t("fields.email")}
+            <input
+              type="email"
+              name="email"
+              autoComplete="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="example@email.com"
+            />
+            {errors.email && <span className={styles.error}>{errors.email}</span>}
+          </label>
+
+          {/* PHONE */}
           <label>
             {t("fields.phone")}
             <PhoneInput
@@ -99,13 +151,17 @@ function ContactForm({ type }) {
               value={phone}
               onChange={(value) => {
                 setPhone(value);
-                setErrors((prev) => ({ ...prev, phone: "" }));
+                setErrors((prev) => ({
+                  ...prev,
+                  phone: "",
+                }));
               }}
               className={styles.phoneInput}
             />
             {errors.phone && <span className={styles.error}>{errors.phone}</span>}
           </label>
 
+          {/* MESSAGE */}
           <label>
             {t("fields.message")}
             <textarea

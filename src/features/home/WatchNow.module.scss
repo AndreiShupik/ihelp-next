@@ -1,0 +1,57 @@
+.featuredStory {
+  max-width: 1200px;
+  padding: 80px 20px 30px;
+  margin: 0 auto;
+}
+
+.container {
+  // max-width: 960px;
+  // margin: 0 auto;
+  text-align: center;
+}
+
+.headerBlockAdditional {
+  margin-bottom: 32px;
+}
+.title {
+  line-height: 1.2;
+}
+
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; // 16:9 ratio
+  height: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  background-color: #000;
+}
+
+.video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.caption {
+  margin-top: 24px;
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+@media (max-width: 768px) {
+  .featuredStory {
+    padding: 60px 16px 20px;
+  }
+
+  .headerBlockAdditional {
+    margin-bottom: 24px;
+  }
+
+  .caption {
+    margin-top: 20px;
+  }
+}

@@ -1,47 +1,88 @@
 {
   "title": {
-    "1stTitlePart": "Charitable Foundation",
-    "2ndTitlePart": "“I HELP”: Our Projects",
-    "subtitle": "From humanitarian support to the recovery of Ukraine",
-    "1stDescription": "The “I HELP” / iHELP Charitable Foundation began its work in the first days of the full-scale invasion as a volunteer initiative, creating a logistics system to support people who lost their homes and were forced to live in bomb shelters. Today, iHELP is a humanitarian operator working in the Kyiv and Kherson regions, with an extensive network of local volunteers and partnerships with communities, local authorities, and businesses.",
-    "2ndDescription": "We believe that help is an infrastructure of trust that forms the foundation for the sustainable recovery and development of Ukraine.",
-    "imageAlt": "iHELP volunteers unloading humanitarian aid"
+    "title": "Our Projects"
   },
-  "ourProjects": {
-    "1stProject": {
-      "title": "1. Mobility and Accessibility: the “Road of Life. South” Project",
-      "description": "30+ trips per month for people with disabilities, individuals with limited mobility, and seriously ill residents of frontline communities in the Kherson and Mykolaiv regions to access life-saving procedures.",
-      "point1": "A project coordinated with the Kherson Regional State Administration and the Shevchenkove community of the Mykolaiv region.",
-      "point2": "Transportation to hospitals, rehabilitation centers, and social services.",
-      "point3": "Evacuation routes for residents who are unable to leave on their own.",
-      "subtitle": "Provides vital access to medical and social assistance. The goal is to create a model of social mobility that can be scaled to other regions of Ukraine."
-    },
-    "2ndProject": {
-      "title": "2. Children and Education: “To the Children of the Kherson Region from the Children of Kyiv”",
-      "description": "15,139 children’s support kits and 34 schools in Kyiv and the Kherson region united into a single network of solidarity.",
-      "point1": "Students, parents, and administrations of educational institutions in Kyiv collect support kits for children in frontline communities.",
-      "point2": "Holiday gifts.",
-      "point3": "Each package includes a letter or a drawing - a symbol of friendship and care.",
-      "point4": "The program fosters a culture of mutual support, social responsibility, and philanthropy among young people.",
-      "subtitle": "It shapes a new generation of citizens for whom charity and compassion are part of their identity. The project strengthens educational resilience and contributes to the recovery of schools in communities affected by the war."
-    },
-    "3rdProject": {
-      "title": "3. Veterans and Their Families: the “Veteran Family Space” Program",
-      "description": "A safe space for reintegration, support, and shared development.",
-      "point1": "Group and individual sessions with psychologists and veteran facilitators.",
-      "point2": "Cultural events, trainings, and family activities.",
-      "point3": "A peer-to-peer approach - veterans supporting veterans.",
-      "subtitle": "The program restores a sense of belonging, strength, and dignity. Veterans become active providers of support, not just its recipients."
-    },
-    "imageAlt": "iHELP. Children and education: “To the Children of Kherson Region from the Children of Kyiv”"
+  "about": {
+    "description": "iHELP is a charitable foundation that supports families, children, and vulnerable groups in Ukraine’s hardest-hit regions. We deliver humanitarian aid, strengthen communities, and contribute to the country’s recovery. Together, we can change lives for the better.",
+    "title": "Core Programmes",
+    "firstProject": "Emergency Aid",
+    "firstProjectDescription": "We deliver food, medicine, hygiene kits, and warm clothing to families in urgent need.",
+    "learnMore": "Learn more",
+    "secondProject": "Social taxi «Road of life. South»",
+    "secondProjectDescription": "Transportation for people with disabilities and residents of frontline communities in Kherson and Mykolaiv regions with limited mobility to undergo vital procedures.",
+    "thirdProject": "Support for Children and Education",
+    "thirdProjectDescription": "We provide emotional and educational support to children affected by war - including psychological care, learning materials, and creative programmes.",
+    "1stPhotoAlt": "iHELP. Emergency Aid Programme",
+    "2ndPhotoAlt": "iHELP. Social taxi «Road of life. South» Programme",
+    "3rdPhotoAlt": "iHELP. Support for Children and Education Programme"
   },
-  "ourVision": {
-    "title": "Volunteering and Partnerships",
-    "subtitle": "People are the heart of our work.",
-    "point1": "30+ active volunteers in the Kyiv and Kherson regions.",
-    "point2": "Partnerships with businesses, civil society organizations, local authorities, and international foundations.",
-    "description": "We are building a network of trust that connects communities, the state, and partners around a shared goal - support and recovery.",
-    "imageAlt": "iHelp. Our vision",
-    "ctaLink": "Join us!"
+  "impactBlock": {
+    "title": "Together, we make recovery possible",
+    "subtitle": "Key figures since 2022",
+    "num1": "People receiving humanitarian assistance",
+    "num2": "People served through Social Taxi",
+    "num3": "Children receiving educational support",
+    "num4": "Schools and nurseries supported on the front line",
+    "num5": "Veterans participating in psychosocial and recreational activities",
+
+    "testimonyTitle": "More than numbers",
+    "testimonySubtitle": "Human interest story",
+
+    "valentina": {
+      "imgAlt": "Valentyna, Social Taxi user",
+      "testimony": "“I am extremely grateful for this service! The driver, Oleh, is amazingly attentive — he points everything out and drops you off right at the doorstep. Everything is organized so well. May God bless you with all the best; you are doing a truly wonderful and noble cause by helping people solve vital matters!”",
+      "author": "Valentyna",
+      "authorData": "Social Taxi user, Mykolaiv Region",
+      "testimonyAboutAuthor": "Valentyna lives in a frontline village in southern Ukraine where public transport is severely limited. Thanks to the Social Taxi project, she can safely travel to the hospital for life-saving procedures and access vital social and administrative services."
+    },
+
+    "liudmila": {
+      "imgAlt": "Liudmyla, Social Taxi user",
+      "testimony": "“Thank you so much! This kind of assistance is a true lifeline for us. It is so difficult for us to get to the hospital on our own, but with you, everything was so easy and quick. I can hardly believe we were able to travel that far. Thank you very much for your care!”",
+      "author": "Liudmyla",
+      "authorData": "Social Taxi user, Mykolaiv Region",
+      "testimonyAboutAuthor": "Liudmyla lives in a frontline village in southern Ukraine with heavily damaged infrastructure. Thanks to the Social Taxi project, she can safely reach the hospital to undergo life-saving medical procedures."
+    },
+
+    "andrii": {
+      "imgAlt": "Andrii, Social Taxi user",
+      "testimony": "“Deepest gratitude to you for providing such a service for people with disabilities, helping them reach hospitals and access essential services. Otherwise, they simply cannot get to the city by public transport, and hiring a private car costs a fortune — around 5,000 UAH.”",
+      "author": "Andrii",
+      "authorData": "Social Taxi user, Mykolaiv Region",
+      "testimonyAboutAuthor": "Lives in a frontline village with destroyed infrastructure and no public transport links, where private rides cost around 10,000 UAH. For people with disabilities, this makes access to hospitals nearly impossible. Thanks to the Social Taxi project, he completed 5 trips to undergo medical examinations and reconfirm his disability status to secure state guarantees."
+    },
+
+    "oleksandr": {
+      "imgAlt": "Oleksandr, Social Taxi user",
+      "testimony": "“It’s great that such a service exists to help people reach hospitals for examinations. Everything was comfortable and went smoothly.”",
+      "author": "Oleksandr",
+      "authorData": "Social Taxi user, Kherson Region",
+      "testimonyAboutAuthor": "Lives in the Kherson region, where transport connections are extremely difficult due to destroyed infrastructure and continuous shelling. Thanks to the Social Taxi project, he was able to reach the hospital for a medical examination to obtain disability status."
+    },
+
+    "nadia": {
+      "imgAlt": "Nadiia, Social Taxi user",
+      "testimony": "“This service is a huge help because my son has mobility issues. The thought of having to travel together to a government office to complete paperwork was completely overwhelming. It is extremely hard for people with disabilities to reach hospitals and administrative services on their own.”",
+      "author": "Nadiia",
+      "authorData": "Social Taxi user with her son, Kherson Region",
+      "testimonyAboutAuthor": "They live in the Kherson region, where transport connections are extremely difficult due to destroyed infrastructure and systematic shelling. Thanks to the Social Taxi project, together with her son, they were able to obtain the necessary documents by traveling from their home to a government institution and returning back home."
+    },
+
+    "imgAlt": "Olha, Social Taxi beneficiary",
+    "testimony": "“With a driver like this, we can overcome any challenge. Before, even getting to a doctor felt impossible. Now I know I am not forgotten.”",
+    "author": "Olha, 72",
+    "authorData": "Special Taxi User, Kherson Region",
+    "testimonyAboutAuthor": "Olha lives in a frontline village where public transport has long disappeared. Through the Social Taxi initiative, she can safely reach medical care, humanitarian support points, and reconnect with her community."
+  },
+  "downloadsBlock": {
+    "download": "Download",
+    "overview": "I HELP Charitable Foundation Overview EN version.pdf",
+    "quarterlyOperationalBrief": "I HELP Operational Brief - January 2026.pdf",
+    "title": "Downloads",
+    "1stFileDescription": "I HELP Charitable Foundation Overview",
+    "2ndFileDescription": "I HELP Charitable Foundation Quarterly Operational Brief",
+    "action": "Open PDF",
+    "ctaTitle": "Get involved",
+    "ctaDescription": "Support I HELP by donating, volunteering, or partnering with us to deliver urgent aid and lasting recovery where it matters most."
   }
 }

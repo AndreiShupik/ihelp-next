@@ -1,9 +1,10 @@
 .contactPage {
-  padding: 160px 20px 90px;
+  padding: 200px 20px 90px;
   max-width: 1200px;
   margin: 0 auto;
 
   .contactPageWrapper {
+    margin-top: 40px;
     display: flex;
     gap: 40px;
     .leftSide {
@@ -13,7 +14,7 @@
 
     .rightSide {
       flex: 1;
-      background-color: rgba(193, 239, 233, 0.9);
+      background-color: rgba(214, 220, 236, 0.9);
       padding: 20px;
       border-radius: 8px;
       position: relative;
@@ -21,7 +22,7 @@
 
       h1 {
         position: absolute;
-        top: -50px;
+        top: -80px;
         left: 18px;
         background-image: none;
       }
@@ -53,7 +54,7 @@
 
 @media (max-width: 992px) {
   .contactPage {
-    padding: 160px 20px 90px;
+    padding: 200px 20px 90px;
     max-width: 1200px;
     margin: 0 auto;
 
@@ -67,6 +68,7 @@
         order: 0;
 
         h1 {
+          top: -70px;
           left: 0;
         }
       }
@@ -86,5 +88,11 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 575px) {
+  .contactPage {
+    padding: 160px 20px 90px;
   }
 }

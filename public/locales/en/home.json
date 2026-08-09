@@ -1,22 +1,27 @@
 {
   "hero": {
     "title": "Together, we help rebuild lives in Ukraine",
-    "subtitle": "We provide aid, restore communities, and bring hope.",
+    "subtitle": "Humanitarian support, education, and recovery for Ukraine.",
     "learnMore": "Learn more about us"
   },
-  "about": {
-    "description": "iHELP is a charitable foundation that supports families, children, and vulnerable groups in Ukraine’s hardest-hit regions. We deliver humanitarian aid, strengthen communities, and contribute to the country’s recovery. Together, we can change lives for the better.",
-    "title": "Core Programmes",
-    "firstProject": "Emergency Aid",
-    "firstProjectDescription": "We deliver food, medicine, hygiene kits, and warm clothing to families in urgent need.",
-    "learnMore": "Learn more",
-    "secondProject": "Social taxi «Road of life. South»",
-    "secondProjectDescription": "ansportation for people with disabilities and residents of frontline communities in Kherson and Mykolaiv regions with limited mobility to undergo vital procedures.",
-    "thirdProject": "Support for Children and Education",
-    "thirdProjectDescription": "We provide emotional and educational support to children affected by war - including psychological care, learning materials, and creative programmes.",
-    "1stPhotoAlt": "iHELP. Emergency Aid Programme",
-    "2ndPhotoAlt": "iHELP. Social taxi «Road of life. South» Programme",
-    "3rdPhotoAlt": "iHELP. Support for Children and Education Programme"
+  "ourProjects": {
+    "title": "Core programmes",
+    "1stProject": {
+      "title": "Emergency Aid",
+      "description": "Distribution of food and non-food items, including medicines, in conflict-affected communities in Kherson and Mykolaiv."
+    },
+    "2ndProject": {
+      "title": "Social Taxi Service",
+      "description": "Emergency transport for people with disabilities and the elderly in Kherson and Mykolaiv. In areas where public transport is disrupted or unsafe, the Social Taxi serves as a reliable support for those already living under constant threat and danger in communities near the frontline."
+    },
+    "3rdProject": {
+      "title": "From Children of Kyiv to Children of Kherson",
+      "description": "Through this initiative I HELP delivers educational kits to support children’s learning in conflict-affected areas of Kherson. This effort is driven by a network of nurseries and early education schools where school communities actively collect, prepare and deliver the supplies, strengthening community ownership and ensuring that assistance reaches learners who need it most."
+    },
+    "4thProject": {
+      "title": "Veteran Family Space",
+      "description": "In collaboration with Return to Peaceful Life, this initiative fosters reintegration of veterans and their families into community life, supporting social connection, psychological resilience, and long-term recovery."
+    }
   },
   "impact": {
     "title": "Our Impact",
@@ -25,6 +30,10 @@
     "communityHelp": "communities of Kherson/Mykolaiv regions have established stable contacts",
     "childrenHelp": "children supported with education and psychological care",
     "ctaButton": "Every donation changes lives"
+  },
+  "watchNow": {
+    "title": "Featured Story",
+    "caption": "Every journey matters - watch how Social Taxi connects people to safety."
   },
   "joinUs": {
     "title": "Join the iHELP Mission - Together We Can Change Lives",
@@ -49,7 +58,7 @@
     "article": "article about us"
   },
   "partners": {
-    "title": "We are helped",
+    "title": "Thanks to the support of",
     "subtitle": "We gratefully acknowledge those walking this path with us - sponsors, businesses, volunteer hubs, and civil society groups. Thanks to them, we deliver vital aid and create lasting social impact.",
     "ctaButton": "Become a Partner"
   },
@@ -76,6 +85,7 @@
   "blog": {
     "title": "Latest News",
     "subtitle": "The iHELP Blog is a space for honest stories, project updates, helpful insights, and inspiration. We write about the challenges we face, the resilience we build, and the victories that keep us moving forward.",
+    "learnMore": "learn more",
     "moreNews": "More News"
   }
 }

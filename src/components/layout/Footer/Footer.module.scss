@@ -4,7 +4,8 @@
 @use "../../../styles/base/typography";
 
 .footerBlock {
-  background-color: #143518;
+  // background-color: #143518;
+  background-color: rgb(193 239 233);
   width: 100%;
 
   .container {
@@ -28,7 +29,7 @@
         font-size: typography.$font-size-lg;
         margin-bottom: 15px;
         background-image: none;
-        color: #64d172;
+        color: #3d8546;
       }
 
       .supportBlock,
@@ -37,12 +38,12 @@
         flex: 1 1 calc(20% - 20px);
         min-width: 200px;
         margin-bottom: 20px;
-        color: #fff;
+        color: #143518;
 
         p {
           font-size: 1.25rem;
           line-height: 1.7rem;
-          color: #fff;
+          color: #143518;
           margin: 15px 0;
 
           a {
@@ -60,13 +61,14 @@
             a {
               font-size: 1.25rem;
               line-height: 1.7rem;
+              color: #143518;
               &:hover {
-                color: #aacfaa;
+                color: #33863d;
               }
 
               &.active {
                 pointer-events: none;
-                color: #aacfaa;
+                color: #33863d;
               }
             }
           }

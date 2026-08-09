@@ -2,30 +2,24 @@ import React, { useState, useEffect } from "react";
 import { useTranslation } from "next-i18next";
 
 import Image from "next/image";
+import Link from "next/link";
+
 import useIsMobile from "@/utils/useIsMobile";
-
 import * as styles from "./BlogSection.module.scss";
-
-// // ✅ Custom hook to detect mobile screen
-// function useIsMobile() {
-//   const [isMobile, setIsMobile] = useState(false);
-
-//   useEffect(() => {
-//     const handleResize = () => setIsMobile(window.innerWidth <= 767);
-//     handleResize();
-//     window.addEventListener("resize", handleResize);
-//     return () => window.removeEventListener("resize", handleResize);
-//   }, []);
-
-//   return isMobile;
-// }
 
 export default function BlogSection({ posts }) {
   const { t, i18n } = useTranslation("home");
   const locale = i18n.language;
-  // const isMobile = useIsMobile();
   const [visibleCount, setVisibleCount] = useState(4);
   const isMobile = useIsMobile(767);
+
+  const getShortDescription = (description, maxLength = 120) => {
+    if (description.length <= maxLength) {
+      return description;
+    }
+
+    return `${description.slice(0, maxLength)}...`;
+  };
 
   // Format posts with date formatting
   const formattedPosts = posts.map((post) => {
@@ -43,7 +37,7 @@ export default function BlogSection({ posts }) {
         month: "2-digit",
         day: "2-digit",
       }),
-      link: "#",
+      // link: "#",
     };
   });
 
@@ -86,12 +80,26 @@ export default function BlogSection({ posts }) {
                 <span>{topPosts[0].date}</span>
               </a> */}
 
+              {/* MAIN POST LAST-------
               <div className={styles.mainPost}>
                 <Image src={topPosts[0].img} alt={topPosts[0].title} width={600} height={400} priority />
                 <h4>{topPosts[0].title}</h4>
                 <p>{topPosts[0].description}</p>
                 <span>{topPosts[0].date}</span>
-              </div>
+              </div> */}
+
+              <Link href={`/blog/${topPosts[0].id}`} className={styles.mainPost}>
+                <Image src={topPosts[0].img} alt={topPosts[0].title} width={600} height={400} priority />
+
+                <h4>{topPosts[0].title}</h4>
+
+                <p>
+                  {getShortDescription(topPosts[0].description)}
+                  {/* {" "}<span className={styles.learnMore}>{t("blog.learnMore")}</span> */}
+                </p>
+
+                <span>{topPosts[0].date}</span>
+              </Link>
 
               {/* ✅ Show sidePosts only on desktop */}
               {!isMobile && (
@@ -103,12 +111,15 @@ export default function BlogSection({ posts }) {
                     //   <p>{post.description}</p>
                     //   <span>{post.date}</span>
                     // </a>
-                    <div key={post.id} className={styles.sidePost}>
+                    <Link href={`/blog/${post.id}`} key={post.id} className={styles.sidePost}>
                       <Image src={post.img} alt={post.title} width={300} height={200} />
                       <h4>{post.title}</h4>
-                      <p>{post.description}</p>
+                      <p>
+                        {getShortDescription(post.description)}
+                        {/* {" "}<span className={styles.learnMore}>{t("blog.learnMore")}</span> */}
+                      </p>
                       <span>{post.date}</span>
-                    </div>
+                    </Link>
                   ))}
                 </div>
               )}
@@ -133,16 +144,20 @@ export default function BlogSection({ posts }) {
                 //   <p>{post.description}</p>
                 //   <span>{post.date}</span>
                 // </a>
-                <div
+                <Link
+                  href={`/blog/${post.id}`}
                   key={post.id}
                   className={`${styles.post} ${shouldAnimate ? styles.animated : ""}`}
                   style={shouldAnimate ? { animationDelay: `${index * 0.1}s` } : {}}
                 >
                   <Image src={post.img} alt={post.title} width={300} height={200} />
                   <h4>{post.title}</h4>
-                  <p>{post.description}</p>
+                  <p>
+                    {getShortDescription(post.description)}
+                    {/* {" "}<span className={styles.learnMore}>{t("blog.learnMore")}</span> */}
+                  </p>
                   <span>{post.date}</span>
-                </div>
+                </Link>
               );
             })}
           </div>

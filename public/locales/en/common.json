@@ -4,7 +4,8 @@
     "about": "About Us",
     "projects": "Our Projects",
     "contact": "Contact",
-    "ctaButton": "Make a donation"
+    "ctaBtnDonation": "Donate Now",
+    "ctaBtnPartner": "Partner with Us"
   },
   "footer": {
     "contactInfo": "Contact Information",

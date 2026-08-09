@@ -11,13 +11,13 @@ import aboutThirdPhoto from "../../../public/assets/images/about-3.webp";
 import * as styles from "./AboutSection.module.scss";
 
 function AboutSection() {
-  const { t } = useTranslation("home");
+  const { t } = useTranslation("projects");
 
   return (
     <section className={styles.about}>
       <div className={styles.aboutWrapper}>
-        <p className={styles.description}>{t("about.description")}</p>
-        <h2>{t("about.title")}</h2>
+        {/* <p className={styles.description}>{t("about.description")}</p> */}
+        {/* <h2>{t("about.title")}</h2> */}
         <div className={styles.aboutContainer}>
           <div className={`${styles.aboutBlock} ${styles.firstBlock}`}>
             <div className={styles.contentBlock}>

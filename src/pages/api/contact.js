@@ -5,35 +5,57 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const { name, phone, message, type } = req.body;
+  const { name, email, phone, message, type } = req.body;
 
-  if (!name || !phone) {
-    return res.status(400).json({ error: "Ім'я та телефон є обов'язковими." });
+  // Email validation
+  const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$/;
+
+  if (!name || !email || !phone) {
+    return res.status(400).json({
+      error: "Ім'я, email та телефон є обов'язковими.",
+    });
+  }
+
+  if (!emailRegex.test(email)) {
+    return res.status(400).json({
+      error: "Некоректний email.",
+    });
   }
 
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.EMAIL_USER, // replace with real email
-      pass: process.env.EMAIL_PASS, // app-specific password
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
     },
   });
 
   const mailOptions = {
-    from: '"iHELP Website" <lovengiro@gmail.com>',
+    from: `"iHELP Website" <${process.env.EMAIL_USER}>`,
+    replyTo: email, // IMPORTANT: allows replying directly to user
     to: process.env.EMAIL_RECEIVER,
     subject: `Новий контакт: ${type || "форма зворотнього зв'язку"}`,
-    text: `Ім'я: ${name}\nТип форми: ${type || 'Через сторінку "Контакти"'}\nПовідомлення: ${
-      message || "(немає)"
-    }\nТелефон: ${phone}`,
+    text: `
+Ім'я: ${name}
+Email: ${email}
+Телефон: ${phone}
+Тип форми: ${type || 'Через сторінку "Контакти"'}
+Повідомлення: ${message || "(немає)"}
+    `,
   };
 
   try {
     await transporter.sendMail(mailOptions);
-    res.status(200).json({ message: "Форма успішно надіслана!" });
+
+    return res.status(200).json({
+      message: "Форма успішно надіслана!",
+    });
   } catch (error) {
     console.error("Email error:", error);
-    res.status(500).json({ error: "Не вдалося надіслати форму." });
+
+    return res.status(500).json({
+      error: "Не вдалося надіслати форму.",
+    });
   }
 }
 

@@ -1,8 +1,11 @@
 import React from "react";
 
 import OurProjectsTitle from "./OurProjectsTitle";
-import OurProjectsProjects from "./OurProjectsProjects";
-import OurVision from "./OurVision";
+// import OurProjectsProjects from "./OurProjectsProjects";
+import AboutSection from "./AboutSection";
+import ImpactBlock from "./ImpactBlock";
+import DownloadsBlock from "./DownloadsBlock";
+import CtaForm from "../../components/ui/CtaForm/CtaForm";
 
 // import OurProjectsPage from "./OurProjectsPage";
 
@@ -12,8 +15,10 @@ function OurProjectsPage() {
   return (
     <main>
       <OurProjectsTitle />
-      <OurProjectsProjects />
-      <OurVision />
+      <AboutSection />
+      <ImpactBlock />
+      <DownloadsBlock />
+      <CtaForm />
     </main>
   );
 }

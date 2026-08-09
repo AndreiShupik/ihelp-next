@@ -16,7 +16,6 @@ import logoImg from "../../../../public/assets/images/logo.png";
 import * as styles from "./Header.module.scss";
 
 function Header() {
-  // const [isMobile, setIsMobile] = useState(useIsMobile(992));
   const [menuOpen, setMenuOpen] = useState(false);
   const { openModal } = useModal();
   const isMobile = useIsMobile(992);
@@ -24,7 +23,8 @@ function Header() {
   const pathname = usePathname();
   const { t } = useTranslation("common");
 
-  const headerBtnText = t("header.ctaButton");
+  const headerBtnText = t("header.ctaBtnDonation");
+  // const headerBtnPartner = t("header.ctaBtnPartner");
   const headerBtnType = "primary";
 
   // useEffect(() => {
@@ -140,7 +140,10 @@ function Header() {
 
         <div className={styles.userBlock}>
           <LanguageSwitcher />
+          {/* <div className={styles.headerBtns}> */}
           <Button text={headerBtnText} type={headerBtnType} onClick={() => openModal("donate")} />
+          {/* <Button text={headerBtnPartner} type={headerBtnType} onClick={() => openModal("partner")} /> */}
+          {/* </div> */}
         </div>
       </div>
     </header>

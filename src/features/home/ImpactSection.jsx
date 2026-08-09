@@ -18,7 +18,7 @@ function ImpactSection() {
         <div className={styles.impactTextContainer}>
           {/* <span>Приєднуйся</span> */}
           {/* <h2>Наші досягнення</h2> */}
-          <h3>{t("impact.title")}</h3>
+          <h3 className="leftHeader">{t("impact.title")}</h3>
           <hr />
           <p>{t("impact.description")}</p>
           <div className={styles.btnContainer}>
@@ -27,11 +27,11 @@ function ImpactSection() {
         </div>
 
         <dl className={styles.impactStatistic}>
-          <dt>57 750+</dt>
+          <dt>58 854</dt>
           <dd>{t("impact.familyHelp")}</dd>
           <dt>8</dt>
           <dd>{t("impact.communityHelp")}</dd>
-          <dt>15 139</dt>
+          <dt>172 555</dt>
           <dd>{t("impact.childrenHelp")}</dd>
         </dl>
       </div>

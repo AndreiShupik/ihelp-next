@@ -4,7 +4,8 @@
     "about": "Про нас",
     "projects": "Наші проекти",
     "contact": "Контакти",
-    "ctaButton": "Зробити пожертву"
+    "ctaBtnDonation": "Пожертвуйте зараз",
+    "ctaBtnPartner": "Стати партнером"
   },
   "footer": {
     "contactInfo": "Контактна інформація",

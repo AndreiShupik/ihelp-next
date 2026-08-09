@@ -640,8 +640,8 @@ ihelp-next
 │  │  │  ├─ OurProjectsProjects.module.scss
 │  │  │  ├─ OurProjectsTitle.jsx
 │  │  │  ├─ OurProjectsTitle.module.scss
-│  │  │  ├─ OurVision.jsx
-│  │  │  └─ OurVision.module.scss
+│  │  │  ├─ ImpactBlock.jsx
+│  │  │  └─ ImpactBlock.module.scss
 │  │  └─ socialTaxi
 │  │     ├─ SocialTaxiPage.jsx
 │  │     └─ SocialTaxiPage.module.scss

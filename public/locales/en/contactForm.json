@@ -5,6 +5,7 @@
 
   "fields": {
     "name": "Name",
+    "email": "Email",
     "phone": "Phone",
     "message": "Message",
     "messagePlaceholder": "Your message..."
@@ -17,6 +18,8 @@
 
   "errors": {
     "nameRequired": "Name is required.",
+    "emailRequired": "Email is required.",
+    "emailInvalid": "Invalid email.",
     "phoneRequired": "Phone number is required.",
     "phoneInvalid": "Invalid phone number.",
     "submitError": "Error submitting the form"

@@ -8,6 +8,23 @@
   //   font-size: 0.9em;
   // }
 
+  .historyBlock {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(30px);
+    transition:
+      max-height 0.8s ease,
+      opacity 0.8s ease,
+      transform 0.8s ease;
+  }
+
+  .historyBlockVisible {
+    max-height: 9999px; // достатньо велике значення
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   .short {
     color: #143518;
     font-style: italic;
@@ -505,3 +522,433 @@
     min-height: 357px;
   }
 }
+
+/*------- The Main About Us Content -------*/
+
+.aboutFoundation {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px 30px;
+
+  .foundationContainer {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 60px;
+    align-items: start;
+
+    .foundationImageSection {
+      position: sticky;
+      top: 120px;
+
+      .foundationImage {
+        width: 100%;
+        height: auto;
+        min-height: 800px;
+        display: block;
+        border-radius: 24px;
+        object-fit: cover;
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+      }
+    }
+
+    .foundationImageSection.imageMobile {
+      display: none;
+    }
+
+    .foundationContentSection {
+      display: flex;
+      flex-direction: column;
+
+      // .foundationTitle {
+      //   font-weight: 800;
+      //   color: #111827;
+      //   margin-bottom: 24px;
+      // }
+
+      .foundationDescription {
+        margin-bottom: 40px;
+      }
+
+      .foundationInfoGrid {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        margin-bottom: 50px;
+        padding: 32px 0 0;
+
+        // &::before {
+        //   content: "";
+        //   position: absolute;
+        //   top: 10%;
+        //   left: 50%;
+        //   width: 1px;
+        //   height: 80%;
+        //   background: linear-gradient(to bottom, transparent, rgba(37, 99, 235, 0.18), transparent);
+        //   transform: rotate(18deg);
+        //   transform-origin: center;
+        // }
+
+        .foundationCard {
+          position: relative;
+          max-width: 460px;
+
+          &:first-child {
+            align-self: start;
+          }
+
+          &:last-child {
+            margin-top: 72px;
+            justify-self: end;
+          }
+
+          // &::before {
+          //   content: "";
+          //   position: absolute;
+          //   top: -12px;
+          //   left: 0;
+          //   width: 56px;
+          //   height: 3px;
+          //   background: linear-gradient(to right, #33863d, rgba(37, 99, 235, 0.15));
+          //   border-radius: 999px;
+          // }
+
+          .foundationCardTitle {
+            font-weight: 800;
+            margin-bottom: 10px;
+          }
+
+          .foundationCardText {
+            max-width: 36ch;
+          }
+        }
+      }
+
+      .foundationPillars {
+        margin-bottom: 48px;
+      }
+
+      .foundationSectionTitle {
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      .foundationPillarsList {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+
+        li {
+          display: flex;
+          align-items: flex-start;
+          gap: 18px;
+          padding: 28px 28px 28px 24px;
+          position: relative;
+
+          /* IMPORTANT */
+          min-height: fit-content;
+          width: 100%;
+
+          .pillarIcon {
+            flex-shrink: 0;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            margin-top: -15px;
+            position: relative;
+            z-index: 2;
+
+            /* Next.js Image renders img inside span */
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+              display: block;
+              filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.08));
+            }
+          }
+
+          .pillarContent {
+            position: relative;
+            z-index: 2;
+
+            h4 {
+              margin-bottom: 7px;
+            }
+          }
+        }
+      }
+
+      /* Pillar 1 */
+      .pillarOne {
+        position: relative;
+        z-index: 1;
+        overflow: visible;
+
+        &::before {
+          content: "";
+          position: absolute;
+
+          /* Make pseudo fully wrap content */
+          inset: 0;
+
+          z-index: -1;
+
+          background-image: url("/assets/images/background-pillar-1.png");
+
+          /* KEY FIX */
+          background-size: 100% 100%;
+          /* OR use cover if texture can crop slightly */
+          /* background-size: cover; */
+
+          background-position: center;
+          background-repeat: no-repeat;
+
+          pointer-events: none;
+        }
+
+        .pillarIcon {
+          height: auto;
+          width: 40px;
+        }
+      }
+
+      /* Pillar 2 */
+      .pillarTwo {
+        position: relative;
+        z-index: 1;
+        overflow: visible;
+
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          z-index: -1;
+
+          background-image: url("/assets/images/background-pillar-2.png");
+
+          /* KEY FIX */
+          background-size: 100% 100%;
+
+          background-position: center;
+          background-repeat: no-repeat;
+          pointer-events: none;
+        }
+
+        .pillarIcon {
+          height: 75px;
+          width: 50px;
+        }
+      }
+
+      /* Pillar 3 */
+      .pillarThree {
+        position: relative;
+        z-index: 1;
+        overflow: visible;
+
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          z-index: -1;
+
+          background-image: url("/assets/images/background-pillar-3.png");
+          background-size: 100% 100%;
+
+          background-position: center;
+          background-repeat: no-repeat;
+          pointer-events: none;
+        }
+
+        .pillarIcon {
+          height: 75px;
+          width: 65px;
+        }
+      }
+    }
+  }
+
+  .foundationCommitment {
+    .foundationCommitmentText {
+      background-color: #143518;
+      background-image: linear-gradient(45deg, #64d172, #000000);
+      background-size: 100%;
+      background-repeat: repeat;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 2rem;
+    }
+  }
+
+  .jorneyLinkBlock {
+    margin-top: 50px;
+    // display: flex;
+
+    h3 {
+      margin-bottom: 15px;
+    }
+
+    .foundationJourneyLink {
+      cursor: pointer;
+      text-decoration: underline;
+      color: #22aeff;
+      font-weight: 800;
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+
+      &:hover {
+        // background: #1d4ed8;
+        transform: translateY(-2px);
+        // box-shadow: 0 12px 24px rgba(37, 99, 235, 0.25);
+      }
+    }
+  }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .aboutFoundation {
+    .foundationContainer {
+      grid-template-columns: 1fr;
+      gap: 40px;
+
+      .foundationImageSection {
+        position: relative;
+        top: auto;
+      }
+
+      .foundationImageSection.imageDesktop {
+        display: none;
+      }
+
+      .foundationImageSection.imageMobile {
+        display: block;
+        margin-bottom: 40px;
+        img {
+          height: 600px;
+          min-height: auto;
+        }
+      }
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .aboutFoundation {
+    padding: 72px 16px 30px;
+
+    .foundationContainer {
+      .foundationContentSection {
+        .foundationInfoGrid {
+          grid-template-columns: 1fr;
+          gap: 0;
+          padding: 0;
+
+          &::before {
+            display: none;
+          }
+
+          .foundationCard {
+            max-width: 100%;
+            padding: 24px 0;
+
+            &:last-child {
+              margin-top: 0;
+              justify-self: start;
+            }
+
+            .foundationCardText {
+              max-width: 100%;
+            }
+          }
+        }
+
+        .foundationPillarsList {
+          gap: 20px;
+
+          li {
+            border-radius: 32px;
+            padding: 24px 20px;
+
+            .pillarIcon {
+              position: absolute;
+              top: 30px;
+            }
+
+            .pillarContent {
+              h4 {
+                margin-left: 40px;
+              }
+
+              p {
+                max-width: 100%;
+              }
+            }
+
+            /* ТІЛЬКИ для першого li */
+            &:first-child {
+              .pillarContent {
+                h4 {
+                  margin-left: 25px; // свій окремий стиль
+                }
+              }
+            }
+          }
+        }
+
+        .pillarOne {
+          .pillarIcon {
+            width: 20px;
+            height: auto;
+          }
+        }
+
+        .pillarTwo {
+          .pillarIcon {
+            width: 30px;
+            height: auto;
+          }
+        }
+
+        .pillarThree {
+          .pillarIcon {
+            width: 30px;
+            height: auto;
+          }
+        }
+
+        // .pillarTwo,
+        // .pillarThree {
+        //   margin-left: 0;
+        //   margin-top: 0;
+        // }
+
+        // .foundationJourneyLink {
+        //   width: 100%;
+        //   justify-content: center;
+        //   text-align: center;
+        // }
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .aboutFoundation {
+    padding-top: 50px;
+    // padding-bottom: 50px;
+  }
+}
+
+/*------- The Main About Us Content -------*/

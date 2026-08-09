@@ -1,17 +1,18 @@
 .about {
   position: relative;
-  padding: 80px 50px;
+  // padding: 80px 50px;
   text-align: center;
+  padding: 50px 50px;
   overflow: hidden;
 
   .aboutWrapper {
     max-width: 1200px;
     margin: 0 auto;
 
-    .description {
-      max-width: 1148px;
-      margin-bottom: 4.5rem;
-    }
+    // .description {
+    //   max-width: 1148px;
+    //   margin-bottom: 3.5rem;
+    // }
 
     h2 {
       position: relative;
@@ -220,6 +221,7 @@
 
 @media (max-width: 992px) {
   .about {
+    padding-top: 30px;
     .aboutWrapper {
       .aboutContainer {
         .aboutBlock {
@@ -326,9 +328,9 @@
 @media (max-width: 767px) {
   .about {
     .aboutWrapper {
-      .description {
-        margin-bottom: 3rem;
-      }
+      // .description {
+      //   margin-bottom: 3rem;
+      // }
       h2 {
         margin-bottom: 2rem;
       }
@@ -338,7 +340,8 @@
 
 @media (max-width: 576px) {
   .about {
-    padding: 20px 15px 50px;
+    // padding: 20px 15px 50px;
+    padding: 20px 15px 15px;
 
     .aboutWrapper {
       .aboutContainer {
