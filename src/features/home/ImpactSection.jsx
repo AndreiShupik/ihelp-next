@@ -31,7 +31,7 @@ function ImpactSection() {
           <dd>{t("impact.familyHelp")}</dd>
           <dt>8</dt>
           <dd>{t("impact.communityHelp")}</dd>
-          <dt>172 555</dt>
+          <dt>17 255</dt>
           <dd>{t("impact.childrenHelp")}</dd>
         </dl>
       </div>
